@@ -1,6 +1,4 @@
-"""
-This class is the main thread of the program, includes the welcome message function and the main function.
-"""
+# This class is the main thread of the program, includes the welcome message function and the main function.
 # External imports
 
 # Internal imports
