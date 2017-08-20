@@ -5,7 +5,7 @@ is going to be implemented iteratively i.e when a new feature is implemented thi
 to include info about it.
 """
 
-
+# prints help into screen.
 def help():
     menu = "- [options] -\n" \
            "\n" \
