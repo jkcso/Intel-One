@@ -4,6 +4,7 @@
 # Internal imports
 import help
 import search.google as google
+import search.socialMedia as socialMedia
 
 
 # Welcome screen of the program.
@@ -46,12 +47,19 @@ if __name__ == '__main__':
         # goes to help.
         if userCommand == 'help' or userCommand == '-h' or userCommand == '--help':
             help.help()
+
         # performs google search.
         elif userCommand.__contains__('-g') or userCommand.__contains__('--google'):
             google.googleSearch(userCommand)
+
+        # performs facebook search.
+        elif userCommand.__contains__('-fb') or userCommand.__contains__('--facebook'):
+            socialMedia.facebookSearch(userCommand)
+
         # exits the program.
         elif userCommand == 'exit' or userCommand == 'quit':
             break
+
         # captures the case in which no option is matched and returns message to the user.
         else:
             errorString = " command not found, press 'help' to view the help menu."

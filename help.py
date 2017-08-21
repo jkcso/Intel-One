@@ -10,9 +10,10 @@ to include info about it.
 def help():
     menu = "- [options] -\n" \
            "\n" \
-           "Options Short/Long  |  Description                     |  Example                                \n" \
-           "=================== + ================================ + ========================================\n" \
-           "-h, --help          | Prints help on screen            | who-dis> help                           \n" \
-           "-g, --google        | Performs normal google search    | who-dis> apple -g, steve jobs --google  \n" \
+           "Options Short/Long  |  Description                              |  Example                                \n" \
+           "=================== + ========================================= + ========================================\n" \
+           "-h, --help          | Prints help on screen                     | who-dis> help                           \n" \
+           "-g, --google        | Performs normal google search             | who-dis> apple -g, steve jobs --google  \n" \
+           "-fb, --facebook     | Performs facebook search through google   | who-dis> jon snow -fb                   \n" \
            "\n"
     print(menu)
