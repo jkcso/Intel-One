@@ -56,6 +56,10 @@ if __name__ == '__main__':
         elif userCommand.__contains__('-fb') or userCommand.__contains__('--facebook'):
             socialMedia.facebookSearch(userCommand)
 
+        # performs linkedin search.
+        elif userCommand.__contains__('-ln') or userCommand.__contains__('--linkedin'):
+            socialMedia.linkedinSearch(userCommand)
+
         # exits the program.
         elif userCommand == 'exit' or userCommand == 'quit':
             break

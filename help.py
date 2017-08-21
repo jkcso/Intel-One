@@ -15,5 +15,6 @@ def help():
            "-h, --help          | Prints help on screen                     | who-dis> help                           \n" \
            "-g, --google        | Performs normal google search             | who-dis> apple -g, steve jobs --google  \n" \
            "-fb, --facebook     | Performs facebook search through google   | who-dis> jon snow -fb                   \n" \
+           "-ln, --linkedin     | Performs linkedin search through google   | who-dis> kevin spacey -ln               \n" \
            "\n"
     print(menu)

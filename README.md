@@ -14,4 +14,8 @@ I am planning to include:
 Current version of the program includes:
 1) Help menu
 2) Google search
-3) Facebook search
+3) Facebook search*
+4) Linkedin search*
+
+* NOTE: for these searches you need to be careful to not overload the IP search allowance you have when it comes to scripting because after a while google thinks that you are
+a web crawler and denies the service returning an error 503.  What I was doing to avoid this was to change my IP address using a VPN.
