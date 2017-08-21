@@ -10,3 +10,7 @@ I am planning to include:
 3) Pipl website search searching for more accounts related to the user.
 4) Construction of path of journey and statistics if twitter found.
 5) Usage of the website inteltechniques to identify the interests of the target, mainly to use spear phishing against.
+
+Current version of the program includes:
+1) Help menu
+2) Google search
