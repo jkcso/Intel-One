@@ -60,6 +60,14 @@ if __name__ == '__main__':
         elif userCommand.__contains__('-ln') or userCommand.__contains__('--linkedin'):
             socialMedia.linkedinSearch(userCommand)
 
+        # performs twitter search.
+        elif userCommand.__contains__('-tw') or userCommand.__contains__('--twitter'):
+            socialMedia.twitterSearch(userCommand)
+
+        # performs instagram search.
+        elif userCommand.__contains__('-in') or userCommand.__contains__('--instagram'):
+            socialMedia.instagramSearch(userCommand)
+
         # exits the program.
         elif userCommand == 'exit' or userCommand == 'quit':
             break

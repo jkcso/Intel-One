@@ -16,5 +16,7 @@ def help():
            "-g, --google        | Performs normal google search             | who-dis> apple -g, steve jobs --google  \n" \
            "-fb, --facebook     | Performs facebook search through google   | who-dis> jon snow -fb                   \n" \
            "-ln, --linkedin     | Performs linkedin search through google   | who-dis> kevin spacey -ln               \n" \
+           "-tw, --twitter      | Performs twitter search through google    | who-dis> beyonce -tw, beyonce --twitter \n" \
+           "-in, --instagram    | Performs instagram search through google  | who-dis> jetbrains -in                  \n" \
            "\n"
     print(menu)
