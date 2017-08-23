@@ -18,6 +18,7 @@ in depth for details specifically password.
 Current version of the program includes:
 1) Help menu
 2) Google, Facebook, Linkedin, Twitter and Instagram search*.
+3) Search in www.pipl.com to capture the social media not covered above that the user or company has.
 
 * NOTE: for these searches you need to be careful to not overload the IP search allowance you have when it comes to
 scripting because after a while google thinks that you are a web crawler and denies the service returning an error 503.

@@ -5,6 +5,7 @@
 import help
 import search.google as google
 import search.socialMedia as socialMedia
+import search.pipl as pipl
 
 
 # Welcome screen of the program.
@@ -67,6 +68,10 @@ if __name__ == '__main__':
         # performs instagram search.
         elif userCommand.__contains__('-in') or userCommand.__contains__('--instagram'):
             socialMedia.instagramSearch(userCommand)
+
+        # performs a search in www.pipl.com to capture the social media not captured above.
+        elif userCommand.__contains__('-p'):
+            pipl.piplSearch(userCommand)
 
         # exits the program.
         elif userCommand == 'exit' or userCommand == 'quit':

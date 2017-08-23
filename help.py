@@ -18,5 +18,6 @@ def help():
            "-ln, --linkedin     | Performs linkedin search through google   | who-dis> kevin spacey -ln               \n" \
            "-tw, --twitter      | Performs twitter search through google    | who-dis> beyonce -tw, beyonce --twitter \n" \
            "-in, --instagram    | Performs instagram search through google  | who-dis> jetbrains -in                  \n" \
+           "-p                  | Provided a link to www.pipl.com           | who-dis> peter smith -p                 \n" \
            "\n"
     print(menu)
