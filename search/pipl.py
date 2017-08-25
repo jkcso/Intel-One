@@ -17,11 +17,8 @@ def piplSearch(query):
 # This function performs search to the optional location in www.pipl.com.
 def piplSearchLocation(query):
     location = _piplLocation(query)
-    print(query)
     query = _piplParseLocation(query)
-    print(query)
     query = _piplSpace(query)
-    print(query)
     piplLink = 'https://pipl.com/search/?q=' + query + '&l=' + location
     print(piplLink)
 
