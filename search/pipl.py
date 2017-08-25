@@ -2,7 +2,7 @@
 # social media search, we can't capture ALL the social media out there, but www.pipl.com will return all accounts
 # related with the individual or website we are searching for no matter how old these accounts are.
 startString = 0
-PIPL_FLAG1 = '-p'
+PIPL_FLAG1 = ' -p'
 
 
 # Performs a search in www.pipl.com to capture the social media not captured above.
@@ -17,7 +17,14 @@ def piplSearch(query):
 # This function performs search to the optional location in www.pipl.com.
 def piplSearchLocation(query):
     location = piplLocation(query)
-    print(location)
+    print(query)
+    query = piplParseLocation(query)
+    print(query)
+    query = piplSpace(query)
+    print(query)
+    piplLink = 'https://pipl.com/search/?q=' + query + '&l=' + location
+    print(piplLink)
+
 
 
 # Removes space and adds the plus sign to complete the query.
@@ -31,6 +38,13 @@ def piplParse(query):
     queryLength = len(query)
     effectiveLength = queryLength - len(PIPL_FLAG1)
     query = query[startString:effectiveLength]
+    return query
+
+
+# Parses query including location.
+def piplParseLocation(query):
+    flagIndex = str(query).index('-p')
+    query = query[startString:flagIndex]
     return query
 
 
