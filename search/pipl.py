@@ -39,7 +39,7 @@ def _piplParse(query):
 
 # Parses query including location.
 def _piplParseLocation(query):
-    flagIndex = str(query).index('-p')
+    flagIndex = str(query).index(__PIPL_FLAG1__)
     query = query[__startString__:flagIndex]
     return query
 

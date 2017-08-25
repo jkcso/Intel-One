@@ -22,7 +22,7 @@ class TestPipl(TestCase):
     def test_piplParseLocation(self):
         query = "john lennon -p new york -l"
         parsed_query = pipl._piplParseLocation(query)
-        self.assertEqual('john lennon ', parsed_query)  # TODO fix space.
+        self.assertEqual('john lennon', parsed_query)
 
     # tests if query parsing is done properly.
     def test_piplParse(self):
@@ -79,7 +79,7 @@ class TestPipl(TestCase):
             pipl.piplSearchLocation(query)
         # This can go inside or outside the `with` block
         link = out.getvalue().strip()
-        self.assertEqual(link, 'https://pipl.com/search/?q=john+lennon+&l=madrid')
+        self.assertEqual(link, 'https://pipl.com/search/?q=john+lennon&l=madrid')
 
     # tests if search for location is giving back correct link for single word location.
     def test_piplSearchLocation_doubleWordLocation(self):
