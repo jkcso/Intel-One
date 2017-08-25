@@ -16,7 +16,7 @@ class TestPipl(TestCase):
     def test_piplLocation_doubleWord(self):
         query = "john lennon -p new york -l"
         location = pipl._piplLocation(query)
-        self.assertEqual('new york', location)
+        self.assertEqual('new+york', location)
 
     # tests if query is parsed correctly before -p flag.
     def test_piplParseLocation(self):
@@ -83,5 +83,9 @@ class TestPipl(TestCase):
 
     # tests if search for location is giving back correct link for single word location.
     def test_piplSearchLocation_doubleWordLocation(self):
-        # TODO fix this
-        pass
+        query = "john lennon -p new york -l"
+        with TestPipl.captured_output(self) as (out, err):
+            pipl.piplSearchLocation(query)
+        # This can go inside or outside the `with` block
+        link = out.getvalue().strip()
+        self.assertEqual(link, 'https://pipl.com/search/?q=john+lennon&l=new+york')
