@@ -51,6 +51,7 @@ def _piplLocation(query):
     try:
         start = query.index(first) + len(first)
         end = query.index(last, start)
-        return query[start:end]
+        query = query[start:end]
+        return _piplSpace(query)
     except ValueError:
         return ""
