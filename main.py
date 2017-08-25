@@ -9,7 +9,7 @@ import search.pipl as pipl
 
 
 # Welcome screen of the program.
-def welcomeMessage():
+def _welcomeMessage():
     message = "####################################################################\n" \
               "##                               _______                          ##\n" \
               "##         ||        ||  ||      ||   ||                          ##\n" \
@@ -38,7 +38,7 @@ def welcomeMessage():
 
 # The main thread of the program.
 if __name__ == '__main__':
-    welcomeMessage()
+    _welcomeMessage()
 
     # the main loop of the program running constantly until ctl+C or exit/quit is used.
     while True:

@@ -2,16 +2,16 @@
 from google import search
 
 # Top level domain search
-TLD = "com"
+__TLD__ = "com"
 # Number of results we want back
-NUM_RESULTS = 8
+__NUM_RESULTS__ = 8
 # Last result to retrieve.  Use none if you want to search forever.
-STOP = 1
+__STOP__ = 1
 # Lapse to wait between HTTP requests.
-PAUSE = 2
+__PAUSE__ = 2
 
 
 # returns google search results.
 def googleSearch(query):
-    for result in search(query, tld=TLD, num=NUM_RESULTS, stop=STOP, pause=PAUSE):
+    for result in search(query, tld=__TLD__, num=__NUM_RESULTS__, stop=__STOP__, pause=__PAUSE__):
         print(result)
