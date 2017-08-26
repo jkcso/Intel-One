@@ -6,6 +6,7 @@ import help
 import search.google as google
 import search.socialMedia as socialMedia
 import search.pipl as pipl
+import search.edgar as edgar
 
 
 # Welcome screen of the program.
@@ -76,6 +77,10 @@ if __name__ == '__main__':
         # performs a search in www.pipl.com to capture the social media not captured above.
         elif userCommand.__contains__('-p'):
             pipl.piplSearch(userCommand)
+
+        # provides a link to search for companies in www.sec.gov.
+        elif userCommand.__contains__('-e') or userCommand.__contains__('--edgar'):
+            edgar.edgarSearch(userCommand)
 
         # exits the program.
         elif userCommand == 'exit' or userCommand == 'quit':
