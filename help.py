@@ -19,8 +19,8 @@ def help():
            "-ln, --linkedin     | Performs linkedin search through google       | who-dis> kevin spacey -ln                \n" \
            "-tw, --twitter      | Performs twitter search through google        | who-dis> beyonce -tw, beyonce --twitter  \n" \
            "-in, --instagram    | Performs instagram search through google      | who-dis> jetbrains -in                   \n" \
-           "-p                  | Provided a link to www.pipl.com               | who-dis> peter smith -p                  \n" \
-           "-p -l               | Performs www.pipl.com search with location    | who-dis> peter smith -p madrid -l        \n" \
+           "-p, --pipl          | Provided a link to www.pipl.com               | who-dis> jon snow -p, jon snow --pipl    \n" \
+           "A -p B -l           | Performs www.pipl.com search with location    | who-dis> peter smith -p madrid -l        \n" \
            "-e, --edgar         | Performs search in www.sec.gov for companies  | who-dis> golman sachs -e                 \n" \
            "\n"
     print(menu)

@@ -22,13 +22,13 @@ class TestPipl(TestCase):
     def test_piplParseLocation(self):
         query = "john lennon -p new york -l"
         parsed_query = pipl._piplParseLocation(query)
-        self.assertEqual('john lennon', parsed_query)
+        self.assertEqual('john lennon ', parsed_query)
 
     # tests if query parsing is done properly.
     def test_piplParse(self):
         query = "john lennon -p"
         parsed_query = pipl._piplParse(query)
-        self.assertEqual('john lennon', parsed_query)
+        self.assertEqual('john lennon ', parsed_query)
 
     # tests if space is replaced by '+' sign without parsing it.
     def test_piplSpace(self):
@@ -41,7 +41,7 @@ class TestPipl(TestCase):
         query = "john lennon -p"
         new_query = pipl._piplSpace(query)
         new_parsed_query = pipl._piplParse(new_query)
-        self.assertEqual('john+lennon', new_parsed_query)
+        self.assertEqual('john+lennon+', new_parsed_query)
 
     # tests output in screen.
     @contextmanager
@@ -61,7 +61,7 @@ class TestPipl(TestCase):
             pipl.piplSearch(query)
         # This can go inside or outside the `with` block
         link = out.getvalue().strip()
-        self.assertEqual(link, 'https://pipl.com/search/?q=john+lennon')
+        self.assertEqual(link, 'https://pipl.com/search/?q=john+lennon+')
 
     # tests if search is giving back correct link for three or more terms.
     def test_piplSearch_moreThanTwoWords(self):
@@ -70,7 +70,7 @@ class TestPipl(TestCase):
             pipl.piplSearch(query)
         # This can go inside or outside the `with` block
         link = out.getvalue().strip()
-        self.assertEqual(link, 'https://pipl.com/search/?q=dr+john+lennon')
+        self.assertEqual(link, 'https://pipl.com/search/?q=dr+john+lennon+')
 
     # tests if search for location is giving back correct link for single word location.
     def test_piplSearchLocation_singleWordLocation(self):
@@ -79,7 +79,7 @@ class TestPipl(TestCase):
             pipl.piplSearchLocation(query)
         # This can go inside or outside the `with` block
         link = out.getvalue().strip()
-        self.assertEqual(link, 'https://pipl.com/search/?q=john+lennon&l=madrid')
+        self.assertEqual(link, 'https://pipl.com/search/?q=john+lennon+&l=madrid')
 
     # tests if search for location is giving back correct link for single word location.
     def test_piplSearchLocation_doubleWordLocation(self):
@@ -88,4 +88,13 @@ class TestPipl(TestCase):
             pipl.piplSearchLocation(query)
         # This can go inside or outside the `with` block
         link = out.getvalue().strip()
-        self.assertEqual(link, 'https://pipl.com/search/?q=john+lennon&l=new+york')
+        self.assertEqual(link, 'https://pipl.com/search/?q=john+lennon+&l=new+york')
+
+    # tests searching using the long flag.
+    def test_piplSearch_LongTerm(self):
+        query = "john lennon --pipl"
+        with TestPipl.captured_output(self) as (out, err):
+            pipl.piplSearch(query)
+        # This can go inside or outside the `with` block
+        link = out.getvalue().strip()
+        self.assertEqual(link, 'https://pipl.com/search/?q=john+lennon+')

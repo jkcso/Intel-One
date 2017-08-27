@@ -75,7 +75,7 @@ if __name__ == '__main__':
             pipl.piplSearchLocation(userCommand)
 
         # performs a search in www.pipl.com to capture the social media not captured above.
-        elif userCommand.__contains__('-p'):
+        elif userCommand.__contains__('-p') or userCommand.__contains__('--pipl'):
             pipl.piplSearch(userCommand)
 
         # provides a link to search for companies in www.sec.gov.
