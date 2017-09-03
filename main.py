@@ -32,7 +32,9 @@ def _welcomeMessage():
               "\n" \
               "Please press 'help' for user manual and options.\n" \
               "Press exit or quit to exit the program\n" \
-              "Joseph Katsioloudes, 2017.\n" \
+              "Please refer to 'Known technical issues' section in README.md file for any problems you have.\n" \
+              "\n" \
+              "Written by Joseph Katsioloudes, 2017.\n" \
               "\n"
     print(message)
 
