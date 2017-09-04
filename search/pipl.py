@@ -1,6 +1,7 @@
 # This class performs a search in the website www.pipl.com.  The reasoning behind this addition is that by
 # social media search, we can't capture ALL the social media out there, but www.pipl.com will return all accounts
 # related with the individual or website we are searching for no matter how old these accounts are.
+# indicates the starting index in a string.
 __startString__ = 0
 
 

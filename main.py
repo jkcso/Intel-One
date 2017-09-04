@@ -7,6 +7,7 @@ import search.google as google
 import search.socialMedia as socialMedia
 import search.pipl as pipl
 import search.edgar as edgar
+import search.whois as whois
 
 
 # Welcome screen of the program.
@@ -83,6 +84,10 @@ if __name__ == '__main__':
         # provides a link to search for companies in www.sec.gov.
         elif userCommand.__contains__('-e') or userCommand.__contains__('--edgar'):
             edgar.edgarSearch(userCommand)
+
+        # provides a link to search for target domains in who.is website.
+        elif userCommand.__contains__('-w') or userCommand.__contains__('--whois'):
+            whois.whoIsSearch(userCommand)
 
         # exits the program.
         elif userCommand == 'exit' or userCommand == 'quit':

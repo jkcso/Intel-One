@@ -11,6 +11,7 @@ Implemented in my free time as part of my genuine interest in Cyber Security, es
 - Social media search for individuals and companies using Facebook, Linkedin, Twitter and Instagram.
 - People search engines search using just a name or both a name and a location.
 - Company search using the edgar search engine returning difficult to find and often confidential information about companies.
+- Whois search on target domain.
 
 ## Known technical issues
 - Users often overload the IP search allowance they have (when it comes to scripting allowance) because after a while google thinks that you are a web crawler and denies the service returning an error 503.  What I was doing to avoid this was to change my IP address using a VPN.  Another way of doing so is to use proxychains in kali linux and when banned you can do 'service tor restart' to retrieve a new IP address.
@@ -18,7 +19,6 @@ Implemented in my free time as part of my genuine interest in Cyber Security, es
 ## Future versions
 - Aiming on target's mail and if pawned try to retrieve credentials.
 - Advanced google dorks.
-- Who-is data.
 - IP address of target.
 - And many more.
 

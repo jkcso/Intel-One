@@ -56,5 +56,12 @@ def help():
            "-ln, --linkedin     | Performs linkedin search through google           | who-dis> glovdi -ln | --linkedin         \n" \
            "-tw, --twitter      | Performs twitter search through google            | who-dis> glovdi -tw | --twitter          \n" \
            "-in, --instagram    | Performs instagram search through google          | who-dis> glovdi -in | --instagram        \n" \
+           "\n" \
+           "\n" \
+           "-- [ Options for Domains ] --\n" \
+           "\n" \
+           "Options Short/Long  |  Description                                      |  Example                                 \n" \
+           "=================== + ================================================= + =========================================\n" \
+           "-w, --whois         | Performs whois search in the target domain        | who-dis> glovdi -w | --whois             \n" \
            "\n"
     print(menu)
