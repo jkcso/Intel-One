@@ -63,5 +63,12 @@ def help():
            "Options Short/Long  |  Description                                      |  Example                                 \n" \
            "=================== + ================================================= + =========================================\n" \
            "-w, --whois         | Performs whois search in the target domain        | who-dis> glovdi -w | --whois             \n" \
+           "\n" \
+           "\n" \
+           "-- [ Other Options ] --\n" \
+           "\n" \
+           "Options Short/Long  |  Description                                      |  Example                                 \n" \
+           "=================== + ================================================= + =========================================\n" \
+           "-sh, --shodan       | Performs shodan search for given keyword          | who-dis> zanussi -sh | --shodan          \n" \
            "\n"
     print(menu)

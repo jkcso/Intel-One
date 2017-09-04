@@ -8,6 +8,7 @@ import search.socialMedia as socialMedia
 import search.pipl as pipl
 import search.edgar as edgar
 import search.whois as whois
+import search.shodan as shodan
 
 
 # Welcome screen of the program.
@@ -88,6 +89,10 @@ if __name__ == '__main__':
         # provides a link to search for target domains in who.is website.
         elif userCommand.__contains__('-w') or userCommand.__contains__('--whois'):
             whois.whoIsSearch(userCommand)
+
+        # provides a link to search in shodan.io.
+        elif userCommand.__contains__('-sh') or userCommand.__contains__('--shodan'):
+            shodan.shodanSearch(userCommand)
 
         # exits the program.
         elif userCommand == 'exit' or userCommand == 'quit':
