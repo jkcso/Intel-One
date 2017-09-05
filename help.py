@@ -62,7 +62,8 @@ def help():
            "\n" \
            "Options Short/Long  |  Description                                      |  Example                                 \n" \
            "=================== + ================================================= + =========================================\n" \
-           "-w, --whois         | Performs whois search in the target domain        | who-dis> glovdi -w | --whois             \n" \
+           "-w, --whois         | Performs whois search in the target domain        | who-dis> www.glovdi.com -w | --whois     \n" \
+           "-sc, --scan         | Performs a vulnerability scan using asafaweb site | who-dis> www.glovdi.com -sc | --scan     \n" \
            "\n" \
            "\n" \
            "-- [ Other Options ] --\n" \

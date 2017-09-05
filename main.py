@@ -9,6 +9,7 @@ import search.pipl as pipl
 import search.edgar as edgar
 import search.whois as whois
 import search.shodan as shodan
+import search.scanner as scanner
 
 
 # Welcome screen of the program.
@@ -93,6 +94,10 @@ if __name__ == '__main__':
         # provides a link to search in shodan.io.
         elif userCommand.__contains__('-sh') or userCommand.__contains__('--shodan'):
             shodan.shodanSearch(userCommand)
+
+        # provides a link to search in asafaweb website for vulnerability scanning.
+        elif userCommand.__contains__('-sc') or userCommand.__contains__('--scan'):
+            scanner.scanSearch(userCommand)
 
         # exits the program.
         elif userCommand == 'exit' or userCommand == 'quit':
