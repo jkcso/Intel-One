@@ -10,13 +10,11 @@ Implemented in my free time as part of my genuine interest in Cyber Security, es
 - A well documented help menu explaining all the available options with examples.
 - Social media search for individuals and companies using Facebook, Linkedin, Twitter, Instagram and Reddit.
 - People search engines search using just a name or both a name and a location.
+- Get insights on lifetime reddit user activity by providing a username.
 - Company search using the edgar search engine returning difficult to find and often confidential information about companies.
 - Whois search on target domain.
 - Shodan.io search using a keyword.
 - Web vulnerability scan against target domain.
-
-## Known technical issues
-- Users often overload the IP search allowance they have (when it comes to scripting allowance) because after a while google thinks that you are a web crawler and denies the service returning an error 503.  What I was doing to avoid this was to change my IP address using a VPN.  Another way of doing so is to use proxychains in kali linux and when banned you can do 'service tor restart' to retrieve a new IP address.
 
 ## Future versions
 - Aiming on target's mail and if pawned try to retrieve credentials.
