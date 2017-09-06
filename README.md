@@ -8,7 +8,7 @@ Implemented in my free time as part of my genuine interest in Cyber Security, es
 
 ## Current version
 - A well documented help menu explaining all the available options with examples.
-- Social media search for individuals and companies using Facebook, Linkedin, Twitter and Instagram.
+- Social media search for individuals and companies using Facebook, Linkedin, Twitter, Instagram and Reddit.
 - People search engines search using just a name or both a name and a location.
 - Company search using the edgar search engine returning difficult to find and often confidential information about companies.
 - Whois search on target domain.

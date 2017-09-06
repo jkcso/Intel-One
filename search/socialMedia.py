@@ -6,6 +6,7 @@ __FACEBOOK__ = "www.facebook.com"
 __LINKEDIN__ = "www.linkedin.com"
 __TWITTER__ = "www.twitter.com"
 __INSTAGRAM__ = "www.instagram.com"
+__REDDIT__ = "www.reddit.com"
 
 
 # performs facebook search for the given query.
@@ -29,4 +30,10 @@ def twitterSearch(query):
 # performs instagram search for the given query.
 def instagramSearch(query):
     query += " inurl:" + "\"" + __INSTAGRAM__ + "\""
+    return google.googleSearch(query)
+
+
+# performs reddit search for the given query.
+def redditSearch(query):
+    query += " inurl:" + "\"" + __REDDIT__ + "\""
     return google.googleSearch(query)

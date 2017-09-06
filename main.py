@@ -75,6 +75,10 @@ if __name__ == '__main__':
         elif userCommand.__contains__('-in') or userCommand.__contains__('--instagram'):
             socialMedia.instagramSearch(userCommand)
 
+        # performs reddit search.
+        elif userCommand.__contains__('-re') or userCommand.__contains__('--reddit'):
+            socialMedia.redditSearch(userCommand)
+
         # performs a search in www.pipl.com containing location information as well to be more specific.
         elif userCommand.__contains__('-p') and userCommand.__contains__('-l'):
             pipl.piplSearchLocation(userCommand)
