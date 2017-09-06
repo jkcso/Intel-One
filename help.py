@@ -25,6 +25,7 @@ def help():
            "\n" \
            "Options Short/Long  |  Description                                      |  Example                                 \n" \
            "=================== + ================================================= + =========================================\n" \
+           "-ss, --social       | Returns posts from all social media about target  | who-dis> john smith -ss | --social       \n" \
            "-fb, --facebook     | Performs facebook search through google           | who-dis> john smith -fb | --facebook     \n" \
            "-ln, --linkedin     | Performs linkedin search through google           | who-dis> john smith -ln | --linkedin     \n" \
            "-tw, --twitter      | Performs twitter search through google            | who-dis> john smith -tw | --twitter      \n" \
@@ -54,6 +55,7 @@ def help():
            "\n" \
            "Options Short/Long  |  Description                                      |  Example                                 \n" \
            "=================== + ================================================= + =========================================\n" \
+           "-ss, --social       | Returns posts from all social media about target  | who-dis> john smith -ss | --social       \n" \
            "-fb, --facebook     | Performs facebook search through google           | who-dis> glovdi -fb | --facebook         \n" \
            "-ln, --linkedin     | Performs linkedin search through google           | who-dis> glovdi -ln | --linkedin         \n" \
            "-tw, --twitter      | Performs twitter search through google            | who-dis> glovdi -tw | --twitter          \n" \

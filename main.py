@@ -80,6 +80,10 @@ if __name__ == '__main__':
         elif userCommand.__contains__('-re') or userCommand.__contains__('--reddit'):
             socialMedia.redditSearch(userCommand)
 
+        # performs search about posts on the given keyword in social search website looking in all available social media.
+        elif userCommand.__contains__('-ss') or userCommand.__contains__('--social'):
+            socialMedia.SocialSearcher.ssSearch(userCommand)
+
         # performs a search in www.pipl.com containing location information as well to be more specific.
         elif userCommand.__contains__('-p') and userCommand.__contains__('-l'):
             pipl.piplSearchLocation(userCommand)

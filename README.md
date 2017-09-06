@@ -8,6 +8,7 @@ Implemented in my free time as part of my genuine interest in Cyber Security, es
 
 ## Current version
 - A well documented help menu explaining all the available options with examples.
+- Social media search matching the provided keyword in recent posts from all social media.
 - Social media search for individuals and companies using Facebook, Linkedin, Twitter, Instagram and Reddit.
 - People search engines search using just a name or both a name and a location.
 - Get insights on lifetime reddit user activity by providing a username.

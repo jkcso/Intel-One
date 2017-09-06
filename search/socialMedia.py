@@ -37,3 +37,26 @@ def instagramSearch(query):
 def redditSearch(query):
     query += " inurl:" + "\"" + __REDDIT__ + "\""
     return google.googleSearch(query)
+
+
+# searches all social media at once returning recent posts about target.
+class SocialSearcher:
+    # Uses social searcher website collecting posts on given keyword on all social media.
+    __startString__ = 0
+    # The length of the space character, used to remove trailing space at the end of parsing keyword.
+    __spaceCharLength__ = 1
+
+    # Performs a search in www.who.is to capture information about a target domain.
+    def ssSearch(query):
+        # search string used in the address bar to perform search.
+        ssLink_1 = 'https://www.social-searcher.com/social-buzz/?q5=' + SocialSearcher._ssParse(query)
+        ssLink_2 = 'https://www.social-searcher.com/google-social-search/?q=' + SocialSearcher._ssParse(query) + '&fb=on&tw=on&gp=on&in=on&li=on&pi=on'
+        # returns a web page as a result of this search.
+        print(ssLink_1)
+        print(ssLink_2)
+
+    # Parses the query by cutting the -p flag.
+    def _ssParse(query):
+        flagIndex = str(query).index('-') or str(query).index('--')
+        query = query[SocialSearcher.__startString__:flagIndex - SocialSearcher.__spaceCharLength__]
+        return query
