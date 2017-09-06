@@ -29,15 +29,17 @@ def help():
            "-ln, --linkedin     | Performs linkedin search through google           | who-dis> john smith -ln | --linkedin     \n" \
            "-tw, --twitter      | Performs twitter search through google            | who-dis> john smith -tw | --twitter      \n" \
            "-in, --instagram    | Performs instagram search through google          | who-dis> john smith -in | --instagram    \n" \
+           "-re, --redit        | Performs reddit search through google             | who-dis> john smith -re | --reddit       \n" \
            "\n" \
            "\n" \
-           "-- [ Options for Individuals @ (People) Search Engines ] --\n" \
+           "-- [ Options for Individuals @ (People/Username) Search Engines ] --\n" \
            "\n" \
            "Options Short/Long  |  Description                                      |  Example                                 \n" \
            "=================== + ================================================= + =========================================\n" \
            "-g, --google        | Performs normal google search                     | who-dis> john smith -g | --google        \n" \
            "-p, --pipl          | Provided a link to pipl search engine             | who-dis> john smith -p | --pipl          \n" \
            "-p and -l           | Performs specific pipl using with location        | who-dis> john smith -p madrid -l         \n" \
+           "-reU, --redditUser  | Provides insights and statistics on reddit user   | who-dis> john smith -reU | --redditUser  \n" \
            "\n" \
            "\n" \
            "-- [ Options for Companies @ Search Engines] --\n" \

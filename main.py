@@ -10,6 +10,7 @@ import search.edgar as edgar
 import search.whois as whois
 import search.shodan as shodan
 import search.scanner as scanner
+import search.reddit as reddit
 
 
 # Welcome screen of the program.
@@ -102,6 +103,10 @@ if __name__ == '__main__':
         # provides a link to search in asafaweb website for vulnerability scanning.
         elif userCommand.__contains__('-sc') or userCommand.__contains__('--scan'):
             scanner.scanSearch(userCommand)
+
+        # # Uses reddit username to get insights on lifetime reddit activity.
+        elif userCommand.__contains__('-reU') or userCommand.__contains__('--redditUser'):
+            reddit.redditSearch(userCommand)
 
         # exits the program.
         elif userCommand == 'exit' or userCommand == 'quit':
