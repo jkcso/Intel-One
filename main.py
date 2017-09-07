@@ -2,6 +2,7 @@
 # External imports
 
 # Internal imports
+import intro
 import help
 import search.google as google
 import search.socialMedia as socialMedia
@@ -13,39 +14,9 @@ import search.scanner as scanner
 import search.reddit as reddit
 
 
-# Welcome screen of the program.
-def _welcomeMessage():
-    message = "####################################################################\n" \
-              "##                               _______                          ##\n" \
-              "##         ||        ||  ||      ||   ||                          ##\n" \
-              "##         ||    \   ||  ||      ||   ||  ___________             ##\n" \
-              "##         ||   \ \  ||  ||____  ||   ||  |__________|_           ##\n" \
-              "##         ||\ \  \ \||  ||   || ||___||   |___________|          ##\n" \
-              "##         ||________||  ||   || ||___||                          ##\n" \
-              "##                                                                ##\n" \
-              "##           __      _   -------\          _________              ##\n" \
-              "##         ||  \    |_|  \ \-----\        / /    / /              ##\n" \
-              "##         ||   \         \ \             \_\   / /               ##\n" \
-              "##         ||   /   ||     \ \                 / /                ##\n" \
-              "##         ||  /    ||     / /                /_/                 ##\n" \
-              "##         || /_____||____/ /                                     ##\n" \
-              "##         ||/______||_____/                  |_|                 ##\n" \
-              "##                                                                ##\n" \
-              "####################################################################\n" \
-              "Version 1.0\n" \
-              "\n" \
-              "Please press 'help' for user manual and options.\n" \
-              "Press exit or quit to exit the program\n" \
-              "Please refer to 'Known technical issues' section in README.md file for any problems you have.\n" \
-              "\n" \
-              "Written by Joseph Katsioloudes, 2017.\n" \
-              "\n"
-    print(message)
-
-
 # The main thread of the program.
 if __name__ == '__main__':
-    _welcomeMessage()
+    intro.welcomeMessage()
 
     # the main loop of the program running constantly until ctl+C or exit/quit is used.
     while True:
