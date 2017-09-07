@@ -6,9 +6,8 @@ from io import StringIO
 
 
 class TestSocialMedia(TestCase):
-
     # tests if socialSearcher search is returning back the correct link for single flag.
-    def test_socialSearcherSearch_singleDashFlag(self):
+    def test_socialSearcherSearch_shortFlag(self):
         query = "edgar -ss"
         with TestSocialMedia.captured_output(self) as (out, err):
             sm.SocialMedia.retrievePosts(query)
@@ -18,7 +17,7 @@ class TestSocialMedia(TestCase):
                                'https://www.social-searcher.com/google-social-search/?q=edgar&fb=on&tw=on&gp=on&in=on&li=on&pi=on')
 
     # tests if socialSearcher search is returning back the correct link for big flag.
-    def test_socialSearcherSearch_doubleDashFlag(self):
+    def test_socialSearcherSearch_longFlag(self):
         query = "edgar --social"
         with TestSocialMedia.captured_output(self) as (out, err):
             sm.SocialMedia.retrievePosts(query)
@@ -28,7 +27,7 @@ class TestSocialMedia(TestCase):
                                'https://www.social-searcher.com/google-social-search/?q=edgar&fb=on&tw=on&gp=on&in=on&li=on&pi=on')
 
     # tests if reddit search is returning back the correct link for single flag.
-    def test_redditSearch_singleDashFlag(self):
+    def test_redditSearch_shortFlag(self):
         query = "edgar -ure"
         with TestSocialMedia.captured_output(self) as (out, err):
             sm.SocialMedia.retrieveRedditUserStats(query)
@@ -37,7 +36,7 @@ class TestSocialMedia(TestCase):
         self.assertEqual(link, 'https://snoopsnoo.com/u/edgar')
 
     # tests if reddit search is returning back the correct link for big flag.
-    def test_redditSearch_doubleDashFlag(self):
+    def test_redditSearch_longFlag(self):
         query = "edgar --userReddit"
         with TestSocialMedia.captured_output(self) as (out, err):
             sm.SocialMedia.retrieveRedditUserStats(query)

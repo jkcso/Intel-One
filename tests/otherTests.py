@@ -6,7 +6,6 @@ from io import StringIO
 
 
 class TestOther(TestCase):
-
     # tests if shodan search is returning back the correct link for single flag.
     def test_shodanSearch_shortFlag(self):
         query = "zanussi -sh"

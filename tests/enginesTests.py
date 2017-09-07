@@ -6,9 +6,8 @@ from io import StringIO
 
 
 class TestEngines(TestCase):
-
     # tests if search is returning back the correct link for two terms.
-    def test_piplSearch_doubleWord(self):
+    def test_piplSearch_doubleTerm_shortFlag(self):
         query = "john lennon -p"
         with TestEngines.captured_output(self) as (out, err):
             engines.PeopleSearchEngines.piplSearch(query)
@@ -17,7 +16,7 @@ class TestEngines(TestCase):
         self.assertEqual(link, 'https://pipl.com/search/?q=john+lennon')
 
     # tests if search is giving back correct link for three or more terms.
-    def test_piplSearch_moreThanTwoWords(self):
+    def test_piplSearch_moreThanTwoWords_shortFlag(self):
         query = "dr john lennon -p"
         with TestEngines.captured_output(self) as (out, err):
             engines.PeopleSearchEngines.piplSearch(query)
@@ -26,7 +25,7 @@ class TestEngines(TestCase):
         self.assertEqual(link, 'https://pipl.com/search/?q=dr+john+lennon')
 
     # tests if search for location is giving back correct link for single word location.
-    def test_piplSearchLocation_singleWordLocation(self):
+    def test_piplSearchLocation_singleLocation(self):
         query = "john lennon -p madrid -l"
         with TestEngines.captured_output(self) as (out, err):
             engines.PeopleSearchEngines.piplSearchLocation(query)
@@ -35,7 +34,7 @@ class TestEngines(TestCase):
         self.assertEqual(link, 'https://pipl.com/search/?q=john+lennon&l=madrid')
 
     # tests if search for location is giving back correct link for single word location.
-    def test_piplSearchLocation_doubleWordLocation(self):
+    def test_piplSearchLocation_doubleLocation(self):
         query = "john lennon -p new york -l"
         with TestEngines.captured_output(self) as (out, err):
             engines.PeopleSearchEngines.piplSearchLocation(query)
@@ -44,7 +43,7 @@ class TestEngines(TestCase):
         self.assertEqual(link, 'https://pipl.com/search/?q=john+lennon&l=new+york')
 
     # tests searching using the long flag.
-    def test_piplSearch_LongTerm(self):
+    def test_piplSearch_LongFlag(self):
         query = "john lennon --pipl"
         with TestEngines.captured_output(self) as (out, err):
             engines.PeopleSearchEngines.piplSearch(query)

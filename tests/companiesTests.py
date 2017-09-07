@@ -6,9 +6,8 @@ from io import StringIO
 
 
 class TestCompanies(TestCase):
-
     # tests if search is returning back the correct link for two terms.
-    def test_edgarSearch_singleTerm(self):
+    def test_edgarSearch_singleTerm_shortFlag(self):
         query = "google -e"
         with TestCompanies.captured_output(self) as (out, err):
             companies.Companies.edgarSearch(query)
@@ -17,7 +16,7 @@ class TestCompanies(TestCase):
         self.assertEqual(link, 'https://www.sec.gov/cgi-bin/browse-edgar?company=google&owner=exclude&action=getcompany')
 
     # tests if search is returning back the correct link for two terms.
-    def test_edgarSearch_doubleTerm(self):
+    def test_edgarSearch_doubleTerm_shortFlag(self):
         query = "goldman sachs -e"
         with TestCompanies.captured_output(self) as (out, err):
             companies.Companies.edgarSearch(query)
@@ -26,7 +25,7 @@ class TestCompanies(TestCase):
         self.assertEqual(link, 'https://www.sec.gov/cgi-bin/browse-edgar?company=goldman+sachs&owner=exclude&action=getcompany')
 
     # tests if search is returning back the correct link for two terms.
-    def test_edgarSearch_singleTerm_fullFlag(self):
+    def test_edgarSearch_singleTerm_longFlag(self):
         query = "google --edgar"
         with TestCompanies.captured_output(self) as (out, err):
             companies.Companies.edgarSearch(query)
@@ -35,7 +34,7 @@ class TestCompanies(TestCase):
         self.assertEqual(link, 'https://www.sec.gov/cgi-bin/browse-edgar?company=google&owner=exclude&action=getcompany')
 
     # tests if search is returning back the correct link for two terms.
-    def test_edgarSearch_doubleTerm_fullFlag(self):
+    def test_edgarSearch_doubleTerm_longFlag(self):
         query = "goldman sachs --edgar"
         with TestCompanies.captured_output(self) as (out, err):
             companies.Companies.edgarSearch(query)
