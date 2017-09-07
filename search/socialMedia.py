@@ -1,38 +1,25 @@
 # imports the google wrapper class defined in this directory.
 import search.google as google
+# imports utilities class for performing parsing or spacing arrangements.
+import search.utilities as util
 
 
 # Responsible for social media account collection of target user, company or domain.
 class SocialMedia(object):
-    # Flags intro used by the user to indicate an action.
-    __SH_FLAG__ = '-'
-    __LO_FLAG__ = '--'
-
     # Advanced google dork used for returning results including the provided url.
-    __INURL__ = " inurl:"
+    __INURL__ = " inurl:\""
 
     # Social media websites that are currently supported by Who-Dis.
-    __FACEBOOK__ = "www.facebook.com"
-    __LINKEDIN__ = "www.linkedin.com"
-    __TWITTER__ = "www.twitter.com"
-    __INSTAGRAM__ = "www.instagram.com"
-    __REDDIT__ = "www.reddit.com"
-
-    # Uses social searcher website collecting posts on given keyword on all social media.
-    __startString__ = 0
-    # The length of the space character, used to remove trailing space at the end of parsing keyword.
-    __spaceCharLength__ = 1
-
-    # Parses the query to avoid the flag inclusion while performing google search.
-    def __parseQuery(query):
-        flagIndex = str(query).index(SocialMedia.__SH_FLAG__) or str(query).index(SocialMedia.__LO_FLAG__)
-        parsedQuery = query[SocialMedia.__startString__:flagIndex - SocialMedia.__spaceCharLength__]
-        return parsedQuery
+    __FACEBOOK__ = "www.facebook.com\""
+    __LINKEDIN__ = "www.linkedin.com\""
+    __TWITTER__ = "www.twitter.com\""
+    __INSTAGRAM__ = "www.instagram.com\""
+    __REDDIT__ = "www.reddit.com\""
 
     # Performs social search through google using the advanced google dork inurl.
     def retrieveAccounts(query, media):
         # Parses the query to avoid the flag inclusion while performing google search.
-        parsedQuery = SocialMedia.__parseQuery(query)
+        parsedQuery = util.Utilities.parseQuery(query)
         searchQuery = parsedQuery + SocialMedia.__INURL__
 
         # Searches in corresponding social media indicated by user.
@@ -51,7 +38,7 @@ class SocialMedia(object):
         elif media == 're':
             searchQuery += SocialMedia.__REDDIT__
 
-        return google.googleSearch(query)
+        return google.googleSearch(searchQuery)
 
     # Used to retrieve posts about target from all available social media websites.
     # TODO needs the space function for name+surname form
