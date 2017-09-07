@@ -18,14 +18,11 @@ if __name__ == '__main__':
         # holds the current command of the user.
         userQuery = str(input('who-dis> '))
 
-        # goes to help.
+        # provides help to the user.
         if userQuery == 'help' or userQuery == '-h' or userQuery == '--help':
             help.help()
 
-        # performs google search.
-        elif userQuery.__contains__('-g') or userQuery.__contains__('--google'):
-            engines.SearchEngines.googleSearch(userQuery)
-
+        # SOCIAL MEDIA
         # performs search about posts on the given keyword in social search website looking in all available social media.
         elif userQuery.__contains__('-ss') or userQuery.__contains__('--social'):
             social.SocialMedia.retrievePosts(userQuery)
@@ -54,6 +51,11 @@ if __name__ == '__main__':
         elif userQuery.__contains__('-ure') or userQuery.__contains__('--userReddit'):
             social.SocialMedia.retrieveRedditUserStats(userQuery)
 
+        # SEARCH ENGINES
+        # performs google search.
+        elif userQuery.__contains__('-g') or userQuery.__contains__('--google'):
+            engines.SearchEngines.googleSearch(userQuery)
+
         # performs a search in www.pipl.com containing location information as well to be more specific.
         elif userQuery.__contains__('-p') and userQuery.__contains__('-l'):
             engines.PeopleSearchEngines.piplSearchLocation(userQuery)
@@ -62,21 +64,24 @@ if __name__ == '__main__':
         elif userQuery.__contains__('-p') or userQuery.__contains__('--pipl'):
             engines.PeopleSearchEngines.piplSearch(userQuery)
 
+        # COMPANIES
         # provides a link to search for companies in www.sec.gov.
         elif userQuery.__contains__('-ed') or userQuery.__contains__('--edgar'):
             companies.Companies.edgarSearch(userQuery)
 
+        # DOMAINS
         # provides a link to search for target domains in who.is website.
         elif userQuery.__contains__('-wh') or userQuery.__contains__('--whois'):
             domains.Domains.whoIsSearch(userQuery)
 
-        # provides a link to search in shodan.io.
-        elif userQuery.__contains__('-sh') or userQuery.__contains__('--shodan'):
-            other.Other.shodanSearch(userQuery)
-
         # provides a link to search in asafaweb website for vulnerability scanning.
         elif userQuery.__contains__('-sc') or userQuery.__contains__('--scan'):
             domains.Domains.scanSearch(userQuery)
+
+        # OTHER
+        # provides a link to search in shodan.io.
+        elif userQuery.__contains__('-sh') or userQuery.__contains__('--shodan'):
+            other.Other.shodanSearch(userQuery)
 
         # exits the program.
         elif userQuery == 'exit' or userQuery == 'quit':
