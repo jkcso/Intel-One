@@ -1,5 +1,5 @@
 # imports the google wrapper class defined in this directory.
-import search.google as google
+import search.engines as engines
 # imports utilities class for performing parsing or spacing arrangements.
 import search.utilities as util
 
@@ -38,7 +38,7 @@ class SocialMedia(object):
         elif media == 're':
             searchQuery += SocialMedia.__REDDIT__
 
-        return google.googleSearch(searchQuery)
+        return engines.SearchEngines.googleSearch(searchQuery)
 
     # Used to retrieve posts about target from all available social media websites.
     def retrievePosts(query):

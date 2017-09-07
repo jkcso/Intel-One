@@ -2,7 +2,7 @@
 # Internal imports
 import intro
 import help
-import search.google as google
+import search.engines as engines
 import search.socialMedia as social
 import search.pipl as pipl
 import search.edgar as edgar
@@ -27,7 +27,7 @@ if __name__ == '__main__':
 
         # performs google search.
         elif userQuery.__contains__('-g') or userQuery.__contains__('--google'):
-            google.googleSearch(userQuery)
+            engines.SearchEngines.googleSearch(userQuery)
 
         # performs facebook search.
         elif userQuery.__contains__('-fb') or userQuery.__contains__('--facebook'):
