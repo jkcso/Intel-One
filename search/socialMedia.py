@@ -41,13 +41,12 @@ class SocialMedia(object):
         return google.googleSearch(searchQuery)
 
     # Used to retrieve posts about target from all available social media websites.
-    # TODO needs the space function for name+surname form
-    # def retrievePosts(query):
-    #     parsedQuery = SocialMedia.__parseQuery(query)
-    #     # search string used in the address bar to perform search.
-    #     postsLink_1 = 'https://www.social-searcher.com/social-buzz/?q5=' + parsedQuery
-    #     postsLink_2 = 'https://www.social-searcher.com/google-social-search/?q=' + parsedQuery + '&fb=on&tw=on&gp=on&in=on&li=on&pi=on'
-    #     # returns a web page as a result of this search.
-    #     print(postsLink_1)
-    #     print(postsLink_2)
-    #     print()
+    def retrievePosts(query):
+        parsedQuery = util.Utilities.parseQuery(query)
+        # search string used in the address bar to perform search.
+        postsLink_1 = 'https://www.social-searcher.com/social-buzz/?q5=' + parsedQuery
+        postsLink_2 = 'https://www.social-searcher.com/google-social-search/?q=' + parsedQuery + '&fb=on&tw=on&gp=on&in=on&li=on&pi=on'
+        # returns a web page as a result of this search.
+        print(postsLink_1)
+        print(postsLink_2)
+        print()

@@ -50,8 +50,8 @@ if __name__ == '__main__':
             social.SocialMedia.retrieveAccounts(userQuery, 're')
 
         # performs search about posts on the given keyword in social search website looking in all available social media.
-        # elif userQuery.__contains__('-ss') or userQuery.__contains__('--social'):
-        #     social.SocialMedia.retrievePosts(userQuery)
+        elif userQuery.__contains__('-ss') or userQuery.__contains__('--social'):
+            social.SocialMedia.retrievePosts(userQuery)
 
         # performs a search in www.pipl.com containing location information as well to be more specific.
         elif userQuery.__contains__('-p') and userQuery.__contains__('-l'):
