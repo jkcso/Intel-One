@@ -54,6 +54,7 @@ class SocialSearcher:
         # returns a web page as a result of this search.
         print(ssLink_1)
         print(ssLink_2)
+        print()
 
     # Parses the query by cutting the -p flag.
     def _ssParse(query):

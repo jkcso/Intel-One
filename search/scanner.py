@@ -9,6 +9,7 @@ def scanSearch(query):
     scanLink = 'https://asafaweb.com/Scan?Url=' + _scanParse(query)
     # returns a web page as a result of this search.
     print(scanLink)
+    print()
 
 
 # Parses the query by cutting the -p flag.

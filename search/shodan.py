@@ -9,6 +9,7 @@ def shodanSearch(query):
     shodanLink = 'https://www.shodan.io/search?query=' + _shodanParse(query)
     # returns a web page as a result of this search.
     print(shodanLink)
+    print()
 
 
 # Parses the query by cutting the -p flag.

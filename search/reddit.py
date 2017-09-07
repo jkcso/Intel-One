@@ -8,6 +8,7 @@ def redditSearch(query):
     redditLink = 'https://snoopsnoo.com/u/' + _redditParse(query)
     # returns a web page as a result of this search.
     print(redditLink)
+    print()
 
 
 # Parses the query by cutting the -p flag.

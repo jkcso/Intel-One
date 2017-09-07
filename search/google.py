@@ -15,3 +15,4 @@ __PAUSE__ = 2
 def googleSearch(query):
     for result in search(query, tld=__TLD__, num=__NUM_RESULTS__, stop=__STOP__, pause=__PAUSE__):
         print(result)
+    print()

@@ -9,6 +9,7 @@ def edgarSearch(query):
     edgarLink = 'https://www.sec.gov/cgi-bin/browse-edgar?company=' + _edgarParse(query) + '&owner=exclude&action=getcompany'
     # returns a web page as a result of this search.
     print(edgarLink)
+    print()
 
 
 # Removes space and adds the plus sign to complete the query.

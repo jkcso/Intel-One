@@ -12,6 +12,7 @@ def piplSearch(query):
     piplLink = 'https://pipl.com/search/?q=' + _piplParse(query)
     # returns a web page as a result of this search.
     print(piplLink)
+    print()
 
 
 # This function performs search to the optional location in www.pipl.com.

@@ -9,6 +9,7 @@ def whoIsSearch(query):
     whoIsLink = 'https://who.is/whois/' + _whoIsParse(query)
     # returns a web page as a result of this search.
     print(whoIsLink)
+    print()
 
 
 # Parses the query by cutting the -p flag.
