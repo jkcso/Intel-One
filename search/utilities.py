@@ -19,11 +19,11 @@ class Utilities(object):
         # Handles the cases where search terms are > 1 therefore we need to add a '+' in the position of each space.
         parsedQueryNumSpaces = str(query).count(' ')
         if parsedQueryNumSpaces > Utilities.__spaceMAX__:
-            parsedQuery = Utilities.__removeSpaces__(parsedQuery)
+            parsedQuery = Utilities.substituteSpaces(parsedQuery)
 
         return parsedQuery
 
     # Removes space and adds the plus sign to complete the query.
-    def __removeSpaces__(query):
+    def substituteSpaces(query):
         numSpaces = str(query).count(' ')
         return str(query).replace(' ', '+', numSpaces)

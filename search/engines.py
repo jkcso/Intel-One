@@ -1,5 +1,6 @@
 # Library used to search in google.
 from google import search
+import search.utilities as util
 
 
 # Class responsible for search engine search.
@@ -24,4 +25,34 @@ class SearchEngines(object):
 
 # Class responsible for people search engines' search.
 class PeopleSearchEngines(object):
-    pass
+
+    # Performs a search in www.pipl.com to capture the social media not captured above.
+    def piplSearch(query):
+        # search string used in the address bar to perform search.
+        parsedQuery = util.Utilities.parseQuery(query)
+        piplLink = 'https://pipl.com/search/?q=' + parsedQuery
+        # returns a web page as a result of this search.
+        print(piplLink)
+        print()
+
+    # This function performs search to the optional location in www.pipl.com.
+    def piplSearchLocation(query):
+        parsedLocation = PeopleSearchEngines.__parseLocation__(query)
+        parsedQuery = util.Utilities.parseQuery(query)
+        piplLink = 'https://pipl.com/search/?q=' + parsedQuery + '&l=' + parsedLocation
+        print(piplLink)
+        print()
+
+    # Parses the query to return the location by splitting it.
+    def __parseLocation__(query):
+        first = '-p '
+        last = ' -l'
+        try:
+            stringQuery = str(query)
+            start = stringQuery.index(first) + len(first)
+            end = stringQuery.index(last, start)
+            parsedQuery = query[start:end]
+            parsedQuery = util.Utilities.substituteSpaces(parsedQuery)
+            return parsedQuery
+        except ValueError:
+            return ""

@@ -4,7 +4,6 @@ import intro
 import help
 import search.engines as engines
 import search.socialMedia as social
-import search.pipl as pipl
 import search.edgar as edgar
 import search.whois as whois
 import search.shodan as shodan
@@ -55,11 +54,11 @@ if __name__ == '__main__':
 
         # performs a search in www.pipl.com containing location information as well to be more specific.
         elif userQuery.__contains__('-p') and userQuery.__contains__('-l'):
-            pipl.piplSearchLocation(userQuery)
+            engines.PeopleSearchEngines.piplSearchLocation(userQuery)
 
         # performs a search in www.pipl.com to capture the social media not captured above.
         elif userQuery.__contains__('-p') or userQuery.__contains__('--pipl'):
-            pipl.piplSearch(userQuery)
+            engines.PeopleSearchEngines.piplSearch(userQuery)
 
         # provides a link to search for companies in www.sec.gov.
         elif userQuery.__contains__('-e') or userQuery.__contains__('--edgar'):
