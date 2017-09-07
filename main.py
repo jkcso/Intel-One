@@ -8,7 +8,6 @@ import search.edgar as edgar
 import search.whois as whois
 import search.shodan as shodan
 import search.scanner as scanner
-import search.reddit as reddit
 
 
 # The main thread of the program.
@@ -27,6 +26,10 @@ if __name__ == '__main__':
         # performs google search.
         elif userQuery.__contains__('-g') or userQuery.__contains__('--google'):
             engines.SearchEngines.googleSearch(userQuery)
+
+        # performs search about posts on the given keyword in social search website looking in all available social media.
+        elif userQuery.__contains__('-ss') or userQuery.__contains__('--social'):
+            social.SocialMedia.retrievePosts(userQuery)
 
         # performs facebook search.
         elif userQuery.__contains__('-fb') or userQuery.__contains__('--facebook'):
@@ -48,9 +51,9 @@ if __name__ == '__main__':
         elif userQuery.__contains__('-re') or userQuery.__contains__('--reddit'):
             social.SocialMedia.retrieveAccounts(userQuery, 're')
 
-        # performs search about posts on the given keyword in social search website looking in all available social media.
-        elif userQuery.__contains__('-ss') or userQuery.__contains__('--social'):
-            social.SocialMedia.retrievePosts(userQuery)
+        # # Uses reddit username to get insights on lifetime reddit activity.
+        elif userQuery.__contains__('-ure') or userQuery.__contains__('--userReddit'):
+            social.SocialMedia.retrieveRedditUserStats(userQuery)
 
         # performs a search in www.pipl.com containing location information as well to be more specific.
         elif userQuery.__contains__('-p') and userQuery.__contains__('-l'):
@@ -75,10 +78,6 @@ if __name__ == '__main__':
         # provides a link to search in asafaweb website for vulnerability scanning.
         elif userQuery.__contains__('-sc') or userQuery.__contains__('--scan'):
             scanner.scanSearch(userQuery)
-
-        # # Uses reddit username to get insights on lifetime reddit activity.
-        elif userQuery.__contains__('-reU') or userQuery.__contains__('--redditUser'):
-            reddit.redditSearch(userQuery)
 
         # exits the program.
         elif userQuery == 'exit' or userQuery == 'quit':

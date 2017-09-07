@@ -40,7 +40,7 @@ Options Short/Long  |  Description                                      |  Examp
 -g, --google        | Performs normal google search                     | who-dis> john smith -g | --google        
 -p, --pipl          | Provided a link to pipl search engine             | who-dis> john smith -p | --pipl          
 -p and -l           | Performs specific pipl using with location        | who-dis> john smith -p madrid -l         
--reU, --redditUser  | Provides insights and statistics on reddit user   | who-dis> john smith -reU | --redditUser  
+-ure, --userReddit  | Provides insights and statistics on reddit user   | who-dis> john smith -reU | --redditUser  
            
            
 -- [ Options for Companies @ Search Engines] --

@@ -50,3 +50,11 @@ class SocialMedia(object):
         print(postsLink_1)
         print(postsLink_2)
         print()
+
+    # Uses reddit username to get insights on lifetime reddit activity.
+    def retrieveRedditUserStats(query):
+        # search string used in the address bar to perform search.
+        redditLink = 'https://snoopsnoo.com/u/' + util.Utilities.parseQuery(query)
+        # returns a web page as a result of this search.
+        print(redditLink)
+        print()
