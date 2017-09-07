@@ -1,5 +1,5 @@
 from unittest import TestCase
-import search.whois as whois
+import search.domains as whois
 import sys
 from contextlib import contextmanager
 from io import StringIO
