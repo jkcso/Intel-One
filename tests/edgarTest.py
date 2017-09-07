@@ -1,5 +1,5 @@
 from unittest import TestCase
-import search.edgar as edgar
+import search.companies as edgar
 import sys
 from contextlib import contextmanager
 from io import StringIO

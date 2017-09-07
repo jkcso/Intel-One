@@ -1,5 +1,5 @@
 from unittest import TestCase
-import search.shodan as shodan
+import search.other as shodan
 import sys
 from contextlib import contextmanager
 from io import StringIO

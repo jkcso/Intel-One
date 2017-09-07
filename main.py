@@ -4,9 +4,9 @@ import intro
 import help
 import search.engines as engines
 import search.socialMedia as social
-import search.edgar as edgar
+import search.companies as companies
 import search.domains as domains
-import search.shodan as shodan
+import search.other as other
 
 
 # The main thread of the program.
@@ -64,7 +64,7 @@ if __name__ == '__main__':
 
         # provides a link to search for companies in www.sec.gov.
         elif userQuery.__contains__('-e') or userQuery.__contains__('--edgar'):
-            edgar.edgarSearch(userQuery)
+            companies.Companies.edgarSearch(userQuery)
 
         # provides a link to search for target domains in who.is website.
         elif userQuery.__contains__('-w') or userQuery.__contains__('--whois'):
@@ -72,7 +72,7 @@ if __name__ == '__main__':
 
         # provides a link to search in shodan.io.
         elif userQuery.__contains__('-sh') or userQuery.__contains__('--shodan'):
-            shodan.shodanSearch(userQuery)
+            other.Other.shodanSearch(userQuery)
 
         # provides a link to search in asafaweb website for vulnerability scanning.
         elif userQuery.__contains__('-sc') or userQuery.__contains__('--scan'):
