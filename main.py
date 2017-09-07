@@ -8,6 +8,7 @@ import search.companies as companies
 import search.domains as domains
 import search.other as other
 
+__listLastIndex__ = 1
 
 # The main thread of the program.
 if __name__ == '__main__':
@@ -17,70 +18,74 @@ if __name__ == '__main__':
     while True:
         # holds the current command of the user.
         userQuery = str(input('who-dis> '))
+        parsedUserQuery = userQuery.split(' ')
+        lenUserQuery = len(parsedUserQuery)
+        effectiveLen = lenUserQuery - __listLastIndex__
 
         # provides help to the user.
-        if userQuery == 'help' or userQuery == '-h' or userQuery == '--help':
+        if userQuery == 'help':
             help.help()
 
         # SOCIAL MEDIA
         # performs search about posts on the given keyword in social search website looking in all available social media.
-        elif userQuery.__contains__('-ss') or userQuery.__contains__('--social'):
+        elif parsedUserQuery[effectiveLen] == '-ss' or parsedUserQuery[effectiveLen] == '--social':
             social.SocialMedia.retrievePosts(userQuery)
 
         # performs facebook search.
-        elif userQuery.__contains__('-fb') or userQuery.__contains__('--facebook'):
+        elif parsedUserQuery[effectiveLen] == '-fb' or parsedUserQuery[effectiveLen] == '--facebook':
             social.SocialMedia.retrieveAccounts(userQuery, 'fb')
 
         # performs linkedin search.
-        elif userQuery.__contains__('-ln') or userQuery.__contains__('--linkedin'):
+        elif parsedUserQuery[effectiveLen] == '-ln' or parsedUserQuery[effectiveLen] == '--linkedin':
             social.SocialMedia.retrieveAccounts(userQuery, 'ln')
 
         # performs twitter search.
-        elif userQuery.__contains__('-tw') or userQuery.__contains__('--twitter'):
+        elif parsedUserQuery[effectiveLen] == '-tw' or parsedUserQuery[effectiveLen] == '--twitter':
             social.SocialMedia.retrieveAccounts(userQuery, 'tw')
 
         # performs instagram search.
-        elif userQuery.__contains__('-in') or userQuery.__contains__('--instagram'):
+        elif parsedUserQuery[effectiveLen] == '-in' or parsedUserQuery[effectiveLen] == '--instagram':
             social.SocialMedia.retrieveAccounts(userQuery, 'in')
 
         # performs reddit search.
-        elif userQuery.__contains__('-re') or userQuery.__contains__('--reddit'):
+        elif parsedUserQuery[effectiveLen] == '-re' or parsedUserQuery[effectiveLen] == '--reddit':
             social.SocialMedia.retrieveAccounts(userQuery, 're')
 
-        # # Uses reddit username to get insights on lifetime reddit activity.
-        elif userQuery.__contains__('-ure') or userQuery.__contains__('--userReddit'):
+        # Uses reddit username to get insights on lifetime reddit activity.
+        elif parsedUserQuery[effectiveLen] == '-ure' or parsedUserQuery[effectiveLen] == '--userReddit':
             social.SocialMedia.retrieveRedditUserStats(userQuery)
 
         # SEARCH ENGINES
         # performs google search.
-        elif userQuery.__contains__('-g') or userQuery.__contains__('--google'):
+        elif parsedUserQuery[effectiveLen] == '-g' or parsedUserQuery[effectiveLen] == '--google':
             engines.SearchEngines.googleSearch(userQuery)
+
+        # PEOPLE SEARCH ENGINES
+        # performs a search in www.pipl.com to capture the social media not captured above.
+        elif parsedUserQuery[effectiveLen] == '-p' or parsedUserQuery[effectiveLen] == '--pipl':
+            engines.PeopleSearchEngines.piplSearch(userQuery)
 
         # performs a search in www.pipl.com containing location information as well to be more specific.
         elif userQuery.__contains__('-p') and userQuery.__contains__('-l'):
             engines.PeopleSearchEngines.piplSearchLocation(userQuery)
 
-        # performs a search in www.pipl.com to capture the social media not captured above.
-        elif userQuery.__contains__('-p') or userQuery.__contains__('--pipl'):
-            engines.PeopleSearchEngines.piplSearch(userQuery)
-
         # COMPANIES
         # provides a link to search for companies in www.sec.gov.
-        elif userQuery.__contains__('-ed') or userQuery.__contains__('--edgar'):
+        elif parsedUserQuery[effectiveLen] == '-ed' or parsedUserQuery[effectiveLen] == '--edgar':
             companies.Companies.edgarSearch(userQuery)
 
         # DOMAINS
         # provides a link to search for target domains in who.is website.
-        elif userQuery.__contains__('-wh') or userQuery.__contains__('--whois'):
+        elif parsedUserQuery[effectiveLen] == '-wh' or parsedUserQuery[effectiveLen] == '--whois':
             domains.Domains.whoIsSearch(userQuery)
 
         # provides a link to search in asafaweb website for vulnerability scanning.
-        elif userQuery.__contains__('-sc') or userQuery.__contains__('--scan'):
+        elif parsedUserQuery[effectiveLen] == '-sc' or parsedUserQuery[effectiveLen] == '--scan':
             domains.Domains.scanSearch(userQuery)
 
         # OTHER
         # provides a link to search in shodan.io.
-        elif userQuery.__contains__('-sh') or userQuery.__contains__('--shodan'):
+        elif parsedUserQuery[effectiveLen] == '-sh' or parsedUserQuery[effectiveLen] == '--shodan':
             other.Other.shodanSearch(userQuery)
 
         # exits the program.
@@ -92,3 +97,4 @@ if __name__ == '__main__':
             errorString = " command not found, press 'help' to view the help menu."
             errorMessage = "'" + userQuery + "'" + errorString
             print(errorMessage)
+            print()
