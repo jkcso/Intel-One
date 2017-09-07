@@ -8,7 +8,7 @@ from io import StringIO
 class TestCompanies(TestCase):
     # tests if search is returning back the correct link for two terms.
     def test_edgarSearch_singleTerm_shortFlag(self):
-        query = "google -e"
+        query = "google -ed"
         with TestCompanies.captured_output(self) as (out, err):
             companies.Companies.edgarSearch(query)
         # This can go inside or outside the `with` block
@@ -17,7 +17,7 @@ class TestCompanies(TestCase):
 
     # tests if search is returning back the correct link for two terms.
     def test_edgarSearch_doubleTerm_shortFlag(self):
-        query = "goldman sachs -e"
+        query = "goldman sachs -ed"
         with TestCompanies.captured_output(self) as (out, err):
             companies.Companies.edgarSearch(query)
         # This can go inside or outside the `with` block

@@ -8,7 +8,7 @@ from io import StringIO
 class TestDomains(TestCase):
     # tests if whois search is returning back the correct link for single flag.
     def test_whoIs_shortFlag(self):
-        query = "www.abc.com -w"
+        query = "www.abc.com -wh"
         with TestDomains.captured_output(self) as (out, err):
             domains.Domains.whoIsSearch(query)
         # This can go inside or outside the `with` block

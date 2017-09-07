@@ -63,11 +63,11 @@ if __name__ == '__main__':
             engines.PeopleSearchEngines.piplSearch(userQuery)
 
         # provides a link to search for companies in www.sec.gov.
-        elif userQuery.__contains__('-e') or userQuery.__contains__('--edgar'):
+        elif userQuery.__contains__('-ed') or userQuery.__contains__('--edgar'):
             companies.Companies.edgarSearch(userQuery)
 
         # provides a link to search for target domains in who.is website.
-        elif userQuery.__contains__('-w') or userQuery.__contains__('--whois'):
+        elif userQuery.__contains__('-wh') or userQuery.__contains__('--whois'):
             domains.Domains.whoIsSearch(userQuery)
 
         # provides a link to search in shodan.io.

@@ -48,7 +48,7 @@ Options Short/Long  |  Description                                      |  Examp
 Options Short/Long  |  Description                                      |  Example                                 
 =================== + ================================================= + =========================================
 -g, --google        | Performs normal google search                     | who-dis> glovdi -g | --google            
--e, --edgar         | Performs search using edgar company search engine | who-dis> glovdi -e | --edgar             
+-ed, --edgar        | Performs search using edgar company search engine | who-dis> glovdi -e | --edgar             
            
        
 -- [ Options for Companies @ Social Media] --
@@ -66,7 +66,7 @@ Options Short/Long  |  Description                                      |  Examp
            
 Options Short/Long  |  Description                                      |  Example                                 
 =================== + ================================================= + =========================================
--w, --whois         | Performs whois search in the target domain        | who-dis> glovdi.com -w | --whois     
+-wh, --whois        | Performs whois search in the target domain        | who-dis> glovdi.com -w | --whois     
 -sc, --scan         | Performs a vulnerability scan using asafaweb site | who-dis> glovdi.com -sc | --scan     
            
            
