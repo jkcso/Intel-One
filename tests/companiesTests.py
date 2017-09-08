@@ -42,6 +42,26 @@ class TestCompanies(TestCase):
         link = out.getvalue().strip()
         self.assertEqual(link, 'https://www.sec.gov/cgi-bin/browse-edgar?company=goldman+sachs&owner=exclude&action=getcompany')
 
+    # tests if search is returning back the correct link for two terms.
+    def test_annualReportSearch_shortFlag(self):
+        query = "natwest -ar"
+        with TestCompanies.captured_output(self) as (out, err):
+            companies.Companies.annualReportSearch(query)
+        # This can go inside or outside the `with` block
+        link = out.getvalue().strip()
+        self.assertEqual(link, 'http://www.annualreports.com/Companies?search=natwest\n'
+                               'https://www.reportlinker.com/report/search/keywords/natwest')
+
+    # tests if search is returning back the correct link for two terms.
+    def test_annualReportSearch_longFlag(self):
+        query = "natwest --reports"
+        with TestCompanies.captured_output(self) as (out, err):
+            companies.Companies.annualReportSearch(query)
+        # This can go inside or outside the `with` block
+        link = out.getvalue().strip()
+        self.assertEqual(link, 'http://www.annualreports.com/Companies?search=natwest\n'
+                               'https://www.reportlinker.com/report/search/keywords/natwest')
+
     # tests output in screen.
     @contextmanager
     def captured_output(self):

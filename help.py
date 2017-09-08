@@ -49,6 +49,7 @@ Options Short/Long  |  Description                                      |  Examp
 =================== + ================================================= + =========================================
 -g, --google        | Performs normal google search                     | who-dis> glovdi -g | --google            
 -ed, --edgar        | Performs search using edgar company search engine | who-dis> glovdi -ed | --edgar             
+-ar, --reports      | Provides 2 links with annual reports of companies | who-dis> glovdi -ar | --reports
            
        
 -- [ Options for Companies @ Social Media] --

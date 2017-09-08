@@ -74,6 +74,10 @@ if __name__ == '__main__':
         elif parsedUserQuery[effectiveLen] == '-ed' or parsedUserQuery[effectiveLen] == '--edgar':
             companies.Companies.edgarSearch(userQuery)
 
+        # Provides link to annual reports, slideshows and other insights of a company.
+        elif parsedUserQuery[effectiveLen] == '-ar' or parsedUserQuery[effectiveLen] == '--reports':
+            companies.Companies.annualReportSearch(userQuery)
+
         # DOMAINS
         # provides a link to search for target domains in who.is website.
         elif parsedUserQuery[effectiveLen] == '-wh' or parsedUserQuery[effectiveLen] == '--whois':
