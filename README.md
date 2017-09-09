@@ -29,6 +29,7 @@ To be updated soon.
 ### Targeting companies
 - Same social media search as above when applicable.
 - Company search using the edgar search engine returning difficult to find and often confidential information about companies.
+- Company search in corporate wiki aka the wikipedia of Corporations.
 - Annual reports, slideshows and other insights.
 
 ### Targeting domains

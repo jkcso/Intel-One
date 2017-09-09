@@ -48,7 +48,8 @@ Options Short/Long  |  Description                                      |  Examp
 Options Short/Long  |  Description                                      |  Example                                 
 =================== + ================================================= + =========================================
 -g, --google        | Performs normal google search                     | who-dis> glovdi -g | --google            
--ed, --edgar        | Performs search using edgar company search engine | who-dis> glovdi -ed | --edgar             
+-ed, --edgar        | Performs search using edgar company search engine | who-dis> glovdi -ed | --edgar
+-cw, --corpWiki     | Provides a link in the wikipedia of corporations  | who-dis> glovdi -cw | --corpWiki             
 -ar, --reports      | Provides 2 links with annual reports of companies | who-dis> glovdi -ar | --reports
            
        

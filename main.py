@@ -74,6 +74,10 @@ if __name__ == '__main__':
         elif parsedUserQuery[effectiveLen] == '-ed' or parsedUserQuery[effectiveLen] == '--edgar':
             companies.Companies.edgarSearch(userQuery)
 
+        # Provides link to corporate wiki that includes a lot of information about a target company.
+        elif parsedUserQuery[effectiveLen] == '-cw' or parsedUserQuery[effectiveLen] == '--corpWiki':
+            companies.Companies.corpWikiSearch(userQuery)
+
         # Provides link to annual reports, slideshows and other insights of a company.
         elif parsedUserQuery[effectiveLen] == '-ar' or parsedUserQuery[effectiveLen] == '--reports':
             companies.Companies.annualReportSearch(userQuery)
