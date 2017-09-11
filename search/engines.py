@@ -21,6 +21,27 @@ class SearchEngines(object):
             print(result)
         print()
 
+    # returns duckduckgo searhable link.
+    def ddGoSearch(query):
+        parsedQuery = util.Utilities.parseQuery(query)
+        piplLink = 'https://duckduckgo.com/?q=' + parsedQuery
+        print(piplLink)
+        print()
+
+    # returns a baidu searchable link.
+    def baiduSearch(query):
+        parsedQuery = util.Utilities.parseQuery(query)
+        piplLink = 'http://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=0&rsv_idx=1&tn=baidu&wd=' + parsedQuery
+        print(piplLink)
+        print()
+
+    # returns a link in bing search engine to search.
+    def bingSearch(query):
+        parsedQuery = util.Utilities.parseQuery(query)
+        piplLink = 'https://www.bing.com/search?q=' + parsedQuery
+        print(piplLink)
+        print()
+
 
 # Class responsible for people search engines' search.
 class PeopleSearchEngines(object):

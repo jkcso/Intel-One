@@ -11,7 +11,6 @@ class TestCompanies(TestCase):
         query = "google -ed"
         with TestCompanies.captured_output(self) as (out, err):
             companies.Companies.edgarSearch(query)
-        # This can go inside or outside the `with` block
         link = out.getvalue().strip()
         self.assertEqual(link, 'https://www.sec.gov/cgi-bin/browse-edgar?company=google&owner=exclude&action=getcompany')
 
@@ -20,7 +19,6 @@ class TestCompanies(TestCase):
         query = "goldman sachs -ed"
         with TestCompanies.captured_output(self) as (out, err):
             companies.Companies.edgarSearch(query)
-        # This can go inside or outside the `with` block
         link = out.getvalue().strip()
         self.assertEqual(link, 'https://www.sec.gov/cgi-bin/browse-edgar?company=goldman+sachs&owner=exclude&action=getcompany')
 
@@ -29,7 +27,6 @@ class TestCompanies(TestCase):
         query = "google --edgar"
         with TestCompanies.captured_output(self) as (out, err):
             companies.Companies.edgarSearch(query)
-        # This can go inside or outside the `with` block
         link = out.getvalue().strip()
         self.assertEqual(link, 'https://www.sec.gov/cgi-bin/browse-edgar?company=google&owner=exclude&action=getcompany')
 
@@ -38,7 +35,6 @@ class TestCompanies(TestCase):
         query = "goldman sachs --edgar"
         with TestCompanies.captured_output(self) as (out, err):
             companies.Companies.edgarSearch(query)
-        # This can go inside or outside the `with` block
         link = out.getvalue().strip()
         self.assertEqual(link, 'https://www.sec.gov/cgi-bin/browse-edgar?company=goldman+sachs&owner=exclude&action=getcompany')
 
@@ -47,7 +43,6 @@ class TestCompanies(TestCase):
         query = "google -cw"
         with TestCompanies.captured_output(self) as (out, err):
             companies.Companies.corpWikiSearch(query)
-        # This can go inside or outside the `with` block
         link = out.getvalue().strip()
         self.assertEqual(link,
                             'https://www.corporationwiki.com/search/results?term=google')
@@ -57,7 +52,6 @@ class TestCompanies(TestCase):
         query = "google --corpWiki"
         with TestCompanies.captured_output(self) as (out, err):
             companies.Companies.corpWikiSearch(query)
-        # This can go inside or outside the `with` block
         link = out.getvalue().strip()
         self.assertEqual(link,
                             'https://www.corporationwiki.com/search/results?term=google')
@@ -67,7 +61,6 @@ class TestCompanies(TestCase):
         query = "natwest -ar"
         with TestCompanies.captured_output(self) as (out, err):
             companies.Companies.annualReportSearch(query)
-        # This can go inside or outside the `with` block
         link = out.getvalue().strip()
         self.assertEqual(link, 'http://www.annualreports.com/Companies?search=natwest\n'
                                'https://www.reportlinker.com/report/search/keywords/natwest')
@@ -77,7 +70,6 @@ class TestCompanies(TestCase):
         query = "natwest --reports"
         with TestCompanies.captured_output(self) as (out, err):
             companies.Companies.annualReportSearch(query)
-        # This can go inside or outside the `with` block
         link = out.getvalue().strip()
         self.assertEqual(link, 'http://www.annualreports.com/Companies?search=natwest\n'
                                'https://www.reportlinker.com/report/search/keywords/natwest')

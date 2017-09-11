@@ -25,12 +25,14 @@ To be updated soon.
 - Specific social media search using Facebook, Linkedin, Twitter, Instagram and Reddit.
 - People search engines using just a name or both a name and a location.
 - Get insights on lifetime reddit user activity by providing a username.
+- Search engine search in google, duckduckgo, baidu and bing.
 
 ### Targeting companies
 - Same social media search as above when applicable.
 - Company search using the edgar search engine returning difficult to find and often confidential information about companies.
 - Company search in corporate wiki aka the wikipedia of Corporations.
 - Annual reports, slideshows and other insights.
+- Search engine search in google, duckduckgo, baidu and bing.
 
 ### Targeting domains
 - Whois lookup.

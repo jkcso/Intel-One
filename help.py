@@ -37,7 +37,10 @@ Options Short/Long  |  Description                                      |  Examp
            
 Options Short/Long  |  Description                                      |  Example                                 
 =================== + ================================================= + =========================================
--g, --google        | Performs normal google search                     | who-dis> john smith -g | --google        
+-g, --google        | Performs normal google search                     | who-dis> john smith -g | --google      
+-ddg, --ddGo        | Performs search in duck duck go search engine     | who-dis> john smith -ddg | --ddGo
+-bd, --baidu        | Performs search in chinese engine baidu           | who-dis> john smith -bd | --baidu
+-bg, --bing         | Performs search in bing search engine             | who-dis> john smith -bg | --bing      
 -p, --pipl          | Provided a link to pipl search engine             | who-dis> john smith -p | --pipl          
 -p and -l           | Performs specific pipl using with location        | who-dis> john smith -p madrid -l         
 -ure, --userReddit  | Provides insights and statistics on reddit user   | who-dis> john smith -ure | --userReddit  
@@ -47,7 +50,10 @@ Options Short/Long  |  Description                                      |  Examp
            
 Options Short/Long  |  Description                                      |  Example                                 
 =================== + ================================================= + =========================================
--g, --google        | Performs normal google search                     | who-dis> glovdi -g | --google            
+-g, --google        | Performs normal google search                     | who-dis> glovdi -g | --google
+-ddg, --ddGo        | Performs search in duck duck go search engine     | who-dis> john smith -ddg | --ddGo
+-bd, --baidu        | Performs search in chinese engine baidu           | who-dis> john smith -bd | --baidu
+-bg, --bing         | Performs search in bing search engine             | who-dis> john smith -bg | --bing            
 -ed, --edgar        | Performs search using edgar company search engine | who-dis> glovdi -ed | --edgar
 -cw, --corpWiki     | Provides a link in the wikipedia of corporations  | who-dis> glovdi -cw | --corpWiki             
 -ar, --reports      | Provides 2 links with annual reports of companies | who-dis> glovdi -ar | --reports

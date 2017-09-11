@@ -60,6 +60,18 @@ if __name__ == '__main__':
         elif parsedUserQuery[effectiveLen] == '-g' or parsedUserQuery[effectiveLen] == '--google':
             engines.SearchEngines.googleSearch(userQuery)
 
+        # performs duckduckgo search.
+        elif parsedUserQuery[effectiveLen] == '-ddg' or parsedUserQuery[effectiveLen] == '--ddGo':
+            engines.SearchEngines.ddGoSearch(userQuery)
+
+        # performs baidu search.
+        elif parsedUserQuery[effectiveLen] == '-bd' or parsedUserQuery[effectiveLen] == '--baidu':
+            engines.SearchEngines.baiduSearch(userQuery)
+
+        # performs bing search.
+        elif parsedUserQuery[effectiveLen] == '-bg' or parsedUserQuery[effectiveLen] == '--bing':
+            engines.SearchEngines.bingSearch(userQuery)
+
         # PEOPLE SEARCH ENGINES
         # performs a search in www.pipl.com to capture the social media not captured above.
         elif parsedUserQuery[effectiveLen] == '-p' or parsedUserQuery[effectiveLen] == '--pipl':

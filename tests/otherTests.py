@@ -11,7 +11,6 @@ class TestOther(TestCase):
         query = "zanussi -sh"
         with TestOther.captured_output(self) as (out, err):
             other.Other.shodanSearch(query)
-        # This can go inside or outside the `with` block
         link = out.getvalue().strip()
         self.assertEqual(link, 'https://www.shodan.io/search?query=zanussi')
 
@@ -20,7 +19,6 @@ class TestOther(TestCase):
         query = "zanussi --shodan"
         with TestOther.captured_output(self) as (out, err):
             other.Other.shodanSearch(query)
-        # This can go inside or outside the `with` block
         link = out.getvalue().strip()
         self.assertEqual(link, 'https://www.shodan.io/search?query=zanussi')
 

@@ -11,7 +11,6 @@ class TestSocialMedia(TestCase):
         query = "edgar -ss"
         with TestSocialMedia.captured_output(self) as (out, err):
             sm.SocialMedia.retrievePosts(query)
-        # This can go inside or outside the `with` block
         link = out.getvalue().strip()
         self.assertEqual(link, 'https://www.social-searcher.com/social-buzz/?q5=edgar\n'
                                'https://www.social-searcher.com/google-social-search/?q=edgar&fb=on&tw=on&gp=on&in=on&li=on&pi=on')
@@ -21,7 +20,6 @@ class TestSocialMedia(TestCase):
         query = "edgar --social"
         with TestSocialMedia.captured_output(self) as (out, err):
             sm.SocialMedia.retrievePosts(query)
-        # This can go inside or outside the `with` block
         link = out.getvalue().strip()
         self.assertEqual(link, 'https://www.social-searcher.com/social-buzz/?q5=edgar\n'
                                'https://www.social-searcher.com/google-social-search/?q=edgar&fb=on&tw=on&gp=on&in=on&li=on&pi=on')
@@ -31,7 +29,6 @@ class TestSocialMedia(TestCase):
         query = "edgar -ure"
         with TestSocialMedia.captured_output(self) as (out, err):
             sm.SocialMedia.retrieveRedditUserStats(query)
-        # This can go inside or outside the `with` block
         link = out.getvalue().strip()
         self.assertEqual(link, 'https://snoopsnoo.com/u/edgar')
 
@@ -40,7 +37,6 @@ class TestSocialMedia(TestCase):
         query = "edgar --userReddit"
         with TestSocialMedia.captured_output(self) as (out, err):
             sm.SocialMedia.retrieveRedditUserStats(query)
-        # This can go inside or outside the `with` block
         link = out.getvalue().strip()
         self.assertEqual(link, 'https://snoopsnoo.com/u/edgar')
 

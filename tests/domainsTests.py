@@ -11,7 +11,6 @@ class TestDomains(TestCase):
         query = "www.abc.com -wh"
         with TestDomains.captured_output(self) as (out, err):
             domains.Domains.whoIsSearch(query)
-        # This can go inside or outside the `with` block
         link = out.getvalue().strip()
         self.assertEqual(link, 'https://who.is/whois/www.abc.com')
 
@@ -20,7 +19,6 @@ class TestDomains(TestCase):
         query = "www.abc.com --whois"
         with TestDomains.captured_output(self) as (out, err):
             domains.Domains.whoIsSearch(query)
-        # This can go inside or outside the `with` block
         link = out.getvalue().strip()
         self.assertEqual(link, 'https://who.is/whois/www.abc.com')
 
@@ -29,7 +27,6 @@ class TestDomains(TestCase):
         query = "www.abc.com -sc"
         with TestDomains.captured_output(self) as (out, err):
             domains.Domains.scanSearch(query)
-        # This can go inside or outside the `with` block
         link = out.getvalue().strip()
         self.assertEqual(link, 'https://asafaweb.com/Scan?Url=www.abc.com')
 
@@ -38,7 +35,6 @@ class TestDomains(TestCase):
         query = "www.abc.com --scan"
         with TestDomains.captured_output(self) as (out, err):
             domains.Domains.scanSearch(query)
-        # This can go inside or outside the `with` block
         link = out.getvalue().strip()
         self.assertEqual(link, 'https://asafaweb.com/Scan?Url=www.abc.com')
 
