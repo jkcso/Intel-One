@@ -1,3 +1,4 @@
+# Class that includes utility functions used by other classes as helpers.
 class Utilities(object):
 
     # Flags intro used by the user to indicate an action.

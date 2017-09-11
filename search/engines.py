@@ -1,9 +1,8 @@
-# Library used to search in google.
 from google import search
 import search.utilities as util
 
 
-# Class responsible for search engine search.
+# Class including functions for OSINT collection using search engines.
 class SearchEngines(object):
 
     # Top level domain search

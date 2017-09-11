@@ -1,10 +1,8 @@
-# imports the google wrapper class defined in this directory.
 import search.engines as engines
-# imports utilities class for performing parsing or spacing arrangements.
 import search.utilities as util
 
 
-# Responsible for social media account collection of target user, company or domain.
+# Class responsible for social media account collection of target user, company or domain.
 class SocialMedia(object):
     # Advanced google dork used for returning results including the provided url.
     __INURL__ = " inurl:\""
@@ -43,18 +41,14 @@ class SocialMedia(object):
     # Used to retrieve posts about target from all available social media websites.
     def retrievePosts(query):
         parsedQuery = util.Utilities.parseQuery(query)
-        # search string used in the address bar to perform search.
         postsLink_1 = 'https://www.social-searcher.com/social-buzz/?q5=' + parsedQuery
         postsLink_2 = 'https://www.social-searcher.com/google-social-search/?q=' + parsedQuery + '&fb=on&tw=on&gp=on&in=on&li=on&pi=on'
-        # returns a web page as a result of this search.
         print(postsLink_1)
         print(postsLink_2)
         print()
 
     # Uses reddit username to get insights on lifetime reddit activity.
     def retrieveRedditUserStats(query):
-        # search string used in the address bar to perform search.
         redditLink = 'https://snoopsnoo.com/u/' + util.Utilities.parseQuery(query)
-        # returns a web page as a result of this search.
         print(redditLink)
         print()

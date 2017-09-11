@@ -1,7 +1,7 @@
 import search.utilities as util
 
 
-# Class responsible for OSINT collection against companies.
+# Class including functions for OSINT collection for companies.
 class Companies(object):
 
     # Provides a link to search in www.sec.gov.

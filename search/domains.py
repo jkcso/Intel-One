@@ -1,7 +1,7 @@
 import search.utilities as util
 
 
-# This class is responsible for all functions having to do with target domains.
+# Class including functions for OSINT collection for target domains.
 class Domains(object):
 
     # Performs search in who.is records giving information about a target domain.
@@ -14,8 +14,6 @@ class Domains(object):
 
     # Retrieves a link for scanning a target domain.
     def scanSearch(query):
-        # search string used in the address bar to perform search.
         scanLink = 'https://asafaweb.com/Scan?Url=' + util.Utilities.parseQuery(query)
-        # returns a web page as a result of this search.
         print(scanLink)
         print()

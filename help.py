@@ -6,7 +6,7 @@ to include info about it.
 """
 
 
-# prints help into screen.
+# Prints help into screen.
 def help():
     print("""
 Please refer to 'Issues' section in GitHub for any problems you may have.
