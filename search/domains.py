@@ -17,3 +17,17 @@ class Domains(object):
         scanLink = 'https://asafaweb.com/Scan?Url=' + util.Utilities.parseQuery(query)
         print(scanLink)
         print()
+
+    # Retrieves a link into archived version of target domain
+    def archiveSearch(query):
+        archiveLink = 'https://web.archive.org/web/*/' + util.Utilities.parseQuery(query)
+        print(archiveLink)
+        print()
+
+    # Provides the link to view the robots.txt file of a target domain.
+    # This function has as a precondition that was is queries is a valid link.
+    def robotsView(query):
+        parsedQuery = util.Utilities.parseQuery(query)
+        newQuery = 'https://' + str(parsedQuery) + '/robots.txt'
+        print(newQuery)
+        print()

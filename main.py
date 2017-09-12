@@ -103,6 +103,14 @@ if __name__ == '__main__':
         elif parsedUserQuery[effectiveLen] == '-sc' or parsedUserQuery[effectiveLen] == '--scan':
             domains.Domains.scanSearch(userQuery)
 
+        # provides a link to search in archive.org website for past versions of target domain.
+        elif parsedUserQuery[effectiveLen] == '-ar' or parsedUserQuery[effectiveLen] == '--archive':
+            domains.Domains.archiveSearch(userQuery)
+
+        # provides a link to view the robots file of a website.
+        elif parsedUserQuery[effectiveLen] == '-rb' or parsedUserQuery[effectiveLen] == '--robots':
+            domains.Domains.robotsView(userQuery)
+
         # OTHER
         # provides a link to search in shodan.io.
         elif parsedUserQuery[effectiveLen] == '-sh' or parsedUserQuery[effectiveLen] == '--shodan':
