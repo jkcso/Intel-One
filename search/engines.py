@@ -48,10 +48,8 @@ class PeopleSearchEngines(object):
 
     # Performs a search in www.pipl.com to capture the social media not captured above.
     def piplSearch(query):
-        # search string used in the address bar to perform search.
         parsedQuery = util.Utilities.parseQuery(query)
         piplLink = 'https://pipl.com/search/?q=' + parsedQuery
-        # returns a web page as a result of this search.
         print(piplLink)
         print()
 
