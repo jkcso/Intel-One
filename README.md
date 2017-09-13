@@ -22,7 +22,7 @@ To be updated soon.
 
 ### Targeting individuals
 - Social media search matching the provided keyword in recent posts from all social media.
-- Specific social media search using Facebook, Linkedin, Twitter, Instagram and Reddit.
+- Specific social media search using Facebook, Linkedin, Twitter, Instagram, Youtube and Reddit.
 - People search engines using just a name or both a name and a location.
 - Get insights on lifetime reddit user activity by providing a username.
 - Search engine search in google, duckduckgo, baidu and bing.

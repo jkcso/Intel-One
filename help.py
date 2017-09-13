@@ -31,7 +31,9 @@ Options Short/Long  |  Description                                      |  Examp
 -tw, --twitter      | Performs twitter search through google            | who-dis> john smith -tw | --twitter      
 -in, --instagram    | Performs instagram search through google          | who-dis> john smith -in | --instagram    
 -re, --redit        | Performs reddit search through google             | who-dis> john smith -re | --reddit
--gh, --github       | Performs github search on repositories            | who-dis> who-dis -gh | --github     
+-yt, --youtube      | Performs search in youtube for username           | who-dis> john smith -yt | --youtube
+-gh, --github       | Performs github search on repositories            | who-dis> who-dis -gh | --github
+     
            
            
 -- [ Options for Individuals @ (People/Username) Search Engines ] --
@@ -68,7 +70,8 @@ Options Short/Long  |  Description                                      |  Examp
 -fb, --facebook     | Performs facebook search through google           | who-dis> glovdi -fb | --facebook         
 -ln, --linkedin     | Performs linkedin search through google           | who-dis> glovdi -ln | --linkedin         
 -tw, --twitter      | Performs twitter search through google            | who-dis> glovdi -tw | --twitter          
--in, --instagram    | Performs instagram search through google          | who-dis> glovdi -in | --instagram        
+-in, --instagram    | Performs instagram search through google          | who-dis> glovdi -in | --instagram
+-yt, --youtube      | Performs search in youtube for username           | who-dis> john smith -yt | --youtube        
            
            
 -- [ Options for Domains ] --

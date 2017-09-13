@@ -59,6 +59,10 @@ if __name__ == '__main__':
         elif parsedUserQuery[effectiveLen] == '-gh' or parsedUserQuery[effectiveLen] == '--github':
             social.SocialMedia.githubSearch(userQuery)
 
+        # Searches for individuals or company profiles in youtube.
+        elif parsedUserQuery[effectiveLen] == '-yt' or parsedUserQuery[effectiveLen] == '--youtube':
+            social.SocialMedia.youtubeSearch(userQuery)
+
         # SEARCH ENGINES
         # performs google search.
         elif parsedUserQuery[effectiveLen] == '-g' or parsedUserQuery[effectiveLen] == '--google':

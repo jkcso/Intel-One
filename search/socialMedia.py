@@ -59,3 +59,10 @@ class SocialMedia(object):
         githubLink = 'https://github.com/search?q=' + parsedQuery
         print(githubLink)
         print()
+
+    # searches youtube about specific user, individual or company.
+    def youtubeSearch(query):
+        parsedQuery = util.Utilities.parseQuery(query)
+        youtubeLink = 'https://www.youtube.com/user/' + parsedQuery
+        print(youtubeLink)
+        print()
