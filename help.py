@@ -30,7 +30,8 @@ Options Short/Long  |  Description                                      |  Examp
 -ln, --linkedin     | Performs linkedin search through google           | who-dis> john smith -ln | --linkedin     
 -tw, --twitter      | Performs twitter search through google            | who-dis> john smith -tw | --twitter      
 -in, --instagram    | Performs instagram search through google          | who-dis> john smith -in | --instagram    
--re, --redit        | Performs reddit search through google             | who-dis> john smith -re | --reddit       
+-re, --redit        | Performs reddit search through google             | who-dis> john smith -re | --reddit
+-gh, --github       | Performs github search on repositories            | who-dis> who-dis -gh | --github     
            
            
 -- [ Options for Individuals @ (People/Username) Search Engines ] --

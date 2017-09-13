@@ -26,6 +26,7 @@ To be updated soon.
 - People search engines using just a name or both a name and a location.
 - Get insights on lifetime reddit user activity by providing a username.
 - Search engine search in google, duckduckgo, baidu and bing.
+- Github search about known published open source projects.
 
 ### Targeting companies
 - Same social media search as above when applicable.

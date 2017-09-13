@@ -40,6 +40,22 @@ class TestSocialMedia(TestCase):
         link = out.getvalue().strip()
         self.assertEqual(link, 'https://snoopsnoo.com/u/edgar')
 
+    # tests if reddit search is returning back the correct link for single flag.
+    def test_githubSearch_shortFlag(self):
+        query = "whodis -gh"
+        with TestSocialMedia.captured_output(self) as (out, err):
+            sm.SocialMedia.githubSearch(query)
+        link = out.getvalue().strip()
+        self.assertEqual(link, 'https://github.com/search?q=whodis')
+
+    # tests if reddit search is returning back the correct link for big flag.
+    def test_githubSearch_longFlag(self):
+        query = "whodis --github"
+        with TestSocialMedia.captured_output(self) as (out, err):
+            sm.SocialMedia.githubSearch(query)
+        link = out.getvalue().strip()
+        self.assertEqual(link, 'https://github.com/search?q=whodis')
+
     # tests output in screen.
     @contextmanager
     def captured_output(self):

@@ -52,3 +52,10 @@ class SocialMedia(object):
         redditLink = 'https://snoopsnoo.com/u/' + util.Utilities.parseQuery(query)
         print(redditLink)
         print()
+
+    # searches about individuals in github, specifically about their projects.
+    def githubSearch(query):
+        parsedQuery = util.Utilities.parseQuery(query)
+        githubLink = 'https://github.com/search?q=' + parsedQuery
+        print(githubLink)
+        print()
