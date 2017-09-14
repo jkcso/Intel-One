@@ -1,13 +1,13 @@
 import search.engines as engines
 import search.utilities as util
-import search.query as queries
+import search.query as qu
 
 
 # Class responsible for social media account collection of target user, company or domain.
-class SocialMedia(queries.Query):
+class SocialMedia(qu.Query):
 
     def __init__(self, query):
-        queries.Query.__init__(self, query)
+        qu.Query.__init__(self, query)
 
     # Advanced google dork used for returning results including the provided url.
     __INURL__ = " inurl:\""

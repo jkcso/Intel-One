@@ -9,7 +9,8 @@ class TestEngines(TestCase):
 
     # tests if duck duck go search is returning back the correct link for short flag.
     def test_ddGo_shortFlag(self):
-        query = "glovdi -ddg"
+        q = "glovdi -ddg"
+        query = engines.SearchEngines(q)
         with TestEngines.captured_output(self) as (out, err):
             engines.SearchEngines.ddGoSearch(query)
         link = out.getvalue().strip()
@@ -17,7 +18,8 @@ class TestEngines(TestCase):
 
     # tests if duck duck go search is returning back the correct link for long flag.
     def test_ddGo_longFlag(self):
-        query = "glovdi -ddGo"
+        q = "glovdi -ddGo"
+        query = engines.SearchEngines(q)
         with TestEngines.captured_output(self) as (out, err):
             engines.SearchEngines.ddGoSearch(query)
         link = out.getvalue().strip()
@@ -25,7 +27,8 @@ class TestEngines(TestCase):
 
     # tests if baidu search is returning back the correct link for short flag.
     def test_baidu_shortFlag(self):
-        query = "glovdi -bd"
+        q = "glovdi -bd"
+        query = engines.SearchEngines(q)
         with TestEngines.captured_output(self) as (out, err):
             engines.SearchEngines.baiduSearch(query)
         link = out.getvalue().strip()
@@ -33,7 +36,8 @@ class TestEngines(TestCase):
 
     # tests if baidu search is returning back the correct link for long flag.
     def test_baidu_longFlag(self):
-        query = "glovdi --baidu"
+        q = "glovdi --baidu"
+        query = engines.SearchEngines(q)
         with TestEngines.captured_output(self) as (out, err):
             engines.SearchEngines.baiduSearch(query)
         link = out.getvalue().strip()
@@ -41,7 +45,8 @@ class TestEngines(TestCase):
 
     # tests if baidu search is returning back the correct link for short flag.
     def test_bing_shortFlag(self):
-        query = "glovdi -bg"
+        q = "glovdi -bg"
+        query = engines.SearchEngines(q)
         with TestEngines.captured_output(self) as (out, err):
             engines.SearchEngines.bingSearch(query)
         link = out.getvalue().strip()
@@ -49,7 +54,8 @@ class TestEngines(TestCase):
 
     # tests if baidu search is returning back the correct link for long flag.
     def test_bing_longFlag(self):
-        query = "glovdi --bing"
+        q = "glovdi --bing"
+        query = engines.SearchEngines(q)
         with TestEngines.captured_output(self) as (out, err):
             engines.SearchEngines.bingSearch(query)
         link = out.getvalue().strip()
@@ -57,7 +63,8 @@ class TestEngines(TestCase):
 
     # tests if search is returning back the correct link for two terms.
     def test_piplSearch_doubleTerm_shortFlag(self):
-        query = "john lennon -p"
+        q = "john lennon -p"
+        query = engines.PeopleSearchEngines(q)
         with TestEngines.captured_output(self) as (out, err):
             engines.PeopleSearchEngines.piplSearch(query)
         link = out.getvalue().strip()
@@ -65,7 +72,8 @@ class TestEngines(TestCase):
 
     # tests if search is giving back correct link for three or more terms.
     def test_piplSearch_moreThanTwoWords_shortFlag(self):
-        query = "dr john lennon -p"
+        q = "dr john lennon -p"
+        query = engines.PeopleSearchEngines(q)
         with TestEngines.captured_output(self) as (out, err):
             engines.PeopleSearchEngines.piplSearch(query)
         link = out.getvalue().strip()
@@ -73,7 +81,8 @@ class TestEngines(TestCase):
 
     # tests if search for location is giving back correct link for single word location.
     def test_piplSearchLocation_singleLocation(self):
-        query = "john lennon -p madrid -l"
+        q = "john lennon -p madrid -l"
+        query = engines.PeopleSearchEngines(q)
         with TestEngines.captured_output(self) as (out, err):
             engines.PeopleSearchEngines.piplSearchLocation(query)
         link = out.getvalue().strip()
@@ -81,7 +90,8 @@ class TestEngines(TestCase):
 
     # tests if search for location is giving back correct link for single word location.
     def test_piplSearchLocation_doubleLocation(self):
-        query = "john lennon -p new york -l"
+        q = "john lennon -p new york -l"
+        query = engines.PeopleSearchEngines(q)
         with TestEngines.captured_output(self) as (out, err):
             engines.PeopleSearchEngines.piplSearchLocation(query)
         link = out.getvalue().strip()
@@ -89,7 +99,8 @@ class TestEngines(TestCase):
 
     # tests searching using the long flag.
     def test_piplSearch_LongFlag(self):
-        query = "john lennon --pipl"
+        q = "john lennon --pipl"
+        query = engines.PeopleSearchEngines(q)
         with TestEngines.captured_output(self) as (out, err):
             engines.PeopleSearchEngines.piplSearch(query)
         link = out.getvalue().strip()

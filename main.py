@@ -24,6 +24,8 @@ if __name__ == '__main__':
 
         # objects needed later for iterative commands that perform all searches in one command.
         socialQuery = social.SocialMedia(userQuery)
+        searchEngineQuery = engines.SearchEngines(userQuery)
+        peopleSearchQuery = engines.PeopleSearchEngines(userQuery)
 
         # provides help to the user.
         if userQuery == 'help':
@@ -69,28 +71,28 @@ if __name__ == '__main__':
         # SEARCH ENGINES
         # performs google search.
         elif parsedUserQuery[effectiveLen] == '-g' or parsedUserQuery[effectiveLen] == '--google':
-            engines.SearchEngines.googleSearch(userQuery)
+            engines.SearchEngines.googleSearch(searchEngineQuery)
 
         # performs duckduckgo search.
         elif parsedUserQuery[effectiveLen] == '-ddg' or parsedUserQuery[effectiveLen] == '--ddGo':
-            engines.SearchEngines.ddGoSearch(userQuery)
+            engines.SearchEngines.ddGoSearch(searchEngineQuery)
 
         # performs baidu search.
         elif parsedUserQuery[effectiveLen] == '-bd' or parsedUserQuery[effectiveLen] == '--baidu':
-            engines.SearchEngines.baiduSearch(userQuery)
+            engines.SearchEngines.baiduSearch(searchEngineQuery)
 
         # performs bing search.
         elif parsedUserQuery[effectiveLen] == '-bg' or parsedUserQuery[effectiveLen] == '--bing':
-            engines.SearchEngines.bingSearch(userQuery)
+            engines.SearchEngines.bingSearch(searchEngineQuery)
 
         # PEOPLE SEARCH ENGINES
         # performs a search in www.pipl.com to capture the social media not captured above.
         elif parsedUserQuery[effectiveLen] == '-p' or parsedUserQuery[effectiveLen] == '--pipl':
-            engines.PeopleSearchEngines.piplSearch(userQuery)
+            engines.PeopleSearchEngines.piplSearch(peopleSearchQuery)
 
         # performs a search in www.pipl.com containing location information as well to be more specific.
         elif userQuery.__contains__('-p') and userQuery.__contains__('-l'):
-            engines.PeopleSearchEngines.piplSearchLocation(userQuery)
+            engines.PeopleSearchEngines.piplSearchLocation(peopleSearchQuery)
 
         # COMPANIES
         # provides a link to search for companies in www.sec.gov.
