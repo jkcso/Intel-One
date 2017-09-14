@@ -1,9 +1,14 @@
 import search.engines as engines
 import search.utilities as util
+# import search.query as queries
 
 
 # Class responsible for social media account collection of target user, company or domain.
 class SocialMedia(object):
+
+    def __init__(self, query):
+        self.query = query
+
     # Advanced google dork used for returning results including the provided url.
     __INURL__ = " inurl:\""
 
@@ -15,9 +20,9 @@ class SocialMedia(object):
     __REDDIT__ = "www.reddit.com\""
 
     # Performs social search through google using the advanced google dork inurl.
-    def retrieveAccounts(query, media):
+    def retrieveAccounts(self, media):
         # Parses the query to avoid the flag inclusion while performing google search.
-        parsedQuery = util.Utilities.parseQuery(query)
+        parsedQuery = util.Utilities.parseQuery(self.query)
         searchQuery = parsedQuery + SocialMedia.__INURL__
 
         # Searches in corresponding social media indicated by user.
@@ -39,8 +44,8 @@ class SocialMedia(object):
         return engines.SearchEngines.googleSearch(searchQuery)
 
     # Used to retrieve posts about target from all available social media websites.
-    def retrievePosts(query):
-        parsedQuery = util.Utilities.parseQuery(query)
+    def retrievePosts(self):
+        parsedQuery = util.Utilities.parseQuery(self.query)
         postsLink_1 = 'https://www.social-searcher.com/social-buzz/?q5=' + parsedQuery
         postsLink_2 = 'https://www.social-searcher.com/google-social-search/?q=' + parsedQuery + '&fb=on&tw=on&gp=on&in=on&li=on&pi=on'
         print(postsLink_1)
@@ -48,21 +53,21 @@ class SocialMedia(object):
         print()
 
     # Uses reddit username to get insights on lifetime reddit activity.
-    def retrieveRedditUserStats(query):
-        redditLink = 'https://snoopsnoo.com/u/' + util.Utilities.parseQuery(query)
+    def retrieveRedditUserStats(self):
+        redditLink = 'https://snoopsnoo.com/u/' + util.Utilities.parseQuery(self.query)
         print(redditLink)
         print()
 
     # searches about individuals in github, specifically about their projects.
-    def githubSearch(query):
-        parsedQuery = util.Utilities.parseQuery(query)
+    def githubSearch(self):
+        parsedQuery = util.Utilities.parseQuery(self.query)
         githubLink = 'https://github.com/search?q=' + parsedQuery
         print(githubLink)
         print()
 
     # searches youtube about specific user, individual or company.
-    def youtubeSearch(query):
-        parsedQuery = util.Utilities.parseQuery(query)
+    def youtubeSearch(self):
+        parsedQuery = util.Utilities.parseQuery(self.query)
         youtubeLink = 'https://www.youtube.com/user/' + parsedQuery
         print(youtubeLink)
         print()

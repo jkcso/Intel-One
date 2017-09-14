@@ -7,6 +7,7 @@ import search.socialMedia as social
 import search.companies as companies
 import search.domains as domains
 import search.other as other
+# import search.query as query
 
 __listLastIndex__ = 1
 
@@ -22,6 +23,9 @@ if __name__ == '__main__':
         lenUserQuery = len(parsedUserQuery)
         effectiveLen = lenUserQuery - __listLastIndex__
 
+        # objects needed later for iterative commands that perform all searches in one command.
+        socialQuery = social.SocialMedia(userQuery)
+
         # provides help to the user.
         if userQuery == 'help':
             help.help()
@@ -29,39 +33,39 @@ if __name__ == '__main__':
         # SOCIAL MEDIA
         # performs search about posts on the given keyword in social search website looking in all available social media.
         elif parsedUserQuery[effectiveLen] == '-ss' or parsedUserQuery[effectiveLen] == '--social':
-            social.SocialMedia.retrievePosts(userQuery)
+            social.SocialMedia.retrievePosts(socialQuery)
 
         # performs facebook search.
         elif parsedUserQuery[effectiveLen] == '-fb' or parsedUserQuery[effectiveLen] == '--facebook':
-            social.SocialMedia.retrieveAccounts(userQuery, 'fb')
+            social.SocialMedia.retrieveAccounts(socialQuery, 'fb')
 
         # performs linkedin search.
         elif parsedUserQuery[effectiveLen] == '-ln' or parsedUserQuery[effectiveLen] == '--linkedin':
-            social.SocialMedia.retrieveAccounts(userQuery, 'ln')
+            social.SocialMedia.retrieveAccounts(socialQuery, 'ln')
 
         # performs twitter search.
         elif parsedUserQuery[effectiveLen] == '-tw' or parsedUserQuery[effectiveLen] == '--twitter':
-            social.SocialMedia.retrieveAccounts(userQuery, 'tw')
+            social.SocialMedia.retrieveAccounts(socialQuery, 'tw')
 
         # performs instagram search.
         elif parsedUserQuery[effectiveLen] == '-in' or parsedUserQuery[effectiveLen] == '--instagram':
-            social.SocialMedia.retrieveAccounts(userQuery, 'in')
+            social.SocialMedia.retrieveAccounts(socialQuery, 'in')
 
         # performs reddit search.
         elif parsedUserQuery[effectiveLen] == '-re' or parsedUserQuery[effectiveLen] == '--reddit':
-            social.SocialMedia.retrieveAccounts(userQuery, 're')
+            social.SocialMedia.retrieveAccounts(socialQuery, 're')
 
         # Uses reddit username to get insights on lifetime reddit activity.
         elif parsedUserQuery[effectiveLen] == '-ure' or parsedUserQuery[effectiveLen] == '--userReddit':
-            social.SocialMedia.retrieveRedditUserStats(userQuery)
+            social.SocialMedia.retrieveRedditUserStats(socialQuery)
 
         # Searches for user's published work in Github.
         elif parsedUserQuery[effectiveLen] == '-gh' or parsedUserQuery[effectiveLen] == '--github':
-            social.SocialMedia.githubSearch(userQuery)
+            social.SocialMedia.githubSearch(socialQuery)
 
         # Searches for individuals or company profiles in youtube.
         elif parsedUserQuery[effectiveLen] == '-yt' or parsedUserQuery[effectiveLen] == '--youtube':
-            social.SocialMedia.youtubeSearch(userQuery)
+            social.SocialMedia.youtubeSearch(socialQuery)
 
         # SEARCH ENGINES
         # performs google search.

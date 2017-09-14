@@ -8,7 +8,8 @@ from io import StringIO
 class TestSocialMedia(TestCase):
     # tests if socialSearcher search is returning back the correct link for single flag.
     def test_socialSearcherSearch_shortFlag(self):
-        query = "edgar -ss"
+        q = "edgar -ss"
+        query = sm.SocialMedia(q)
         with TestSocialMedia.captured_output(self) as (out, err):
             sm.SocialMedia.retrievePosts(query)
         link = out.getvalue().strip()
@@ -17,7 +18,8 @@ class TestSocialMedia(TestCase):
 
     # tests if socialSearcher search is returning back the correct link for big flag.
     def test_socialSearcherSearch_longFlag(self):
-        query = "edgar --social"
+        q = "edgar --social"
+        query = sm.SocialMedia(q)
         with TestSocialMedia.captured_output(self) as (out, err):
             sm.SocialMedia.retrievePosts(query)
         link = out.getvalue().strip()
@@ -26,7 +28,8 @@ class TestSocialMedia(TestCase):
 
     # tests if reddit search is returning back the correct link for single flag.
     def test_redditSearch_shortFlag(self):
-        query = "edgar -ure"
+        q = "edgar -ure"
+        query = sm.SocialMedia(q)
         with TestSocialMedia.captured_output(self) as (out, err):
             sm.SocialMedia.retrieveRedditUserStats(query)
         link = out.getvalue().strip()
@@ -34,7 +37,8 @@ class TestSocialMedia(TestCase):
 
     # tests if reddit search is returning back the correct link for big flag.
     def test_redditSearch_longFlag(self):
-        query = "edgar --userReddit"
+        q = "edgar --userReddit"
+        query = sm.SocialMedia(q)
         with TestSocialMedia.captured_output(self) as (out, err):
             sm.SocialMedia.retrieveRedditUserStats(query)
         link = out.getvalue().strip()
@@ -42,7 +46,8 @@ class TestSocialMedia(TestCase):
 
     # tests if reddit search is returning back the correct link for single flag.
     def test_githubSearch_shortFlag(self):
-        query = "whodis -gh"
+        q = "whodis -gh"
+        query = sm.SocialMedia(q)
         with TestSocialMedia.captured_output(self) as (out, err):
             sm.SocialMedia.githubSearch(query)
         link = out.getvalue().strip()
@@ -50,7 +55,8 @@ class TestSocialMedia(TestCase):
 
     # tests if reddit search is returning back the correct link for big flag.
     def test_githubSearch_longFlag(self):
-        query = "whodis --github"
+        q = "whodis --github"
+        query = sm.SocialMedia(q)
         with TestSocialMedia.captured_output(self) as (out, err):
             sm.SocialMedia.githubSearch(query)
         link = out.getvalue().strip()
@@ -58,7 +64,8 @@ class TestSocialMedia(TestCase):
 
     # tests if reddit search is returning back the correct link for single flag.
     def test_youtubeSearch_shortFlag(self):
-        query = "google -yt"
+        q = "google -yt"
+        query = sm.SocialMedia(q)
         with TestSocialMedia.captured_output(self) as (out, err):
             sm.SocialMedia.youtubeSearch(query)
         link = out.getvalue().strip()
@@ -66,7 +73,8 @@ class TestSocialMedia(TestCase):
 
     # tests if reddit search is returning back the correct link for big flag.
     def test_youtubeSearch_longFlag(self):
-        query = "google --youtube"
+        q = "google --youtube"
+        query = sm.SocialMedia(q)
         with TestSocialMedia.captured_output(self) as (out, err):
             sm.SocialMedia.youtubeSearch(query)
         link = out.getvalue().strip()
