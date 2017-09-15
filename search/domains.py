@@ -24,7 +24,7 @@ class Domains(qu.Query):
 
     # Retrieves a link into archived version of target domain
     def archiveSearch(self):
-        archiveLink = 'https://web.archive.org/web/*/' + util.Utilities.parseQuery(self.getQuery)
+        archiveLink = 'https://web.archive.org/web/*/' + util.Utilities.parseQuery(self.getQuery)   # TODO make star sign part of the link.
         print(archiveLink)
         print()
 
@@ -35,3 +35,16 @@ class Domains(qu.Query):
         newQuery = 'https://' + str(parsedQuery) + '/robots.txt'
         print(newQuery)
         print()
+
+    # Executes all of the above functions.
+    def domainAllSearches(self):
+        print("\n---- DOMAIN INFO ----")
+        print("View official whois records:")
+        self.whoIsSearch()
+        print("View archived versions of the website:")
+        self.archiveSearch()
+        print("View the robots.txt file with disallowed resource access:")
+        self.robotsView()
+        print("Scan the domain for common vulnerabilities here:")
+        self.scanSearch()
+        # TODO add social media search and search engine search.

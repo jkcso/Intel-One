@@ -32,3 +32,14 @@ class Companies(qu.Query):
         print(postsLink_1)
         print(postsLink_2)
         print()
+
+    # Executes all of the above functions.
+    def companyAllSearches(self):
+        print("\n---- COMPANY RECORDS ----")
+        print("Government records found using the edgar search engine:")
+        self.edgarSearch()
+        print("Corporation info can be found here:")
+        self.corpWikiSearch()
+        print("Annual reports and presentations can be found here:")
+        self.annualReportSearch()
+        # TODO add social media search and search engine search.

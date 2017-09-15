@@ -20,7 +20,7 @@ class SearchEngines(qu.Query):
 
     # returns google search results.
     def googleSearch(self):
-        for result in search(str(self), tld=SearchEngines.__TLD__, num=SearchEngines.__NUM_RESULTS__,
+        for result in search(self.getQuery, tld=SearchEngines.__TLD__, num=SearchEngines.__NUM_RESULTS__,
                              stop=SearchEngines.__STOP__, pause=SearchEngines.__PAUSE__):
             print(result)
         print()
@@ -45,6 +45,19 @@ class SearchEngines(qu.Query):
         bingLink = 'https://www.bing.com/search?q=' + parsedQuery
         print(bingLink)
         print()
+
+    # Executes all of the above functions.
+    def searchEngineAllSearches(self):
+        print("\n---- SEARCH ENGINES ----")
+        print("Google search:")
+        self.googleSearch()
+        print("DuckDuckGo search:")
+        self.ddGoSearch()
+        print("Baidu search:")
+        self.baiduSearch()
+        print("Bing search:")
+        self.bingSearch()
+        # TODO add social media search.
 
 
 # Class responsible for people search engines' search.

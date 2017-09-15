@@ -27,6 +27,7 @@ To be updated soon.
 - Get insights on lifetime reddit user activity by providing a username.
 - Search engine search in google, duckduckgo, baidu and bing.
 - Github search about known published open source projects.
+- Perform all of the above using just one flag.
 
 ### Targeting companies
 - Same social media search as above when applicable.
@@ -34,12 +35,14 @@ To be updated soon.
 - Company search in corporate wiki aka the wikipedia of Corporations.
 - Annual reports, slideshows and other insights.
 - Search engine search in google, duckduckgo, baidu and bing.
+- Perform all of the above using just one flag.
 
 ### Targeting domains
 - Whois lookup.
 - Web vulnerability scan.
 - View archived versions of a website since its its day 1.
 - View robots.txt file including links not indexed by search engines.
+- Perform all of the above using just one flag.
 
 ### Other features
 - Shodan.io search.
@@ -52,9 +55,11 @@ To be updated soon.
 - other.py: Includes non directly related to OSINT functionality such as shodan search.
 - socialMedia.py: Includes social media search and posts gathering in various ways.
 - utilities.py: Includes functions that help in all other classes.
+- query.py: The parent class from which the rest of the classes inherit, contains functionality about query manipulation.
 
 ### tests
 - Clear, concise and extensive tests for each of the above class and function.
+- Include specific class tests, end to end and robustness testing.
 
 ### help
 - Explains with a description and an example each available function.

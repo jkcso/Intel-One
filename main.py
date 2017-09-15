@@ -133,6 +133,21 @@ if __name__ == '__main__':
         elif parsedUserQuery[effectiveLen] == '-sh' or parsedUserQuery[effectiveLen] == '--shodan':
             other.Other.shodanSearch(otherQuery)
 
+        # POWERFUL ALL IN ONE SEARCH divided into categories.
+        # Performs all possible searches about a company.
+        elif parsedUserQuery[effectiveLen] == '-c' or parsedUserQuery[effectiveLen] == '--company':
+            companies.Companies.companyAllSearches(companiesQuery)
+
+        # Performs all possible searches about a target domain.
+        elif parsedUserQuery[effectiveLen] == '-d' or parsedUserQuery[effectiveLen] == '--domain':
+            domains.Domains.domainAllSearches(domainQuery)
+
+
+
+        # Performs all possible searches about anything in all search engines.
+        elif parsedUserQuery[effectiveLen] == '-s' or parsedUserQuery[effectiveLen] == '--search':
+            engines.SearchEngines.searchEngineAllSearches(searchEngineQuery)
+
         # exits the program.
         elif userQuery == 'exit' or userQuery == 'quit':
             break
