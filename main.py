@@ -26,6 +26,7 @@ if __name__ == '__main__':
         socialQuery = social.SocialMedia(userQuery)
         searchEngineQuery = engines.SearchEngines(userQuery)
         peopleSearchQuery = engines.PeopleSearchEngines(userQuery)
+        companiesQuery = companies.Companies(userQuery)
 
         # provides help to the user.
         if userQuery == 'help':
@@ -97,15 +98,15 @@ if __name__ == '__main__':
         # COMPANIES
         # provides a link to search for companies in www.sec.gov.
         elif parsedUserQuery[effectiveLen] == '-ed' or parsedUserQuery[effectiveLen] == '--edgar':
-            companies.Companies.edgarSearch(userQuery)
+            companies.Companies.edgarSearch(companiesQuery)
 
         # Provides link to corporate wiki that includes a lot of information about a target company.
         elif parsedUserQuery[effectiveLen] == '-cw' or parsedUserQuery[effectiveLen] == '--corpWiki':
-            companies.Companies.corpWikiSearch(userQuery)
+            companies.Companies.corpWikiSearch(companiesQuery)
 
         # Provides link to annual reports, slideshows and other insights of a company.
         elif parsedUserQuery[effectiveLen] == '-ar' or parsedUserQuery[effectiveLen] == '--reports':
-            companies.Companies.annualReportSearch(userQuery)
+            companies.Companies.annualReportSearch(companiesQuery)
 
         # DOMAINS
         # provides a link to search for target domains in who.is website.

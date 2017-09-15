@@ -1,28 +1,32 @@
 import search.utilities as util
+import search.query as qu
 
 
 # Class including functions for OSINT collection for companies.
-class Companies(object):
+class Companies(qu.Query):
+
+    def __init__(self, query):
+        qu.Query.__init__(self, query)
 
     # Provides a link to search in www.sec.gov.
-    def edgarSearch(query):
+    def edgarSearch(self):
         # search string used in the address bar to perform search.
-        parsedQuery = util.Utilities.parseQuery(query)
+        parsedQuery = util.Utilities.parseQuery(self.getQuery)
         edgarLink = 'https://www.sec.gov/cgi-bin/browse-edgar?company=' + parsedQuery + '&owner=exclude&action=getcompany'
         # returns a web page as a result of this search.
         print(edgarLink)
         print()
 
     # Provides a searchable link in corporation wiki for the target company queried.
-    def corpWikiSearch(query):
-        parsedQuery = util.Utilities.parseQuery(query)
+    def corpWikiSearch(self):
+        parsedQuery = util.Utilities.parseQuery(self.getQuery)
         cwLink = 'https://www.corporationwiki.com/search/results?term=' + parsedQuery
         print(cwLink)
         print()
 
     # Provides link to annual reports, slideshows and other insights of a company.
-    def annualReportSearch(query):
-        parsedQuery = util.Utilities.parseQuery(query)
+    def annualReportSearch(self):
+        parsedQuery = util.Utilities.parseQuery(self.getQuery)
         postsLink_1 = 'http://www.annualreports.com/Companies?search=' + parsedQuery
         postsLink_2 = 'https://www.reportlinker.com/report/search/keywords/' + parsedQuery
         print(postsLink_1)

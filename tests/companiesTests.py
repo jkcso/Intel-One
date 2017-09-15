@@ -8,7 +8,8 @@ from io import StringIO
 class TestCompanies(TestCase):
     # tests if search is returning back the correct link for two terms.
     def test_edgarSearch_singleTerm_shortFlag(self):
-        query = "google -ed"
+        q = "google -ed"
+        query = companies.Companies(q)
         with TestCompanies.captured_output(self) as (out, err):
             companies.Companies.edgarSearch(query)
         link = out.getvalue().strip()
@@ -16,7 +17,8 @@ class TestCompanies(TestCase):
 
     # tests if search is returning back the correct link for two terms.
     def test_edgarSearch_doubleTerm_shortFlag(self):
-        query = "goldman sachs -ed"
+        q = "goldman sachs -ed"
+        query = companies.Companies(q)
         with TestCompanies.captured_output(self) as (out, err):
             companies.Companies.edgarSearch(query)
         link = out.getvalue().strip()
@@ -24,7 +26,8 @@ class TestCompanies(TestCase):
 
     # tests if search is returning back the correct link for two terms.
     def test_edgarSearch_singleTerm_longFlag(self):
-        query = "google --edgar"
+        q = "google --edgar"
+        query = companies.Companies(q)
         with TestCompanies.captured_output(self) as (out, err):
             companies.Companies.edgarSearch(query)
         link = out.getvalue().strip()
@@ -32,7 +35,8 @@ class TestCompanies(TestCase):
 
     # tests if search is returning back the correct link for two terms.
     def test_edgarSearch_doubleTerm_longFlag(self):
-        query = "goldman sachs --edgar"
+        q = "goldman sachs --edgar"
+        query = companies.Companies(q)
         with TestCompanies.captured_output(self) as (out, err):
             companies.Companies.edgarSearch(query)
         link = out.getvalue().strip()
@@ -40,7 +44,8 @@ class TestCompanies(TestCase):
 
     # tests if search is returning back the correct link for two terms.
     def test_corpWikiSearch_shortFlag(self):
-        query = "google -cw"
+        q = "google -cw"
+        query = companies.Companies(q)
         with TestCompanies.captured_output(self) as (out, err):
             companies.Companies.corpWikiSearch(query)
         link = out.getvalue().strip()
@@ -49,7 +54,8 @@ class TestCompanies(TestCase):
 
     # tests if search is returning back the correct link for two terms.
     def test_corpWikiSearch_longFlag(self):
-        query = "google --corpWiki"
+        q = "google --corpWiki"
+        query = companies.Companies(q)
         with TestCompanies.captured_output(self) as (out, err):
             companies.Companies.corpWikiSearch(query)
         link = out.getvalue().strip()
@@ -58,7 +64,8 @@ class TestCompanies(TestCase):
 
     # tests if search is returning back the correct link for two terms.
     def test_annualReportSearch_shortFlag(self):
-        query = "natwest -ar"
+        q = "natwest -ar"
+        query = companies.Companies(q)
         with TestCompanies.captured_output(self) as (out, err):
             companies.Companies.annualReportSearch(query)
         link = out.getvalue().strip()
@@ -67,7 +74,8 @@ class TestCompanies(TestCase):
 
     # tests if search is returning back the correct link for two terms.
     def test_annualReportSearch_longFlag(self):
-        query = "natwest --reports"
+        q = "natwest --reports"
+        query = companies.Companies(q)
         with TestCompanies.captured_output(self) as (out, err):
             companies.Companies.annualReportSearch(query)
         link = out.getvalue().strip()
