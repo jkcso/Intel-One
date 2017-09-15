@@ -84,18 +84,18 @@ class TestEngines(TestCase):
         q = "john lennon -p madrid -l"
         query = engines.PeopleSearchEngines(q)
         with TestEngines.captured_output(self) as (out, err):
-            engines.PeopleSearchEngines.piplSearchLocation(query)
+            engines.PeopleSearchEngines.piplSearchLocation(query, '-p')
         link = out.getvalue().strip()
-        self.assertEqual(link, 'https://pipl.com/search/?q=john+lennon&l=madrid')
+        self.assertEqual(link, 'https://pipl.com/search/?q=john+lennon&l=+madrid')
 
     # tests if search for location is giving back correct link for single word location.
     def test_piplSearchLocation_doubleLocation(self):
         q = "john lennon -p new york -l"
         query = engines.PeopleSearchEngines(q)
         with TestEngines.captured_output(self) as (out, err):
-            engines.PeopleSearchEngines.piplSearchLocation(query)
+            engines.PeopleSearchEngines.piplSearchLocation(query, '-p')
         link = out.getvalue().strip()
-        self.assertEqual(link, 'https://pipl.com/search/?q=john+lennon&l=new+york')
+        self.assertEqual(link, 'https://pipl.com/search/?q=john+lennon&l=+new+york')
 
     # tests searching using the long flag.
     def test_piplSearch_LongFlag(self):

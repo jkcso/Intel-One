@@ -49,12 +49,16 @@ class SearchEngines(qu.Query):
     # Executes all of the above functions.
     def searchEngineAllSearches(self):
         print("\n---- SEARCH ENGINES ----")
+
         print("Google search:")
         self.googleSearch()
+
         print("DuckDuckGo search:")
         self.ddGoSearch()
+
         print("Baidu search:")
         self.baiduSearch()
+
         print("Bing search:")
         self.bingSearch()
 
