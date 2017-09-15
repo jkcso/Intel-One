@@ -23,10 +23,13 @@ if __name__ == '__main__':
         effectiveLen = lenUserQuery - __listLastIndex__
 
         # objects needed later for iterative commands that perform all searches in one command.
+        # also provide isolation for specific class category inside 'search' directory.
         socialQuery = social.SocialMedia(userQuery)
         searchEngineQuery = engines.SearchEngines(userQuery)
         peopleSearchQuery = engines.PeopleSearchEngines(userQuery)
         companiesQuery = companies.Companies(userQuery)
+        domainQuery = domains.Domains(userQuery)
+        otherQuery = other.Other(userQuery)
 
         # provides help to the user.
         if userQuery == 'help':
@@ -105,30 +108,30 @@ if __name__ == '__main__':
             companies.Companies.corpWikiSearch(companiesQuery)
 
         # Provides link to annual reports, slideshows and other insights of a company.
-        elif parsedUserQuery[effectiveLen] == '-ar' or parsedUserQuery[effectiveLen] == '--reports':
+        elif parsedUserQuery[effectiveLen] == '-are' or parsedUserQuery[effectiveLen] == '--reports':
             companies.Companies.annualReportSearch(companiesQuery)
 
         # DOMAINS
         # provides a link to search for target domains in who.is website.
         elif parsedUserQuery[effectiveLen] == '-wh' or parsedUserQuery[effectiveLen] == '--whois':
-            domains.Domains.whoIsSearch(userQuery)
+            domains.Domains.whoIsSearch(domainQuery)
 
         # provides a link to search in asafaweb website for vulnerability scanning.
         elif parsedUserQuery[effectiveLen] == '-sc' or parsedUserQuery[effectiveLen] == '--scan':
-            domains.Domains.scanSearch(userQuery)
+            domains.Domains.scanSearch(domainQuery)
 
         # provides a link to search in archive.org website for past versions of target domain.
         elif parsedUserQuery[effectiveLen] == '-ar' or parsedUserQuery[effectiveLen] == '--archive':
-            domains.Domains.archiveSearch(userQuery)
+            domains.Domains.archiveSearch(domainQuery)
 
         # provides a link to view the robots file of a website.
         elif parsedUserQuery[effectiveLen] == '-rb' or parsedUserQuery[effectiveLen] == '--robots':
-            domains.Domains.robotsView(userQuery)
+            domains.Domains.robotsView(domainQuery)
 
         # OTHER
         # provides a link to search in shodan.io.
         elif parsedUserQuery[effectiveLen] == '-sh' or parsedUserQuery[effectiveLen] == '--shodan':
-            other.Other.shodanSearch(userQuery)
+            other.Other.shodanSearch(otherQuery)
 
         # exits the program.
         elif userQuery == 'exit' or userQuery == 'quit':

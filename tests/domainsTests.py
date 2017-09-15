@@ -8,7 +8,8 @@ from io import StringIO
 class TestDomains(TestCase):
     # tests if whois search is returning back the correct link for single flag.
     def test_whoIs_shortFlag(self):
-        query = "www.abc.com -wh"
+        q = "www.abc.com -wh"
+        query = domains.Domains(q)
         with TestDomains.captured_output(self) as (out, err):
             domains.Domains.whoIsSearch(query)
         link = out.getvalue().strip()
@@ -16,7 +17,8 @@ class TestDomains(TestCase):
 
     # tests if whois search is returning back the correct link for big flag.
     def test_whoIs_longFlag(self):
-        query = "www.abc.com --whois"
+        q = "www.abc.com --whois"
+        query = domains.Domains(q)
         with TestDomains.captured_output(self) as (out, err):
             domains.Domains.whoIsSearch(query)
         link = out.getvalue().strip()
@@ -24,7 +26,8 @@ class TestDomains(TestCase):
 
     # tests if whois search is returning back the correct link for single flag.
     def test_scanSearch_shortFlag(self):
-        query = "www.abc.com -sc"
+        q = "www.abc.com -sc"
+        query = domains.Domains(q)
         with TestDomains.captured_output(self) as (out, err):
             domains.Domains.scanSearch(query)
         link = out.getvalue().strip()
@@ -32,7 +35,8 @@ class TestDomains(TestCase):
 
     # tests if whois search is returning back the correct link for big flag.
     def test_scanSearch_longFlag(self):
-        query = "www.abc.com --scan"
+        q = "www.abc.com --scan"
+        query = domains.Domains(q)
         with TestDomains.captured_output(self) as (out, err):
             domains.Domains.scanSearch(query)
         link = out.getvalue().strip()
@@ -40,7 +44,8 @@ class TestDomains(TestCase):
 
     # tests if whois search is returning back the correct link for single flag.
     def test_archSearch_shortFlag(self):
-        query = "www.abc.com -ar"
+        q = "www.abc.com -ar"
+        query = domains.Domains(q)
         with TestDomains.captured_output(self) as (out, err):
             domains.Domains.archiveSearch(query)
         link = out.getvalue().strip()
@@ -48,7 +53,8 @@ class TestDomains(TestCase):
 
     # tests if whois search is returning back the correct link for big flag.
     def test_archSearch_longFlag(self):
-        query = "www.abc.com --archive"
+        q = "www.abc.com --archive"
+        query = domains.Domains(q)
         with TestDomains.captured_output(self) as (out, err):
             domains.Domains.archiveSearch(query)
         link = out.getvalue().strip()
@@ -56,7 +62,8 @@ class TestDomains(TestCase):
 
     # tests if whois search is returning back the correct link for single flag.
     def test_robotsView_shortFlag(self):
-        query = "www.abc.com -rb"
+        q = "www.abc.com -rb"
+        query = domains.Domains(q)
         with TestDomains.captured_output(self) as (out, err):
             domains.Domains.robotsView(query)
         link = out.getvalue().strip()
@@ -64,7 +71,8 @@ class TestDomains(TestCase):
 
     # tests if whois search is returning back the correct link for big flag.
     def test_robotsView_longFlag(self):
-        query = "www.abc.com --robots"
+        q = "www.abc.com --robots"
+        query = domains.Domains(q)
         with TestDomains.captured_output(self) as (out, err):
             domains.Domains.robotsView(query)
         link = out.getvalue().strip()

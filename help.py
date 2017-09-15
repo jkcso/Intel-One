@@ -59,7 +59,7 @@ Options Short/Long  |  Description                                      |  Examp
 -bg, --bing         | Performs search in bing search engine             | who-dis> john smith -bg | --bing            
 -ed, --edgar        | Performs search using edgar company search engine | who-dis> glovdi -ed | --edgar
 -cw, --corpWiki     | Provides a link in the wikipedia of corporations  | who-dis> glovdi -cw | --corpWiki             
--ar, --reports      | Provides 2 links with annual reports of companies | who-dis> glovdi -ar | --reports
+-are, --reports     | Provides 2 links with annual reports of companies | who-dis> glovdi -are | --reports
            
        
 -- [ Options for Companies @ Social Media] --

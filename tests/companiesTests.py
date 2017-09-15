@@ -64,7 +64,7 @@ class TestCompanies(TestCase):
 
     # tests if search is returning back the correct link for two terms.
     def test_annualReportSearch_shortFlag(self):
-        q = "natwest -ar"
+        q = "natwest -are"
         query = companies.Companies(q)
         with TestCompanies.captured_output(self) as (out, err):
             companies.Companies.annualReportSearch(query)

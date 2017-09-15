@@ -8,7 +8,8 @@ from io import StringIO
 class TestOther(TestCase):
     # tests if shodan search is returning back the correct link for single flag.
     def test_shodanSearch_shortFlag(self):
-        query = "zanussi -sh"
+        q = "zanussi -sh"
+        query = other.Other(q)
         with TestOther.captured_output(self) as (out, err):
             other.Other.shodanSearch(query)
         link = out.getvalue().strip()
@@ -16,7 +17,8 @@ class TestOther(TestCase):
 
     # tests if whois search is returning back the correct link for big flag.
     def test_shodanSearch_longFlag(self):
-        query = "zanussi --shodan"
+        q = "zanussi --shodan"
+        query = other.Other(q)
         with TestOther.captured_output(self) as (out, err):
             other.Other.shodanSearch(query)
         link = out.getvalue().strip()
