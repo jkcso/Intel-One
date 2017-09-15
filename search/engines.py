@@ -20,7 +20,7 @@ class SearchEngines(qu.Query):
 
     # returns google search results.
     def googleSearch(self):
-        for result in search(self.getQuery, tld=SearchEngines.__TLD__, num=SearchEngines.__NUM_RESULTS__,
+        for result in search(str(self), tld=SearchEngines.__TLD__, num=SearchEngines.__NUM_RESULTS__,
                              stop=SearchEngines.__STOP__, pause=SearchEngines.__PAUSE__):
             print(result)
         print()
