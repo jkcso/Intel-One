@@ -19,6 +19,7 @@ To be updated soon.
 ## Current version
 ### Constantly improving user experience
 - A well documented help menu explaining all the available options with examples.
+- Powerful way to perform all searches in one go by providing 3 flags: -i for individuals, -d for domains and -c for companies.
 
 ### Targeting individuals
 - Social media search matching the provided keyword in recent posts from all social media.
@@ -46,6 +47,7 @@ To be updated soon.
 
 ### Other features
 - Shodan.io search.
+- Perform search engine search and social media search alone very easy.  These searches are included in the 'ALL in One' flags.
 
 ## Directories explained
 ### search
