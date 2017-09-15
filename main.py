@@ -137,14 +137,30 @@ if __name__ == '__main__':
         # Performs all possible searches about a company.
         elif parsedUserQuery[effectiveLen] == '-c' or parsedUserQuery[effectiveLen] == '--company':
             companies.Companies.companyAllSearches(companiesQuery)
+            social.SocialMedia.socialMediaAllSearches(socialQuery)
+            engines.SearchEngines.searchEngineAllSearches(searchEngineQuery)
 
         # Performs all possible searches about a target domain.
         elif parsedUserQuery[effectiveLen] == '-d' or parsedUserQuery[effectiveLen] == '--domain':
             domains.Domains.domainAllSearches(domainQuery)
+            social.SocialMedia.socialMediaAllSearches(socialQuery)
+            engines.SearchEngines.searchEngineAllSearches(searchEngineQuery)
+
+        # Performs all possible searches about an individual.
+        elif parsedUserQuery[effectiveLen] == '-i' or parsedUserQuery[effectiveLen] == '--individual':
+            engines.PeopleSearchEngines.peopleEngineAllSearches(peopleSearchQuery)
+            social.SocialMedia.socialMediaAllSearches(socialQuery)
+            engines.SearchEngines.searchEngineAllSearches(searchEngineQuery)
 
         # Performs all possible searches about an individual.
         elif userQuery.__contains__('-i') and userQuery.__contains__('-l'):
             engines.PeopleSearchEngines.peopleEngineAllSearches(peopleSearchQuery)
+            social.SocialMedia.socialMediaAllSearches(socialQuery)
+            engines.SearchEngines.searchEngineAllSearches(searchEngineQuery)
+
+        # Performs all possible searches in social media.
+        elif parsedUserQuery[effectiveLen] == '-sm' or parsedUserQuery[effectiveLen] == '--socialMedia':
+            social.SocialMedia.socialMediaAllSearches(socialQuery)
 
         # Performs all possible searches about anything in all search engines.
         elif parsedUserQuery[effectiveLen] == '-s' or parsedUserQuery[effectiveLen] == '--search':

@@ -23,24 +23,25 @@ class SocialMedia(qu.Query):
     def retrieveAccounts(self, media):
         # Parses the query to avoid the flag inclusion while performing google search.
         parsedQuery = util.Utilities.parseQuery(self.getQuery)
-        searchQuery = parsedQuery + SocialMedia.__INURL__
+        newQuery = parsedQuery + SocialMedia.__INURL__
 
         # Searches in corresponding social media indicated by user.
         if media == 'fb':
-            searchQuery += SocialMedia.__FACEBOOK__
+            newQuery += SocialMedia.__FACEBOOK__
 
         elif media == 'ln':
-            searchQuery += SocialMedia.__LINKEDIN__
+            newQuery += SocialMedia.__LINKEDIN__
 
         elif media == 'tw':
-            searchQuery += SocialMedia.__TWITTER__
+            newQuery += SocialMedia.__TWITTER__
 
         elif media == 'in':
-            searchQuery += SocialMedia.__INSTAGRAM__
+            newQuery += SocialMedia.__INSTAGRAM__
 
         elif media == 're':
-            searchQuery += SocialMedia.__REDDIT__
+            newQuery += SocialMedia.__REDDIT__
 
+        searchQuery = engines.SearchEngines(newQuery)
         return engines.SearchEngines.googleSearch(searchQuery)
 
     # Used to retrieve posts about target from all available social media websites.
@@ -71,3 +72,33 @@ class SocialMedia(qu.Query):
         youtubeLink = 'https://www.youtube.com/user/' + parsedQuery
         print(youtubeLink)
         print()
+
+    # Executes all of the above functions to perform social media search.
+    def socialMediaAllSearches(self):
+        print("\n---- SOCIAL MEDIA SEARCH ----")
+        print("Facebook search:")
+        self.retrieveAccounts('fb')
+
+        print("Linkedin search:")
+        self.retrieveAccounts('ln')
+
+        print("Twitter search:")
+        self.retrieveAccounts('tw')
+
+        print("Instagram search:")
+        self.retrieveAccounts('in')
+
+        print("Youtube search:")
+        self.youtubeSearch()
+
+        print("GitHub search:")
+        self.githubSearch()
+
+        print("Reddit search:")
+        self.retrieveAccounts('re')
+
+        print("If victim target is reddit user, use the following as well:")
+        self.retrieveRedditUserStats()
+
+        print("Social media posts search:")
+        self.retrievePosts()

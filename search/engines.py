@@ -57,7 +57,6 @@ class SearchEngines(qu.Query):
         self.baiduSearch()
         print("Bing search:")
         self.bingSearch()
-        # TODO add social media search.
 
 
 # Class responsible for people search engines' search.
@@ -84,15 +83,14 @@ class PeopleSearchEngines(SearchEngines):
     # Executes all of the above functions.
     def peopleEngineAllSearches(self):
         print("\n---- PEOPLE SEARCH ENGINES ----")
+
         print("Note: We suggest to add a location to make your search more specific.")
         print("To do so, please use: <name> -i <location> -l")
         print("\nSearch in pipl search engine:")
         self.piplSearch()
+
         print("Search in pipl search engine with location:")
         self.piplSearchLocation('-i')
-
-        # TODO add social media here in between those searches.
-        SearchEngines.searchEngineAllSearches(self)
 
     # Parses the query to return the location by splitting it.
     def __parseLocation__(self, flag):

@@ -28,7 +28,10 @@ Options Short/Long  |  Description                                      |  Examp
 -c, --company       | Executes all available searches for companies     | who-dis> glovdi -c | --company       
 -d, --domain        | Executes all available searches for domains       | who-dis> glovdi.com -d | --domain
 -i, --individual    | Executes all available searches for individuals   | who-dis> john smith -i | --individual
--i and -l           | As above including location                       | who-dis> john smith -i madrid -l
+-i and -l           | As above including location of an individual      | who-dis> john smith -i madrid -l
+
+-- Note: The 2 following flags below are executed whenever the above ALL in ONE flags are executed. --  
+-sm, --socialMedia  | Executes all available searches in social media   | who-dis> john smith -sm | --socialMedia
 -s, --search        | Executes all available searches in search engines | who-dis> glovdi -s | --search
 
            
