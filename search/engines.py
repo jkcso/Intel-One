@@ -74,16 +74,29 @@ class PeopleSearchEngines(SearchEngines):
         print()
 
     # This function performs search to the optional location in www.pipl.com.
-    def piplSearchLocation(self):
-        parsedLocation = PeopleSearchEngines.__parseLocation__(self)
+    def piplSearchLocation(self, flag):
+        parsedLocation = PeopleSearchEngines.__parseLocation__(self, flag)
         parsedQuery = util.Utilities.parseQuery(self.getQuery)
         piplLink = 'https://pipl.com/search/?q=' + parsedQuery + '&l=' + parsedLocation
         print(piplLink)
         print()
 
+    # Executes all of the above functions.
+    def peopleEngineAllSearches(self):
+        print("\n---- PEOPLE SEARCH ENGINES ----")
+        print("Note: We suggest to add a location to make your search more specific.")
+        print("To do so, please use: <name> -i <location> -l")
+        print("\nSearch in pipl search engine:")
+        self.piplSearch()
+        print("Search in pipl search engine with location:")
+        self.piplSearchLocation('-i')
+
+        # TODO add social media here in between those searches.
+        SearchEngines.searchEngineAllSearches(self)
+
     # Parses the query to return the location by splitting it.
-    def __parseLocation__(self):
-        first = '-p '
+    def __parseLocation__(self, flag):
+        first = str(flag)
         last = ' -l'
         try:
             stringQuery = self.getQuery

@@ -96,7 +96,7 @@ if __name__ == '__main__':
 
         # performs a search in www.pipl.com containing location information as well to be more specific.
         elif userQuery.__contains__('-p') and userQuery.__contains__('-l'):
-            engines.PeopleSearchEngines.piplSearchLocation(peopleSearchQuery)
+            engines.PeopleSearchEngines.piplSearchLocation(peopleSearchQuery, '-p')
 
         # COMPANIES
         # provides a link to search for companies in www.sec.gov.
@@ -142,7 +142,9 @@ if __name__ == '__main__':
         elif parsedUserQuery[effectiveLen] == '-d' or parsedUserQuery[effectiveLen] == '--domain':
             domains.Domains.domainAllSearches(domainQuery)
 
-
+        # Performs all possible searches about an individual.
+        elif userQuery.__contains__('-i') and userQuery.__contains__('-l'):
+            engines.PeopleSearchEngines.peopleEngineAllSearches(peopleSearchQuery)
 
         # Performs all possible searches about anything in all search engines.
         elif parsedUserQuery[effectiveLen] == '-s' or parsedUserQuery[effectiveLen] == '--search':

@@ -11,7 +11,7 @@ def help():
     print("""
 Please refer to 'Issues' section in GitHub for any problems you may have.
            
--- [ Options for Help & Symbols Meaning ] --
+-- [ Options for Help & Symbols Explained ] --
            
 Options Short/Long  |  Description                                      |  Example                                 
 =================== + ================================================= + =========================================
@@ -21,7 +21,18 @@ help                | Prints help on screen                             | who-di
 '--' symbol         | Used for the long flag                            | who-dis> john smith --google             
            
            
--- [ Options for Individuals @ Social Media ] --
+-- [ ALL in ONE Options ] --
+           
+Options Short/Long  |  Description                                      |  Example                                 
+=================== + ================================================= + =========================================
+-c, --company       | Executes all available searches for companies     | who-dis> glovdi -c | --company       
+-d, --domain        | Executes all available searches for domains       | who-dis> glovdi.com -d | --domain
+-i, --individual    | Executes all available searches for individuals   | who-dis> john smith -i | --individual
+-i and -l           | As above including location                       | who-dis> john smith -i madrid -l
+-s, --search        | Executes all available searches in search engines | who-dis> glovdi -s | --search
+
+           
+-- [ Options for Social Media ] --
            
 Options Short/Long  |  Description                                      |  Example                                 
 =================== + ================================================= + =========================================
@@ -29,51 +40,40 @@ Options Short/Long  |  Description                                      |  Examp
 -fb, --facebook     | Performs facebook search through google           | who-dis> john smith -fb | --facebook     
 -ln, --linkedin     | Performs linkedin search through google           | who-dis> john smith -ln | --linkedin     
 -tw, --twitter      | Performs twitter search through google            | who-dis> john smith -tw | --twitter      
--in, --instagram    | Performs instagram search through google          | who-dis> john smith -in | --instagram    
+-in, --instagram    | Performs instagram search through google          | who-dis> john smith -in | --instagram
+-yt, --youtube      | Performs search in youtube for username           | who-dis> john smith -yt | --youtube    
 -re, --redit        | Performs reddit search through google             | who-dis> john smith -re | --reddit
--yt, --youtube      | Performs search in youtube for username           | who-dis> john smith -yt | --youtube
--gh, --github       | Performs github search on repositories            | who-dis> who-dis -gh | --github
-     
+-ure, --userReddit  | Provides insights and statistics on reddit user   | who-dis> john smith -ure | --userReddit  
+-gh, --github       | Performs github search on repositories            | who-dis> setoolkit -gh | --github
            
            
--- [ Options for Individuals @ (People/Username) Search Engines ] --
+-- [ Options for Search Engines ] --
            
 Options Short/Long  |  Description                                      |  Example                                 
 =================== + ================================================= + =========================================
 -g, --google        | Performs normal google search                     | who-dis> john smith -g | --google      
 -ddg, --ddGo        | Performs search in duck duck go search engine     | who-dis> john smith -ddg | --ddGo
 -bd, --baidu        | Performs search in chinese engine baidu           | who-dis> john smith -bd | --baidu
--bg, --bing         | Performs search in bing search engine             | who-dis> john smith -bg | --bing      
--p, --pipl          | Provided a link to pipl search engine             | who-dis> john smith -p | --pipl          
--p and -l           | Performs specific pipl using with location        | who-dis> john smith -p madrid -l         
--ure, --userReddit  | Provides insights and statistics on reddit user   | who-dis> john smith -ure | --userReddit  
-           
-           
--- [ Options for Companies @ Search Engines] --
+-bg, --bing         | Performs search in bing search engine             | who-dis> john smith -bg | --bing
+
+
+-- [ Options for People Search Engines ] --
            
 Options Short/Long  |  Description                                      |  Example                                 
-=================== + ================================================= + =========================================
--g, --google        | Performs normal google search                     | who-dis> glovdi -g | --google
--ddg, --ddGo        | Performs search in duck duck go search engine     | who-dis> john smith -ddg | --ddGo
--bd, --baidu        | Performs search in chinese engine baidu           | who-dis> john smith -bd | --baidu
--bg, --bing         | Performs search in bing search engine             | who-dis> john smith -bg | --bing            
+=================== + ================================================= + =========================================      
+-p, --pipl          | Provided a link to pipl search engine             | who-dis> john smith -p | --pipl          
+-p and -l           | Performs specific pipl using with location        | who-dis> john smith -p madrid -l         
+           
+           
+-- [ Options for Companies ] --
+           
+Options Short/Long  |  Description                                      |  Example                                 
+=================== + ================================================= + =========================================       
 -ed, --edgar        | Performs search using edgar company search engine | who-dis> glovdi -ed | --edgar
 -cw, --corpWiki     | Provides a link in the wikipedia of corporations  | who-dis> glovdi -cw | --corpWiki             
 -are, --reports     | Provides 2 links with annual reports of companies | who-dis> glovdi -are | --reports
            
-       
--- [ Options for Companies @ Social Media] --
-           
-Options Short/Long  |  Description                                      |  Example                                 
-=================== + ================================================= + =========================================
--ss, --social       | Returns posts from all social media about target  | who-dis> glovdi -ss | --social       
--fb, --facebook     | Performs facebook search through google           | who-dis> glovdi -fb | --facebook         
--ln, --linkedin     | Performs linkedin search through google           | who-dis> glovdi -ln | --linkedin         
--tw, --twitter      | Performs twitter search through google            | who-dis> glovdi -tw | --twitter          
--in, --instagram    | Performs instagram search through google          | who-dis> glovdi -in | --instagram
--yt, --youtube      | Performs search in youtube for username           | who-dis> john smith -yt | --youtube        
-           
-           
+                      
 -- [ Options for Domains ] --
            
 Options Short/Long  |  Description                                      |  Example                                 
@@ -89,4 +89,5 @@ Options Short/Long  |  Description                                      |  Examp
 Options Short/Long  |  Description                                      |  Example                                 
 =================== + ================================================= + =========================================
 -sh, --shodan       | Performs shodan search for given keyword          | who-dis> zanussi -sh | --shodan          
+
 """)
