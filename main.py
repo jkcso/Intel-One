@@ -116,6 +116,10 @@ if __name__ == '__main__':
         elif parsedUserQuery[effectiveLen] == '-wh' or parsedUserQuery[effectiveLen] == '--whois':
             domains.Domains.whoIsSearch(domainQuery)
 
+        # provides a link that performs a DNS lookup.
+        elif parsedUserQuery[effectiveLen] == '-dns' or parsedUserQuery[effectiveLen] == '--dnsLookup':
+            domains.Domains.dnsLookup(domainQuery)
+
         # provides a link to search in asafaweb website for vulnerability scanning.
         elif parsedUserQuery[effectiveLen] == '-sc' or parsedUserQuery[effectiveLen] == '--scan':
             domains.Domains.scanSearch(domainQuery)

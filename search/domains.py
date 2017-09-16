@@ -16,6 +16,12 @@ class Domains(qu.Query):
         print(whoIsLink)
         print()
 
+    # Performs search in who.is records giving information about a target domain.
+    def dnsLookup(self):
+        dnsLookupLink = 'https://mxtoolbox.com/SuperTool.aspx?action=a%3' + util.Utilities.parseQuery(self.getQuery)
+        print(dnsLookupLink)
+        print()
+
     # Retrieves a link for scanning a target domain.
     def scanSearch(self):
         scanLink = 'https://asafaweb.com/Scan?Url=' + util.Utilities.parseQuery(self.getQuery)
@@ -42,6 +48,9 @@ class Domains(qu.Query):
 
         print("View official whois records:")
         self.whoIsSearch()
+
+        print("View results from DNS lookup:")
+        self.dnsLookup()
 
         print("View archived versions of the website:")
         self.archiveSearch()

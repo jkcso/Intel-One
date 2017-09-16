@@ -40,6 +40,7 @@ To be updated soon.
 
 ### Targeting domains
 - Whois lookup.
+- DNS lookup.
 - Web vulnerability scan.
 - View archived versions of a website since its its day 1.
 - View robots.txt file including links not indexed by search engines.

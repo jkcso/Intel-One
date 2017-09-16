@@ -81,7 +81,8 @@ Options Short/Long  |  Description                                      |  Examp
            
 Options Short/Long  |  Description                                      |  Example                                 
 =================== + ================================================= + =========================================
--wh, --whois        | Performs whois search in the target domain        | who-dis> glovdi.com -wh | --whois     
+-wh, --whois        | Performs whois search in the target domain        | who-dis> glovdi.com -wh | --whois
+-dns, --dnsLookup   | Performs a DNS lookup about target domain         | who-dis> glovdi.com -dns | --dnsLookup     
 -sc, --scan         | Performs a vulnerability scan using asafaweb site | who-dis> glovdi.com -sc | --scan
 -ar, --archive      | Performs search for past versions of website      | who-dis> glovdi.com -ar | --arch
 -rb, --robots       | Provides the link including the robots.txt file   | who-dis> glovdi.com -rb | --robots     
