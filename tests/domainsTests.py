@@ -49,7 +49,7 @@ class TestDomains(TestCase):
         with TestDomains.captured_output(self) as (out, err):
             domains.Domains.archiveSearch(query)
         link = out.getvalue().strip()
-        self.assertEqual(link, 'https://web.archive.org/web/*/www.abc.com')
+        self.assertEqual(link, 'https://web.archive.org/web/www.abc.com')
 
     # tests if whois search is returning back the correct link for big flag.
     def test_archSearch_longFlag(self):
@@ -58,7 +58,7 @@ class TestDomains(TestCase):
         with TestDomains.captured_output(self) as (out, err):
             domains.Domains.archiveSearch(query)
         link = out.getvalue().strip()
-        self.assertEqual(link, 'https://web.archive.org/web/*/www.abc.com')
+        self.assertEqual(link, 'https://web.archive.org/web/www.abc.com')
 
     # tests if whois search is returning back the correct link for single flag.
     def test_robotsView_shortFlag(self):

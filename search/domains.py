@@ -24,7 +24,7 @@ class Domains(qu.Query):
 
     # Retrieves a link into archived version of target domain
     def archiveSearch(self):
-        archiveLink = 'https://web.archive.org/web/' + '*/' + util.Utilities.parseQuery(self.getQuery)  # TODO fix the */
+        archiveLink = 'https://web.archive.org/web/' + util.Utilities.parseQuery(self.getQuery)  # TODO fix the */
         print(archiveLink)
         print()
 
