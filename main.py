@@ -93,6 +93,10 @@ if __name__ == '__main__':
         elif parsedUserQuery[effectiveLen] == '-qw' or parsedUserQuery[effectiveLen] == '--qwant':
             engines.SearchEngines.qwantSearch(searchEngineQuery)
 
+        # performs clustering search.
+        elif parsedUserQuery[effectiveLen] == '-cl' or parsedUserQuery[effectiveLen] == '--cluster':
+            engines.SearchEngines.clusteringSearchEngines(searchEngineQuery)
+
         # performs excite news search.
         elif parsedUserQuery[effectiveLen] == '-ex' or parsedUserQuery[effectiveLen] == '--exciteNews':
             engines.SearchEngines.exciteNewsSearch(searchEngineQuery)

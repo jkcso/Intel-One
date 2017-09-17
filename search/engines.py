@@ -67,6 +67,15 @@ class SearchEngines(qu.Query):
         print(qwantLink)
         print()
 
+    # returns a link in clustering websites that provide search to many places.
+    def clusteringSearchEngines(self):
+        parsedQuery = util.Utilities.parseQuery(self.getQuery)
+        carrotLink = 'http://search.carrot2.org/stable/search?source=web&view=folders&skin=fancy-compact&query=' + parsedQuery
+        cluzLink = 'http://www.cluuz.com/Default.aspx?list=y&yahoo=y&q=' + parsedQuery
+        print(carrotLink)
+        print(cluzLink)
+        print()
+
     # Executes all of the above functions.
     def searchEngineAllSearches(self):
         print("\n---- SEARCH ENGINES ----")
@@ -85,6 +94,9 @@ class SearchEngines(qu.Query):
 
         print("Qwant search:")
         self.qwantSearch()
+
+        print("Clustering multi search:")
+        self.clusteringSearchEngines()
 
         print("Excite news search:")
         self.exciteNewsSearch()
