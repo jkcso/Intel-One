@@ -60,6 +60,13 @@ class SearchEngines(qu.Query):
         print(oldArticlesLink)
         print()
 
+    # returns a link in qwant search engine collecting search, media, and social.
+    def qwantSearch(self):
+        parsedQuery = util.Utilities.parseQuery(self.getQuery)
+        qwantLink = 'https://www.qwant.com/?q=' + parsedQuery + '&t=all'
+        print(qwantLink)
+        print()
+
     # Executes all of the above functions.
     def searchEngineAllSearches(self):
         print("\n---- SEARCH ENGINES ----")
@@ -76,8 +83,14 @@ class SearchEngines(qu.Query):
         print("Bing search:")
         self.bingSearch()
 
+        print("Qwant search:")
+        self.qwantSearch()
+
         print("Excite news search:")
         self.exciteNewsSearch()
+
+        print("Fact bites news search:")
+        self.oldArticlesSearch()
 
 
 # Class responsible for people search engines' search.

@@ -89,6 +89,10 @@ if __name__ == '__main__':
         elif parsedUserQuery[effectiveLen] == '-bg' or parsedUserQuery[effectiveLen] == '--bing':
             engines.SearchEngines.bingSearch(searchEngineQuery)
 
+        # performs qwant search.
+        elif parsedUserQuery[effectiveLen] == '-qw' or parsedUserQuery[effectiveLen] == '--qwant':
+            engines.SearchEngines.qwantSearch(searchEngineQuery)
+
         # performs excite news search.
         elif parsedUserQuery[effectiveLen] == '-ex' or parsedUserQuery[effectiveLen] == '--exciteNews':
             engines.SearchEngines.exciteNewsSearch(searchEngineQuery)
