@@ -27,7 +27,7 @@ To be updated soon.
 - People search engines using just a name or both a name and a location.
 - Get insights on lifetime reddit user activity by providing a username.
 - Search engine search in google, duckduckgo, baidu, bing, qwant, clustering multi search, excite search (newest posts) and fact bites (old posts).
-- Github search about known published open source projects.
+- Github and 'nerdy data' search to search keywords on published source code.
 - Perform all of the above using just one flag.
 
 ### Targeting companies

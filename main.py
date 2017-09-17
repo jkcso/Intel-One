@@ -64,9 +64,9 @@ if __name__ == '__main__':
         elif parsedUserQuery[effectiveLen] == '-ure' or parsedUserQuery[effectiveLen] == '--userReddit':
             social.SocialMedia.retrieveRedditUserStats(socialQuery)
 
-        # Searches for user's published work in Github.
-        elif parsedUserQuery[effectiveLen] == '-gh' or parsedUserQuery[effectiveLen] == '--github':
-            social.SocialMedia.githubSearch(socialQuery)
+        # Searches for user's published work in source code search and github.
+        elif parsedUserQuery[effectiveLen] == '-cd' or parsedUserQuery[effectiveLen] == '--code':
+            social.SocialMedia.sourceCodeSearch(socialQuery)
 
         # Searches for individuals or company profiles in youtube.
         elif parsedUserQuery[effectiveLen] == '-yt' or parsedUserQuery[effectiveLen] == '--youtube':

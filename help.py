@@ -47,7 +47,7 @@ Options Short/Long  |  Description                                      |  Examp
 -yt, --youtube      | Performs search in youtube for username           | who-dis> john smith -yt | --youtube    
 -re, --redit        | Performs reddit search through google             | who-dis> john smith -re | --reddit
 -ure, --userReddit  | Provides insights and statistics on reddit user   | who-dis> john smith -ure | --userReddit  
--gh, --github       | Performs github search on repositories            | who-dis> setoolkit -gh | --github
+-cd ,--code         | Performs github & 'nerdy data' search on repos    | who-dis> setoolkit -cd | --code
            
            
 -- [ Options for Search Engines ] --

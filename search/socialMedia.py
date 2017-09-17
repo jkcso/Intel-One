@@ -60,9 +60,11 @@ class SocialMedia(qu.Query):
         print()
 
     # searches about individuals in github, specifically about their projects.
-    def githubSearch(self):
+    def sourceCodeSearch(self):
         parsedQuery = util.Utilities.parseQuery(self.getQuery)
+        scLink = 'https://nerdydata.com/search?query=' + parsedQuery
         githubLink = 'https://github.com/search?q=' + parsedQuery
+        print(scLink)
         print(githubLink)
         print()
 
