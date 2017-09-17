@@ -17,6 +17,7 @@ class SocialMedia(qu.Query):
     __LINKEDIN__ = "www.linkedin.com\""
     __TWITTER__ = "www.twitter.com\""
     __INSTAGRAM__ = "www.instagram.com\""
+    __PINTEREST__ = "www.pinterest.com\n"
     __REDDIT__ = "www.reddit.com\""
 
     # Performs social search through google using the advanced google dork inurl.
@@ -37,6 +38,9 @@ class SocialMedia(qu.Query):
 
         elif media == 'in':
             newQuery += SocialMedia.__INSTAGRAM__
+
+        elif media == 'pn':
+            newQuery += SocialMedia.__PINTEREST__
 
         elif media == 're':
             newQuery += SocialMedia.__REDDIT__
@@ -90,11 +94,14 @@ class SocialMedia(qu.Query):
         print("Instagram search:")
         self.retrieveAccounts('in')
 
+        print("Pinterest search:")
+        self.retrieveAccounts('pn')
+
         print("Youtube search:")
         self.youtubeSearch()
 
-        print("GitHub search:")
-        self.githubSearch()
+        print("Source code search:")
+        self.sourceCodeSearch()
 
         print("Reddit search:")
         self.retrieveAccounts('re')

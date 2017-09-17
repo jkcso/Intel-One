@@ -44,6 +44,7 @@ Options Short/Long  |  Description                                      |  Examp
 -ln, --linkedin     | Performs linkedin search through google           | who-dis> john smith -ln | --linkedin     
 -tw, --twitter      | Performs twitter search through google            | who-dis> john smith -tw | --twitter      
 -in, --instagram    | Performs instagram search through google          | who-dis> john smith -in | --instagram
+-pn, --pinterest    | Performs pinterest search through google          | who-dis> john smith -pn | --pinterest
 -yt, --youtube      | Performs search in youtube for username           | who-dis> john smith -yt | --youtube    
 -re, --redit        | Performs reddit search through google             | who-dis> john smith -re | --reddit
 -ure, --userReddit  | Provides insights and statistics on reddit user   | who-dis> john smith -ure | --userReddit  

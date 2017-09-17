@@ -49,8 +49,7 @@ class TestCompanies(TestCase):
         with TestCompanies.captured_output(self) as (out, err):
             companies.Companies.corpWikiSearch(query)
         link = out.getvalue().strip()
-        self.assertEqual(link,
-                            'https://www.corporationwiki.com/search/results?term=google')
+        self.assertEqual(link, 'https://www.corporationwiki.com/search/results?term=google')
 
     # tests if search is returning back the correct link for two terms.
     def test_corpWikiSearch_longFlag(self):
@@ -59,8 +58,7 @@ class TestCompanies(TestCase):
         with TestCompanies.captured_output(self) as (out, err):
             companies.Companies.corpWikiSearch(query)
         link = out.getvalue().strip()
-        self.assertEqual(link,
-                            'https://www.corporationwiki.com/search/results?term=google')
+        self.assertEqual(link, 'https://www.corporationwiki.com/search/results?term=google')
 
     # tests if search is returning back the correct link for two terms.
     def test_annualReportSearch_shortFlag(self):

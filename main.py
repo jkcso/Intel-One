@@ -56,6 +56,10 @@ if __name__ == '__main__':
         elif parsedUserQuery[effectiveLen] == '-in' or parsedUserQuery[effectiveLen] == '--instagram':
             social.SocialMedia.retrieveAccounts(socialQuery, 'in')
 
+        # performs pinterest search.
+        elif parsedUserQuery[effectiveLen] == '-pn' or parsedUserQuery[effectiveLen] == '--pinterest':
+            social.SocialMedia.retrieveAccounts(socialQuery, 'pn')
+
         # performs reddit search.
         elif parsedUserQuery[effectiveLen] == '-re' or parsedUserQuery[effectiveLen] == '--reddit':
             social.SocialMedia.retrieveAccounts(socialQuery, 're')
