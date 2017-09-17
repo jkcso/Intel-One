@@ -58,6 +58,7 @@ Options Short/Long  |  Description                                      |  Examp
 -ddg, --ddGo        | Performs search in duck duck go search engine     | who-dis> john smith -ddg | --ddGo
 -bd, --baidu        | Performs search in chinese engine baidu           | who-dis> john smith -bd | --baidu
 -bg, --bing         | Performs search in bing search engine             | who-dis> john smith -bg | --bing
+-ex, --exciteNews   | Performs search about recent news on search engine| who-dis> john smith -ex | --exciteNews
 
 
 -- [ Options for People Search Engines ] --

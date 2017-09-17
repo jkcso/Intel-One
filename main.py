@@ -89,6 +89,10 @@ if __name__ == '__main__':
         elif parsedUserQuery[effectiveLen] == '-bg' or parsedUserQuery[effectiveLen] == '--bing':
             engines.SearchEngines.bingSearch(searchEngineQuery)
 
+        # performs excite news search.
+        elif parsedUserQuery[effectiveLen] == '-ex' or parsedUserQuery[effectiveLen] == '--exciteNews':
+            engines.SearchEngines.exciteNewsSearch(searchEngineQuery)
+
         # PEOPLE SEARCH ENGINES
         # performs a search in www.pipl.com to capture the social media not captured above.
         elif parsedUserQuery[effectiveLen] == '-p' or parsedUserQuery[effectiveLen] == '--pipl':

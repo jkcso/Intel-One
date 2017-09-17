@@ -46,6 +46,13 @@ class SearchEngines(qu.Query):
         print(bingLink)
         print()
 
+    # returns a link in excite search engine to search - specifically news, latest posts about queries -.
+    def exciteNewsSearch(self):
+        parsedQuery = util.Utilities.parseQuery(self.getQuery)
+        exciteNewsLink = 'http://msxml.excite.com/search/news?q=' + parsedQuery + '&fcoid=411&fcop=left&om_nextpage=True&fpid=2'
+        print(exciteNewsLink)
+        print()
+
     # Executes all of the above functions.
     def searchEngineAllSearches(self):
         print("\n---- SEARCH ENGINES ----")
@@ -61,6 +68,9 @@ class SearchEngines(qu.Query):
 
         print("Bing search:")
         self.bingSearch()
+
+        print("Excite news search:")
+        self.exciteNewsSearch()
 
 
 # Class responsible for people search engines' search.
