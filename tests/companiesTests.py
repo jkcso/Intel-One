@@ -70,7 +70,11 @@ class TestCompanies(TestCase):
             companies.Companies.annualReportSearch(query)
         link = out.getvalue().strip()
         self.assertEqual(link, 'http://www.annualreports.com/Companies?search=natwest\n'
-                               'https://www.reportlinker.com/report/search/keywords/natwest')
+                               'https://www.reportlinker.com/report/search/keywords/natwest\n'
+                               'http://www.authorstream.com/tag/natwest\n'
+                               'http://www.freefullpdf.com/#gsc.tab=0&gsc.q=natwest\n'
+                               'https://offshoreleaks.icij.org/search?utf8=✓&q=natwest\n'
+                               'https://www.slideshare.net/search/slideshow?searchfrom=header&q=natwest')
 
     # tests if search is returning back the correct link for two terms.
     def test_annualReportSearch_longFlag(self):
@@ -80,7 +84,11 @@ class TestCompanies(TestCase):
             companies.Companies.annualReportSearch(query)
         link = out.getvalue().strip()
         self.assertEqual(link, 'http://www.annualreports.com/Companies?search=natwest\n'
-                               'https://www.reportlinker.com/report/search/keywords/natwest')
+                               'https://www.reportlinker.com/report/search/keywords/natwest\n'
+                               'http://www.authorstream.com/tag/natwest\n'
+                               'http://www.freefullpdf.com/#gsc.tab=0&gsc.q=natwest\n'
+                               'https://offshoreleaks.icij.org/search?utf8=✓&q=natwest\n'
+                               'https://www.slideshare.net/search/slideshow?searchfrom=header&q=natwest')
 
     # tests output in screen.
     @contextmanager

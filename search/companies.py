@@ -29,8 +29,16 @@ class Companies(qu.Query):
         parsedQuery = util.Utilities.parseQuery(self.getQuery)
         postsLink_1 = 'http://www.annualreports.com/Companies?search=' + parsedQuery
         postsLink_2 = 'https://www.reportlinker.com/report/search/keywords/' + parsedQuery
+        postsLink_3 = 'http://www.authorstream.com/tag/' + parsedQuery
+        postsLink_4 = 'http://www.freefullpdf.com/#gsc.tab=0&gsc.q=' + parsedQuery
+        postsLink_5 = 'https://offshoreleaks.icij.org/search?utf8=✓&q=' + parsedQuery
+        postsLink_6 = 'https://www.slideshare.net/search/slideshow?searchfrom=header&q=' + parsedQuery
         print(postsLink_1)
         print(postsLink_2)
+        print(postsLink_3)
+        print(postsLink_4)
+        print(postsLink_5)
+        print(postsLink_6)
         print()
 
     # Executes all of the above functions to perform company search.
@@ -43,5 +51,5 @@ class Companies(qu.Query):
         print("Corporation info can be found here:")
         self.corpWikiSearch()
 
-        print("Annual reports and presentations can be found here:")
+        print("Annual reports, presentations and PDFs can be found here:")
         self.annualReportSearch()

@@ -34,7 +34,7 @@ To be updated soon.
 - Same social media search as above when applicable.
 - Company search using the edgar search engine returning difficult to find and often confidential information about companies.
 - Company search in corporate wiki aka the wikipedia of Corporations.
-- Annual reports, slideshows and other insights.
+- Annual reports, slideshows, PDFs and other insights.
 - Search engine search in google, duckduckgo, baidu and bing.
 - Perform all of the above using just one flag.
 
