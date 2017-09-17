@@ -60,6 +60,10 @@ if __name__ == '__main__':
         elif parsedUserQuery[effectiveLen] == '-pn' or parsedUserQuery[effectiveLen] == '--pinterest':
             social.SocialMedia.retrieveAccounts(socialQuery, 'pn')
 
+        # performs tumblr search.
+        elif parsedUserQuery[effectiveLen] == '-tb' or parsedUserQuery[effectiveLen] == '--tumblr':
+            social.SocialMedia.retrieveAccounts(socialQuery, 'tb')
+
         # performs reddit search.
         elif parsedUserQuery[effectiveLen] == '-re' or parsedUserQuery[effectiveLen] == '--reddit':
             social.SocialMedia.retrieveAccounts(socialQuery, 're')

@@ -18,6 +18,7 @@ class SocialMedia(qu.Query):
     __TWITTER__ = "www.twitter.com\""
     __INSTAGRAM__ = "www.instagram.com\""
     __PINTEREST__ = "www.pinterest.com\n"
+    __TUMBLR__ = "www.tumblr.com\n"
     __REDDIT__ = "www.reddit.com\""
 
     # Performs social search through google using the advanced google dork inurl.
@@ -41,6 +42,9 @@ class SocialMedia(qu.Query):
 
         elif media == 'pn':
             newQuery += SocialMedia.__PINTEREST__
+
+        elif media == 'tb':
+            newQuery += SocialMedia.__TUMBLR__
 
         elif media == 're':
             newQuery += SocialMedia.__REDDIT__
@@ -99,6 +103,9 @@ class SocialMedia(qu.Query):
 
         print("Youtube search:")
         self.youtubeSearch()
+
+        print("Tumblr search:")
+        self.retrieveAccounts('tb')
 
         print("Source code search:")
         self.sourceCodeSearch()
