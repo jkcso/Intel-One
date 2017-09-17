@@ -53,6 +53,13 @@ class SearchEngines(qu.Query):
         print(exciteNewsLink)
         print()
 
+    # returns a link in fact bites search engine to search very old posts about search term.
+    def oldArticlesSearch(self):
+        parsedQuery = util.Utilities.parseQuery(self.getQuery)
+        oldArticlesLink = 'http://www.factbites.com/topics/' + parsedQuery
+        print(oldArticlesLink)
+        print()
+
     # Executes all of the above functions.
     def searchEngineAllSearches(self):
         print("\n---- SEARCH ENGINES ----")

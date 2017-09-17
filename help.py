@@ -59,6 +59,7 @@ Options Short/Long  |  Description                                      |  Examp
 -bd, --baidu        | Performs search in chinese engine baidu           | who-dis> john smith -bd | --baidu
 -bg, --bing         | Performs search in bing search engine             | who-dis> john smith -bg | --bing
 -ex, --exciteNews   | Performs search about recent news on search engine| who-dis> john smith -ex | --exciteNews
+-oa, --oldArticles  | Performs search about very old posts about query  | who-dis> john smith -oa | --oldArticles
 
 
 -- [ Options for People Search Engines ] --

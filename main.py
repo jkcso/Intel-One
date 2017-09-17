@@ -93,6 +93,10 @@ if __name__ == '__main__':
         elif parsedUserQuery[effectiveLen] == '-ex' or parsedUserQuery[effectiveLen] == '--exciteNews':
             engines.SearchEngines.exciteNewsSearch(searchEngineQuery)
 
+        # performs old posts serach in factbites search engine.
+        elif parsedUserQuery[effectiveLen] == '-oa' or parsedUserQuery[effectiveLen] == '--oldArticles':
+            engines.SearchEngines.oldArticlesSearch(searchEngineQuery)
+
         # PEOPLE SEARCH ENGINES
         # performs a search in www.pipl.com to capture the social media not captured above.
         elif parsedUserQuery[effectiveLen] == '-p' or parsedUserQuery[effectiveLen] == '--pipl':

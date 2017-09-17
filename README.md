@@ -26,7 +26,7 @@ To be updated soon.
 - Specific social media search using Facebook, Linkedin, Twitter, Instagram, Youtube and Reddit.
 - People search engines using just a name or both a name and a location.
 - Get insights on lifetime reddit user activity by providing a username.
-- Search engine search in google, duckduckgo, baidu and bing.
+- Search engine search in google, duckduckgo, baidu, bing, excite search (newest posts) and fact bites (old posts).
 - Github search about known published open source projects.
 - Perform all of the above using just one flag.
 
