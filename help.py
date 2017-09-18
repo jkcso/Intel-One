@@ -39,7 +39,7 @@ Options Short/Long  |  Description                                      |  Examp
            
 Options Short/Long  |  Description                                      |  Example                                 
 =================== + ================================================= + =========================================
--ss, --social       | Returns posts from all social media about target  | who-dis> john smith -ss | --social       
+-rts, --rtsearch    | Returns real time social media search results     | who-dis> john smith -rts | --rtsearch  
 -fb, --facebook     | Performs facebook search through google           | who-dis> john smith -fb | --facebook     
 -ln, --linkedin     | Performs linkedin search through google           | who-dis> john smith -ln | --linkedin     
 -tw, --twitter      | Performs twitter search through google            | who-dis> john smith -tw | --twitter      

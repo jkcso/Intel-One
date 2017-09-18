@@ -36,9 +36,9 @@ if __name__ == '__main__':
             help.help()
 
         # SOCIAL MEDIA
-        # performs search about posts on the given keyword in social search website looking in all available social media.
-        elif parsedUserQuery[effectiveLen] == '-ss' or parsedUserQuery[effectiveLen] == '--social':
-            social.SocialMedia.retrievePosts(socialQuery)
+        # performs real time search on posts about given keyword.
+        elif parsedUserQuery[effectiveLen] == '-rts' or parsedUserQuery[effectiveLen] == '--rtsearch':
+            social.SocialMedia.realTimeSocialMediaSearch(socialQuery)
 
         # performs facebook search.
         elif parsedUserQuery[effectiveLen] == '-fb' or parsedUserQuery[effectiveLen] == '--facebook':
