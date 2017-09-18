@@ -71,9 +71,31 @@ class SocialMedia(qu.Query):
         print(rtLink_6)
         print()
 
+    # Gets the tweets about the keyword queried.
+    def retrieveTweets(self):
+        parsedQuery = util.Utilities.parseQuery(self.getQuery)
+        tweetsLink_1 = 'http://backtweets.com/search/?q=' + parsedQuery
+        tweetsLink_2 = 'https://socialbearing.com/search/user/' + parsedQuery
+        print(tweetsLink_1)
+        print(tweetsLink_2)
+        print()
+
+    def retrieveTwitterAnalytics(self):
+        parsedQuery = util.Utilities.parseQuery(self.getQuery)
+        twitterAnalyticsLink_1 = 'https://burrrd.com/analyze?username=' + parsedQuery
+        twitterAnalyticsLink_2 = 'https://foller.me/' + parsedQuery
+        twitterAnalyticsLink_3 = 'http://gettwitterid.com/?user_name=' + parsedQuery + '&submit=GET+USER+ID'
+        twitterAnalyticsLink_4 = 'https://www.hashtags.org/analytics/' + parsedQuery + '/'
+        print(twitterAnalyticsLink_1)
+        print(twitterAnalyticsLink_2)
+        print(twitterAnalyticsLink_3)
+        print(twitterAnalyticsLink_4)
+        print()
+
     # Uses reddit username to get insights on lifetime reddit activity.
     def retrieveRedditUserStats(self):
-        redditLink = 'https://snoopsnoo.com/u/' + util.Utilities.parseQuery(self.getQuery)
+        parsedQuery = util.Utilities.parseQuery(self.getQuery)
+        redditLink = 'https://snoopsnoo.com/u/' + parsedQuery
         print(redditLink)
         print()
 
@@ -108,6 +130,12 @@ class SocialMedia(qu.Query):
 
         print("Twitter search:")
         self.retrieveAccounts('tw')
+
+        print("Tweets mentioning target keyword:")
+        self.retrieveTweets()
+
+        print("Specific username's twitter analytics:")
+        self.retrieveTwitterAnalytics()
 
         print("Instagram search:")
         self.retrieveAccounts('in')

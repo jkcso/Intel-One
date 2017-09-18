@@ -42,7 +42,7 @@ Options Short/Long  |  Description                                      |  Examp
 -rts, --rtsearch    | Returns real time social media search results     | who-dis> john smith -rts | --rtsearch  
 -fb, --facebook     | Performs facebook search through google           | who-dis> john smith -fb | --facebook     
 -ln, --linkedin     | Performs linkedin search through google           | who-dis> john smith -ln | --linkedin     
--tw, --twitter      | Performs twitter search through google            | who-dis> john smith -tw | --twitter      
+-tw, --twitter      | Twitter search + retrieves tweets and analytics   | who-dis> john smith -tw | --twitter      
 -in, --instagram    | Performs instagram search through google          | who-dis> john smith -in | --instagram
 -pn, --pinterest    | Performs pinterest search through google          | who-dis> john smith -pn | --pinterest
 -yt, --youtube      | Performs search in youtube for username           | who-dis> john smith -yt | --youtube

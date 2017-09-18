@@ -51,6 +51,8 @@ if __name__ == '__main__':
         # performs twitter search.
         elif parsedUserQuery[effectiveLen] == '-tw' or parsedUserQuery[effectiveLen] == '--twitter':
             social.SocialMedia.retrieveAccounts(socialQuery, 'tw')
+            social.SocialMedia.retrieveTweets(socialQuery)
+            social.SocialMedia.retrieveTwitterAnalytics(socialQuery)
 
         # performs instagram search.
         elif parsedUserQuery[effectiveLen] == '-in' or parsedUserQuery[effectiveLen] == '--instagram':
