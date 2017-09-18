@@ -74,10 +74,15 @@ class SocialMedia(qu.Query):
     # Gets the tweets about the keyword queried.
     def retrieveTweets(self):
         parsedQuery = util.Utilities.parseQuery(self.getQuery)
+        tweetsLink_0 = 'https://twitter.com/search?q=' + parsedQuery + '&src=typd'
         tweetsLink_1 = 'http://backtweets.com/search/?q=' + parsedQuery
         tweetsLink_2 = 'https://socialbearing.com/search/user/' + parsedQuery
+        tweetsLink_3 = 'http://twbirthday.com/' + parsedQuery + '/'
+        print(tweetsLink_0)
         print(tweetsLink_1)
         print(tweetsLink_2)
+        print("Trying to retrieve twitter user account birthday here:")
+        print(tweetsLink_3)
         print()
 
     def retrieveTwitterAnalytics(self):
