@@ -22,7 +22,7 @@ To be updated soon.
 - Powerful way to perform all searches in one go by providing 3 flags: -i for individuals, -d for domains and -c for companies.
 
 ### Targeting individuals
-- Social media search matching the provided keyword in recent posts from all social media.
+- Real time social media search matching the provided keyword in recent posts on everything that exists out there.
 - Specific social media search using Facebook, Linkedin, Twitter, Instagram, Pinterest, Youtube, Tumblr and Reddit.
 - People search engines using just a name or both a name and a location.
 - Get insights on lifetime reddit user activity by providing a username.
