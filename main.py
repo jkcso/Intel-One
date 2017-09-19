@@ -47,6 +47,8 @@ if __name__ == '__main__':
         # performs linkedin search.
         elif parsedUserQuery[effectiveLen] == '-ln' or parsedUserQuery[effectiveLen] == '--linkedin':
             social.SocialMedia.retrieveAccounts(socialQuery, 'ln')
+            print("Browser plugin that finds emails of people's profiles in Linkedin.")
+            print('https://chrome.google.com/webstore/detail/ftl/lkpekgkhmldknbcgjicjkomphkhhdkjj?hl=en-GB\n')
 
         # performs twitter search.
         elif parsedUserQuery[effectiveLen] == '-tw' or parsedUserQuery[effectiveLen] == '--twitter':
@@ -70,6 +72,7 @@ if __name__ == '__main__':
         # performs reddit search.
         elif parsedUserQuery[effectiveLen] == '-re' or parsedUserQuery[effectiveLen] == '--reddit':
             social.SocialMedia.retrieveAccounts(socialQuery, 're')
+            social.SocialMedia.retrieveRedditPosts(socialQuery)
 
         # Uses reddit username to get insights on lifetime reddit activity.
         elif parsedUserQuery[effectiveLen] == '-ure' or parsedUserQuery[effectiveLen] == '--userReddit':
@@ -82,6 +85,10 @@ if __name__ == '__main__':
         # Searches for individuals or company profiles in youtube.
         elif parsedUserQuery[effectiveLen] == '-yt' or parsedUserQuery[effectiveLen] == '--youtube':
             social.SocialMedia.youtubeSearch(socialQuery)
+
+        # Searches for target keyword in blogs.
+        elif parsedUserQuery[effectiveLen] == '-bl' or parsedUserQuery[effectiveLen] == '--blogs':
+            social.SocialMedia.blogSearch(socialQuery)
 
         # SEARCH ENGINES
         # performs google search.
@@ -118,8 +125,8 @@ if __name__ == '__main__':
 
         # PEOPLE SEARCH ENGINES
         # performs a search in www.pipl.com to capture the social media not captured above.
-        elif parsedUserQuery[effectiveLen] == '-p' or parsedUserQuery[effectiveLen] == '--pipl':
-            engines.PeopleSearchEngines.piplSearch(peopleSearchQuery)
+        elif parsedUserQuery[effectiveLen] == '-p' or parsedUserQuery[effectiveLen] == '--people':
+            engines.PeopleSearchEngines.peopleSearch(peopleSearchQuery)
 
         # performs a search in www.pipl.com containing location information as well to be more specific.
         elif userQuery.__contains__('-p') and userQuery.__contains__('-l'):

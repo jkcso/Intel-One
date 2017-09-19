@@ -61,24 +61,6 @@ class TestEngines(TestCase):
         link = out.getvalue().strip()
         self.assertEqual(link, 'https://www.bing.com/search?q=glovdi')
 
-    # tests if search is returning back the correct link for two terms.
-    def test_piplSearch_doubleTerm_shortFlag(self):
-        q = "john lennon -p"
-        query = engines.PeopleSearchEngines(q)
-        with TestEngines.captured_output(self) as (out, err):
-            engines.PeopleSearchEngines.piplSearch(query)
-        link = out.getvalue().strip()
-        self.assertEqual(link, 'https://pipl.com/search/?q=john+lennon')
-
-    # tests if search is giving back correct link for three or more terms.
-    def test_piplSearch_moreThanTwoWords_shortFlag(self):
-        q = "dr john lennon -p"
-        query = engines.PeopleSearchEngines(q)
-        with TestEngines.captured_output(self) as (out, err):
-            engines.PeopleSearchEngines.piplSearch(query)
-        link = out.getvalue().strip()
-        self.assertEqual(link, 'https://pipl.com/search/?q=dr+john+lennon')
-
     # tests if search for location is giving back correct link for single word location.
     def test_piplSearchLocation_singleLocation(self):
         q = "john lennon -p madrid -l"
@@ -96,15 +78,6 @@ class TestEngines(TestCase):
             engines.PeopleSearchEngines.piplSearchLocation(query, '-p')
         link = out.getvalue().strip()
         self.assertEqual(link, 'https://pipl.com/search/?q=john+lennon&l=+new+york')
-
-    # tests searching using the long flag.
-    def test_piplSearch_LongFlag(self):
-        q = "john lennon --pipl"
-        query = engines.PeopleSearchEngines(q)
-        with TestEngines.captured_output(self) as (out, err):
-            engines.PeopleSearchEngines.piplSearch(query)
-        link = out.getvalue().strip()
-        self.assertEqual(link, 'https://pipl.com/search/?q=john+lennon')
 
     # tests output in screen.
     @contextmanager

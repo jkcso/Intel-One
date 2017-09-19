@@ -104,11 +104,24 @@ class SocialMedia(qu.Query):
         print(twitterAnalyticsLink_4)
         print()
 
+    # Gets the reddit posts about specific keyword.
+    def retrieveRedditPosts(self):
+        parsedQuery = util.Utilities.parseQuery(self.getQuery)
+        redditLink = 'http://metareddit.com/reddits/search/cloud/?query=' + parsedQuery
+        print(redditLink)
+        print()
+
     # Uses reddit username to get insights on lifetime reddit activity.
     def retrieveRedditUserStats(self):
         parsedQuery = util.Utilities.parseQuery(self.getQuery)
-        redditLink = 'https://snoopsnoo.com/u/' + parsedQuery
-        print(redditLink)
+        redditLink_0 = 'https://snoopsnoo.com/u/' + parsedQuery
+        redditLink_1 = 'https://atomiks.github.io/reddit-user-analyser/#' + parsedQuery
+        redditLink_2 = 'http://redditmetrics.com/r/' + parsedQuery
+        redditLink_3 = 'https://snoopsnoo.com/u/' + parsedQuery
+        print(redditLink_0)
+        print(redditLink_1)
+        print(redditLink_2)
+        print(redditLink_3)
         print()
 
     # searches about individuals in github, specifically about their projects.
@@ -127,6 +140,15 @@ class SocialMedia(qu.Query):
         print(youtubeLink)
         print()
 
+    # searches in blogs about provided keyword.
+    def blogSearch(self):
+        parsedQuery = util.Utilities.parseQuery(self.getQuery)
+        blogLink_0 = 'http://www.blogsearchengine.org/search.html?cx=partner-pub-9634067433254658%3A5laonibews6&cof=FORID%3A10&ie=ISO-8859-1&q=' + parsedQuery
+        blogLink_1 = 'http://omgili.com/search?siteType=&q=' + parsedQuery
+        print(blogLink_0)
+        print(blogLink_1)
+        print()
+
     # Executes all of the above functions to perform social media search.
     def socialMediaAllSearches(self):
         print("\n---- SOCIAL MEDIA SEARCH ----")
@@ -139,6 +161,9 @@ class SocialMedia(qu.Query):
 
         print("Linkedin search:")
         self.retrieveAccounts('ln')
+
+        print("Browser plugin that finds emails of people's profiles in Linkedin.")
+        print('https://chrome.google.com/webstore/detail/ftl/lkpekgkhmldknbcgjicjkomphkhhdkjj?hl=en-GB')
 
         print("Twitter search:")
         self.retrieveAccounts('tw')
@@ -170,5 +195,11 @@ class SocialMedia(qu.Query):
         print("Reddit search:")
         self.retrieveAccounts('re')
 
-        print("If victim target is reddit user, use the following as well:")
+        print("Reddit posts mentioning target keyword:")
+        self.retrieveRedditPosts()
+
+        print("Stats and Analytics on specific reddit user:")
         self.retrieveRedditUserStats()
+
+        print("Blog search on given keyword:")
+        self.blogSearch()

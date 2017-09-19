@@ -112,10 +112,15 @@ class PeopleSearchEngines(SearchEngines):
         qu.Query.__init__(self, query)
 
     # Performs a search in www.pipl.com to capture the social media not captured above.
-    def piplSearch(self):
+    def peopleSearch(self):
         parsedQuery = util.Utilities.parseQuery(self.getQuery)
         piplLink = 'https://pipl.com/search/?q=' + parsedQuery
+
+        parse411 = self.__411parse__()
+        link411Website = 'http://www.411.com/name/' + parse411
+
         print(piplLink)
+        print(link411Website)
         print()
 
     # This function performs search to the optional location in www.pipl.com.
@@ -132,8 +137,8 @@ class PeopleSearchEngines(SearchEngines):
 
         print("Note: We suggest to add a location to make your search more specific.")
         print("To do so, please use: <name> -i <location> -l")
-        print("\nSearch in pipl search engine:")
-        self.piplSearch()
+        print("\nSearch links in multiple people search engines:")
+        self.peopleSearch()
 
         print("Search in pipl search engine with location:")
         self.piplSearchLocation('-i')
@@ -151,3 +156,9 @@ class PeopleSearchEngines(SearchEngines):
             return subQuery
         except ValueError:
             return ""
+
+    # 411 People search website has a very unique matching of keywords using '-'.
+    def __411parse__(self):
+        q = util.Utilities.parseQuery(self.getQuery)
+        numSpaces = self.getQuery.count(' ')
+        return q.replace('+', '-', numSpaces)

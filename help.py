@@ -42,13 +42,14 @@ Options Short/Long  |  Description                                      |  Examp
 -rts, --rtsearch    | Returns real time social media search results     | who-dis> john smith -rts | --rtsearch  
 -fb, --facebook     | Performs facebook search through google           | who-dis> john smith -fb | --facebook     
 -ln, --linkedin     | Performs linkedin search through google           | who-dis> john smith -ln | --linkedin     
--tw, --twitter      | Twitter search + retrieves tweets and analytics   | who-dis> john smith -tw | --twitter      
--in, --instagram    | Performs instagram search through google          | who-dis> john smith -in | --instagram
+-tw, --twitter      | Twitter search plus retrieves tweets and analytics| who-dis> john smith -tw | --twitter      
+-in, --instagram    | Performs instagram search, posts and analytics    | who-dis> john smith -in | --instagram
 -pn, --pinterest    | Performs pinterest search through google          | who-dis> john smith -pn | --pinterest
 -yt, --youtube      | Performs search in youtube for username           | who-dis> john smith -yt | --youtube
 -tb, --tumblr       | Performs tumblr search through google             | who-dis> john smith -tb | --tumblr    
--re, --redit        | Performs reddit search through google             | who-dis> john smith -re | --reddit
--ure, --userReddit  | Provides insights and statistics on reddit user   | who-dis> john smith -ure | --userReddit  
+-re, --redit        | Performs reddit search and posts search           | who-dis> john smith -re | --reddit
+-ure, --userReddit  | Provides insights and statistics on reddit user   | who-dis> john smith -ure | --userReddit
+-bl, --blogs        | Searches in blogs about target keyword            | who-dis> john smith -bl | --blogs  
 -cd ,--code         | Performs github & 'nerdy data' search on repos    | who-dis> setoolkit -cd | --code
            
            
@@ -70,7 +71,7 @@ Options Short/Long  |  Description                                      |  Examp
            
 Options Short/Long  |  Description                                      |  Example                                 
 =================== + ================================================= + =========================================      
--p, --pipl          | Provided a link to pipl search engine             | who-dis> john smith -p | --pipl          
+-p, --people        | Provides links on multiple people search engines  | who-dis> john smith -p | --people          
 -p and -l           | Performs specific pipl using with location        | who-dis> john smith -p madrid -l         
            
            
