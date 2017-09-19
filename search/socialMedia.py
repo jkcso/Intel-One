@@ -85,6 +85,13 @@ class SocialMedia(qu.Query):
         print(tweetsLink_3)
         print()
 
+    # Gets the instagram posts about specific keyword.
+    def retrieveInstagramPosts(self):
+        parsedQuery = util.Utilities.parseQuery(self.getQuery)
+        redditLink = 'http://hashtagify.me/hashtag/' + parsedQuery
+        print(redditLink)
+        print()
+
     def retrieveTwitterAnalytics(self):
         parsedQuery = util.Utilities.parseQuery(self.getQuery)
         twitterAnalyticsLink_1 = 'https://burrrd.com/analyze?username=' + parsedQuery
@@ -144,6 +151,9 @@ class SocialMedia(qu.Query):
 
         print("Instagram search:")
         self.retrieveAccounts('in')
+
+        print("Instagram posts mentioning target keyword:")
+        self.retrieveInstagramPosts()
 
         print("Pinterest search:")
         self.retrieveAccounts('pn')

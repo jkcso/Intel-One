@@ -57,6 +57,7 @@ if __name__ == '__main__':
         # performs instagram search.
         elif parsedUserQuery[effectiveLen] == '-in' or parsedUserQuery[effectiveLen] == '--instagram':
             social.SocialMedia.retrieveAccounts(socialQuery, 'in')
+            social.SocialMedia.retrieveInstagramPosts(socialQuery)
 
         # performs pinterest search.
         elif parsedUserQuery[effectiveLen] == '-pn' or parsedUserQuery[effectiveLen] == '--pinterest':
