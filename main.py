@@ -29,6 +29,7 @@ if __name__ == '__main__':
         peopleSearchQuery = engines.PeopleSearchEngines(userQuery)
         companiesQuery = companies.Companies(userQuery)
         domainQuery = domains.Domains(userQuery)
+        emailQuery = engines.EmailValidityEngine(userQuery)
         otherQuery = other.Other(userQuery)
 
         # provides help to the user.
@@ -132,18 +133,23 @@ if __name__ == '__main__':
         elif userQuery.__contains__('-p') and userQuery.__contains__('-l'):
             engines.PeopleSearchEngines.piplSearchLocation(peopleSearchQuery, '-p')
 
-        # COMPANIES
-        # provides a link to search for companies in www.sec.gov.
-        elif parsedUserQuery[effectiveLen] == '-ed' or parsedUserQuery[effectiveLen] == '--edgar':
-            companies.Companies.edgarSearch(companiesQuery)
+        # EMAIL VALIDITY ENGINE
+        # performs email validity search using provided address.
+        elif parsedUserQuery[effectiveLen] == '-ev' or parsedUserQuery[effectiveLen] == '--emailValid':
+            engines.EmailValidityEngine.emailValidity(emailQuery)
 
+        # COMPANIES
         # Provides link to corporate wiki that includes a lot of information about a target company.
-        elif parsedUserQuery[effectiveLen] == '-cw' or parsedUserQuery[effectiveLen] == '--corpWiki':
-            companies.Companies.corpWikiSearch(companiesQuery)
+        elif parsedUserQuery[effectiveLen] == '-cs' or parsedUserQuery[effectiveLen] == '--compSearch':
+            companies.Companies.companySearch(companiesQuery)
 
         # Provides link to annual reports, slideshows and other insights of a company.
         elif parsedUserQuery[effectiveLen] == '-are' or parsedUserQuery[effectiveLen] == '--reports':
             companies.Companies.annualReportSearch(companiesQuery)
+
+        # Gets the company email format.
+        elif parsedUserQuery[effectiveLen] == '-cef' or parsedUserQuery[effectiveLen] == '--emailFormat':
+            companies.Companies.getCompanyEmailFormat(companiesQuery)
 
         # DOMAINS
         # provides a link to search for target domains in who.is website.
@@ -193,6 +199,12 @@ if __name__ == '__main__':
         # Performs all possible searches about an individual.
         elif userQuery.__contains__('-i') and userQuery.__contains__('-l'):
             engines.PeopleSearchEngines.peopleEngineAllSearches(peopleSearchQuery)
+            social.SocialMedia.socialMediaAllSearches(socialQuery)
+            engines.SearchEngines.searchEngineAllSearches(searchEngineQuery)
+
+        # Performs all possible searches about a given email format.
+        elif parsedUserQuery[effectiveLen] == '-e' or parsedUserQuery[effectiveLen] == '--email':
+            engines.EmailValidityEngine.emailSearch(emailQuery)
             social.SocialMedia.socialMediaAllSearches(socialQuery)
             engines.SearchEngines.searchEngineAllSearches(searchEngineQuery)
 

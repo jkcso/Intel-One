@@ -114,13 +114,42 @@ class PeopleSearchEngines(SearchEngines):
     # Performs a search in www.pipl.com to capture the social media not captured above.
     def peopleSearch(self):
         parsedQuery = util.Utilities.parseQuery(self.getQuery)
-        piplLink = 'https://pipl.com/search/?q=' + parsedQuery
-
         parse411 = self.__411parse__()
+        peekParse = self._peekParse__()
+
+        piplLink = 'https://pipl.com/search/?q=' + parsedQuery
+        canadaLink = 'http://www.canada411.ca/search/?stype=si&what=' + parsedQuery
+        forebears = 'http://forebears.io/place-search?q=' + parsedQuery
+        infospace = 'http://search.infospace.com/search/web?q=' + parsedQuery + '&searchbtn=Search'
+        intermentSearch = 'http://www.interment.net/data/search-general.htm?cx=partner-pub-1928517298809652%3A6045987309&cof=FORID%3A10&ie=ISO-8859-1&q=' + parsedQuery + '&sa=Search'
+        marketVisual = 'http://www.marketvisual.com/Search/Results?searchString=' + parsedQuery
+        nationalArchives = 'http://discovery.nationalarchives.gov.uk/results/r?_q=' + parsedQuery
         link411Website = 'http://www.411.com/name/' + parse411
+        whitePages = 'http://www.whitepages.com/name/' + parse411
+        spokeo = 'https://www.spokeo.com/' + parse411
+        thatsThem = 'https://thatsthem.com/name/' + parse411
+        peekLink = 'http://www.peekyou.com/' + peekParse
+        yasni = 'http://www.yasni.com/' + parsedQuery + '/check+people?sh'
+        zabasaSearch = 'http://www.zabasearch.com/people/' + parsedQuery + '/'
+        journal = 'https://network.expertisefinder.com/searchexperts?query=' + parsedQuery
+        wink = 'https://www.wink.com/people/?pf=&nm=' + parsedQuery
 
         print(piplLink)
+        print(peekLink)
+        print(canadaLink)
         print(link411Website)
+        print(whitePages)
+        print(forebears)
+        print(infospace)
+        print(intermentSearch)
+        print(marketVisual)
+        print(nationalArchives)
+        print(spokeo)
+        print(thatsThem)
+        print(yasni)
+        print(zabasaSearch)
+        print(journal)
+        print(wink)
         print()
 
     # This function performs search to the optional location in www.pipl.com.
@@ -162,3 +191,33 @@ class PeopleSearchEngines(SearchEngines):
         q = util.Utilities.parseQuery(self.getQuery)
         numSpaces = self.getQuery.count(' ')
         return q.replace('+', '-', numSpaces)
+
+    def _peekParse__(self):
+        q = util.Utilities.parseQuery(self.getQuery)
+        numSpaces = self.getQuery.count(' ')
+        return q.replace('+', '_', numSpaces)
+
+
+# Class responsible for email validity.
+class EmailValidityEngine(SearchEngines):
+
+    def __init__(self, query):
+        qu.Query.__init__(self, query)
+
+    # This function performs search to the optional location in www.pipl.com.
+    def emailValidity(self):
+        evLink_0 = 'https://mailjagger.ga/api/validate/' + self.getQuery
+        evLink_1 = 'http://www.reversegenie.com/email_search/' + self.getQuery
+        revLookup = 'https://thatsthem.com/email/' + self.getQuery
+        print(evLink_0)
+        print(evLink_1)
+        print("Reverse email lookup:")
+        print(revLookup)
+        print()
+
+    # Performs email and social media search on given email.
+    def emailSearch(self):
+        print("\n---- EMAIL VALIDITY ----")
+
+        print("Checks email validity:")
+        self.emailValidity()

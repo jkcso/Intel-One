@@ -8,20 +8,51 @@ class Companies(qu.Query):
     def __init__(self, query):
         qu.Query.__init__(self, query)
 
-    # Provides a link to search in www.sec.gov.
-    def edgarSearch(self):
-        # search string used in the address bar to perform search.
+    # Provides a searchable link in corporation wiki for the target company queried.
+    def companySearch(self):
         parsedQuery = util.Utilities.parseQuery(self.getQuery)
         edgarLink = 'https://www.sec.gov/cgi-bin/browse-edgar?company=' + parsedQuery + '&owner=exclude&action=getcompany'
-        # returns a web page as a result of this search.
+        cwLink = 'https://www.corporationwiki.com/search/results?term=' + parsedQuery
+        hoovers = 'http://www.hoovers.com/company-information/company-search.html?term=' + parsedQuery
+        glassdoor = 'https://www.glassdoor.com/Job/jobs.htm?suggestCount=0&suggestChosen=false&clickSource=searchBtn&typedKeyword=microsoft&sc.keyword=' + parsedQuery + '&locT=&locId=&jobType='
+        canLink = 'https://www.canada.ca/en/sr.html?cdn=canada&st=s&num=10&langs=en&st1rt=1&s5bm3ts21rch=x&q=' + parsedQuery
+        wiki = 'https://en.wikipedia.org/wiki/' + parsedQuery
+        marketVisual = 'http://www.marketvisual.com/Search/Results?searchString=' + parsedQuery
+        opencorp = 'https://opencorporates.com/companies?jurisdiction_code=&q=' + parsedQuery
+        serpstat = 'https://serpstat.com/keywords/?query=' + parsedQuery
+        globalEdge = 'https://globaledge.msu.edu/search?q=' + parsedQuery
+        comparablyLink = 'https://www.comparably.com/search?q=' + parsedQuery
+        semrush = 'https://www.semrush.com/info/' + parsedQuery
+        qLink = 'http://www.corporateinformation.com/Company-Search.aspx?s=' + parsedQuery
+        ezilon = 'https://find.ezilon.com/search.php?q=' + parsedQuery + '&v=&x=0&y=0&f=1'
+        owler = 'https://www.owler.com/iaApp/143891/' + parsedQuery
+        ispionage = 'https://www.ispionage.com/freeaccountv2.aspx?q=' + parsedQuery
+        ebr = 'http://www.ebr.org/?s=' + parsedQuery
+
         print(edgarLink)
+        print(cwLink)
+        print(hoovers)
+        print(glassdoor)
+        print(globalEdge)
+        print(wiki)
+        print(canLink)
+        print(comparablyLink)
+        print(opencorp)
+        print(serpstat)
+        print(semrush)
+        print(qLink)
+        print(ezilon)
+        print(ispionage)
+        print(owler)
+        print(marketVisual)
+        print(ebr)
         print()
 
-    # Provides a searchable link in corporation wiki for the target company queried.
-    def corpWikiSearch(self):
+    # Gets the email ending of the company.
+    def getCompanyEmailFormat(self):
         parsedQuery = util.Utilities.parseQuery(self.getQuery)
-        cwLink = 'https://www.corporationwiki.com/search/results?term=' + parsedQuery
-        print(cwLink)
+        ceLink = 'https://email-format.com/i/search_result/?q=' + parsedQuery
+        print(ceLink)
         print()
 
     # Provides link to annual reports, slideshows and other insights of a company.
@@ -45,11 +76,11 @@ class Companies(qu.Query):
     def companyAllSearches(self):
         print("\n---- COMPANY RECORDS ----")
 
-        print("Government records found using the edgar search engine:")
-        self.edgarSearch()
-
-        print("Corporation info can be found here:")
-        self.corpWikiSearch()
+        print("Company information and search results can be found here:")
+        self.companySearch()
 
         print("Annual reports, presentations and PDFs can be found here:")
         self.annualReportSearch()
+
+        print("Email format of the company: ")
+        self.getCompanyEmailFormat()

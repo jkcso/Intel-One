@@ -19,22 +19,23 @@ To be updated soon.
 ## Current version
 ### Constantly improving user experience
 - A well documented help menu explaining all the available options with examples.
-- Powerful way to perform all searches in one go by providing 3 flags: -i for individuals, -d for domains and -c for companies.
+- Powerful way to perform all searches in one go by providing 3 flags: -i for individuals, -d for domains and -c for companies, -e for emails.
 
 ### Targeting individuals
 - Real time social media search matching the provided keyword in recent posts on everything that exists out there.
 - Specific social media search using Facebook, Linkedin, Twitter (including tweets and analytics for provided user), Instagram, Pinterest, Youtube, Tumblr and Reddit.
-- People search engines using just a name or both a name and a location.
+- Multiple people search engines from various countries using just a name or both a name and a location.
 - Get insights on lifetime reddit user activity by providing a username.
 - Search engine search in google, duckduckgo, baidu, bing, qwant, clustering multi search, excite search (newest posts) and fact bites (old posts).
 - Github and 'nerdy data' search to search keywords on published source code.
+- Search about the email validity of any email and reverse email lookup.
 - Perform all of the above using just one flag.
 
 ### Targeting companies
 - Same social media search as above when applicable.
-- Company search using the edgar search engine returning difficult to find and often confidential information about companies.
-- Company search in corporate wiki aka the wikipedia of Corporations.
+- Company search using multiple company search engines returning difficult to find and often confidential information about companies.
 - Annual reports, slideshows, PDFs and other insights.
+- Search for company's email format.
 - Search engine search in google, duckduckgo, baidu and bing.
 - Perform all of the above using just one flag.
 
