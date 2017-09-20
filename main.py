@@ -87,6 +87,10 @@ if __name__ == '__main__':
         elif parsedUserQuery[effectiveLen] == '-yt' or parsedUserQuery[effectiveLen] == '--youtube':
             social.SocialMedia.youtubeSearch(socialQuery)
 
+        # Searches for additional videos on other multiple video database about individuals or company profiles.
+        elif parsedUserQuery[effectiveLen] == '-evs' or parsedUserQuery[effectiveLen] == '--extraVid':
+            social.SocialMedia.otherVdieoSearch(socialQuery)
+
         # Searches for target keyword in blogs.
         elif parsedUserQuery[effectiveLen] == '-bl' or parsedUserQuery[effectiveLen] == '--blogs':
             social.SocialMedia.blogSearch(socialQuery)
@@ -112,6 +116,10 @@ if __name__ == '__main__':
         elif parsedUserQuery[effectiveLen] == '-qw' or parsedUserQuery[effectiveLen] == '--qwant':
             engines.SearchEngines.qwantSearch(searchEngineQuery)
 
+        # performs keyword matching search engine.
+        elif parsedUserQuery[effectiveLen] == '-km' or parsedUserQuery[effectiveLen] == '--keyword':
+            engines.SearchEngines.keywordMatching(searchEngineQuery)
+
         # performs clustering search.
         elif parsedUserQuery[effectiveLen] == '-cl' or parsedUserQuery[effectiveLen] == '--cluster':
             engines.SearchEngines.clusteringSearchEngines(searchEngineQuery)
@@ -123,6 +131,10 @@ if __name__ == '__main__':
         # performs old posts serach in factbites search engine.
         elif parsedUserQuery[effectiveLen] == '-oa' or parsedUserQuery[effectiveLen] == '--oldArticles':
             engines.SearchEngines.oldArticlesSearch(searchEngineQuery)
+
+        # performs old posts serach in factbites search engine.
+        elif parsedUserQuery[effectiveLen] == '-rss' or parsedUserQuery[effectiveLen] == '--rssFeeds':
+            engines.SearchEngines.searchRSS(searchEngineQuery)
 
         # PEOPLE SEARCH ENGINES
         # performs a search in www.pipl.com to capture the social media not captured above.
@@ -167,6 +179,10 @@ if __name__ == '__main__':
         # provides a link to search in archive.org website for past versions of target domain.
         elif parsedUserQuery[effectiveLen] == '-ar' or parsedUserQuery[effectiveLen] == '--archive':
             domains.Domains.archiveSearch(domainQuery)
+
+        # provides a link to search with what technologies is the website build with.
+        elif parsedUserQuery[effectiveLen] == '-bw' or parsedUserQuery[effectiveLen] == '--builtWith':
+            domains.Domains.builtWith(domainQuery)
 
         # provides a link to view the robots file of a website.
         elif parsedUserQuery[effectiveLen] == '-rb' or parsedUserQuery[effectiveLen] == '--robots':

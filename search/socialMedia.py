@@ -140,6 +140,36 @@ class SocialMedia(qu.Query):
         print(youtubeLink)
         print()
 
+    # searches videos on other video databases about specific user, individual or company.
+    def otherVdieoSearch(self):
+        parsedQuery = util.Utilities.parseQuery(self.getQuery)
+        metacafeLink = 'http://www.metacafe.com/videos_about/' + parsedQuery + '/'
+        metatube = 'http://www.metatube.com/en/videos/?q=' + parsedQuery
+        aol = 'https://www.aol.com/video/search/?q=' + parsedQuery
+        bing = 'https://www.bing.com/videos/search?q=' + parsedQuery + '&go=Submit&qs=n&form=QBLH&scope=video&sp=-1&pq=' + parsedQuery
+        blinkx = 'http://www.blinkx.com/search/' + parsedQuery
+        earthcam = 'http://www.earthcam.com/search/ft_search.php?term=' + parsedQuery
+        geoSearch = 'http://www.geosearchtool.com/?q=&la=35.1327266&lo=33.31108219999999&lr=10km&tw=any&cl=&sl=' + parsedQuery
+        archive = 'https://archive.org/details/opensource_movies?and[]=' + parsedQuery
+        liveleak = 'https://www.liveleak.com/browse?q=' + parsedQuery
+        veoh = 'http://www.veoh.com/find/?query=' + parsedQuery
+        voxalead = 'http://voxalead.labs.exalead.com/search/?q=' + parsedQuery + '&lr=&r=&l=en'
+        yahoo = 'http://video.search.yahoo.com/search/video;_ylt=AwrDQ2oPaMJZZysAGy36w8QF;_ylc=X1MDOTY3ODEzMDYEX3IDMgRiY2sDMjB2aGwxaGNraXJoaiUyNmIlM0QzJTI2cyUzRDkxBGZyAwRncHJpZAMEbXRlc3RpZANudWxsBG5fc3VnZwMwBG9yaWdpbgN2aWRlby5zZWFyY2gueWFob28uY29tBHBvcwMwBHBxc3RyAwRwcXN0cmwDBHFzdHJsAzYEcXVlcnkDZ2xvdmRpBHRfc3RtcAMxNTA1OTEyOTUyBHZ0ZXN0aWQDbnVsbA--?pvid=mb7ibDEwLjEgfjUMWUluMwCeMjEzLgAAAACoVxVj&fr2=sb-top-video.search.yahoo.com&p=' + parsedQuery
+
+        print(metacafeLink)
+        print(metatube)
+        print(aol)
+        print(bing)
+        print(blinkx)
+        print(veoh)
+        print(yahoo)
+        print(earthcam)
+        print(liveleak)
+        print(voxalead)
+        print(archive)
+        print(geoSearch)
+        print()
+
     # searches in blogs about provided keyword.
     def blogSearch(self):
         parsedQuery = util.Utilities.parseQuery(self.getQuery)
@@ -185,6 +215,9 @@ class SocialMedia(qu.Query):
 
         print("Youtube search:")
         self.youtubeSearch()
+
+        print("Other video database search:")
+        self.otherVdieoSearch()
 
         print("Tumblr search:")
         self.retrieveAccounts('tb')

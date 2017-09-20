@@ -11,27 +11,88 @@ class Domains(qu.Query):
     # Performs search in who.is records giving information about a target domain.
     def whoIsSearch(self):
         # search string used in the address bar to perform search.
-        whoIsLink = 'https://who.is/whois/' + util.Utilities.parseQuery(self.getQuery)
+        parsedQuery = util.Utilities.parseQuery(self.getQuery)
+        pageGlimpse = 'http://www.pageglimpse.com/' + parsedQuery
+        whoIsLink_0 = 'https://who.is/whois/' + parsedQuery
+        whoIsLink_1 = 'http://www.dnsstuff.com/tools#whois|type=domain&&value=' + parsedQuery
+        whoIsLink_2 = 'http://domainbigdata.com/' + parsedQuery
+        whoIsLink_3 = 'http://www.domaincrawler.com/' + parsedQuery
+        whoIsLink_4 = 'http://www.domainhistory.net/' + parsedQuery
+        whoIsLink_5 = 'http://whois.domaintools.com/' + parsedQuery
+        whoIsLink_6 = 'https://app2.follow.net/#domains/' + parsedQuery
+        whoIsLink_7 = 'https://majestic.com/reports/site-explorer?q=' + parsedQuery + '&oq=' + parsedQuery + '&IndexDataSource=F'
+        whoIsLink_8 = 'https://www.robtex.com/dns-lookup/' + parsedQuery
+        whoIsLink_9 = 'http://www.whoishostingthis.com/?q=' + parsedQuery
+
         # returns a web page as a result of this search.
-        print(whoIsLink)
+        print(whoIsLink_5)
+        print(whoIsLink_0)
+        print(whoIsLink_1)
+        print(whoIsLink_9)
+        print(whoIsLink_2)
+        print(whoIsLink_3)
+        print(whoIsLink_4)
+        print(whoIsLink_7)
+        print(whoIsLink_6)
+        print(whoIsLink_8)
+        print(pageGlimpse)
         print()
 
     # Performs search in who.is records giving information about a target domain.
     def dnsLookup(self):
-        dnsLookupLink = 'https://mxtoolbox.com/SuperTool.aspx?action=a%3' + util.Utilities.parseQuery(self.getQuery)
-        print(dnsLookupLink)
+        parsedQuery = util.Utilities.parseQuery(self.getQuery)
+        dnsLookupLink_0 = 'https://mxtoolbox.com/SuperTool.aspx?action=a%3' + parsedQuery
+        dedicatedOrNot = parsedQuery + '.dedicatedornot.com'
+        netcraft = 'http://toolbar.netcraft.com/site_report?url=' + parsedQuery + '#last_reboot'
+        dnsLookupLink_1 = 'http://dnshistory.org/dns-records/' + parsedQuery
+        dnsLookupLink_2 = 'http://www.dnsstuff.com/tools#dnsReport|type=domain&&value=' + parsedQuery
+        dnsLookupLink_3 = 'http://research.dnstrails.com/tools/lookup.htm?domain=' + parsedQuery
+        dnsLookupLink_4 = 'http://dnsviz.net/d/' + parsedQuery + '/analyze/'
+        dnsLookupLink_5 = 'https://intodns.com/' + parsedQuery
+        dnsLookupLink_6 = 'https://mxtoolbox.com/SuperTool.aspx?action=mx%3a' + parsedQuery + '&run=toolpage'
+        dnsLookupLink_7 = 'http://sameid.net/id/' + parsedQuery + '/'
+        dnsLookupLink_8 = 'https://www.tcpiputils.com/search?q=' + parsedQuery
+        dnsLookupLink_9 = 'http://dnssec-debugger.verisignlabs.com/' + parsedQuery
+
+        print(dnsLookupLink_0)
+        print(dedicatedOrNot)
+        print(netcraft)
+        print(dnsLookupLink_1)
+        print(dnsLookupLink_2)
+        print(dnsLookupLink_9)
+        print(dnsLookupLink_8)
+        print(dnsLookupLink_3)
+        print(dnsLookupLink_6)
+        print(dnsLookupLink_4)
+        print(dnsLookupLink_5)
+        print(dnsLookupLink_7)
         print()
 
     # Retrieves a link for scanning a target domain.
     def scanSearch(self):
-        scanLink = 'https://asafaweb.com/Scan?Url=' + util.Utilities.parseQuery(self.getQuery)
+        parsedQuery = util.Utilities.parseQuery(self.getQuery)
+        scanLink = 'https://asafaweb.com/Scan?Url=' + parsedQuery
         print(scanLink)
         print()
 
     # Retrieves a link into archived version of target domain
     def archiveSearch(self):
-        archiveLink = 'https://web.archive.org/web/' + util.Utilities.parseQuery(self.getQuery)  # TODO fix the */
+        parsedQuery = util.Utilities.parseQuery(self.getQuery)
+        archiveLink = 'https://web.archive.org/web/' + parsedQuery  # TODO an issue with star.
+        googleCache = 'http://webcache.googleusercontent.com/search?q=cache:http://' + parsedQuery + '/'
+        webCache = 'http://webcache.googleusercontent.com/search?q=cache:' + parsedQuery
+        screenShot = 'http://www.screenshots.com/' + parsedQuery + '/'
         print(archiveLink)
+        print(googleCache)
+        print(webCache)
+        print(screenShot)
+        print()
+
+    # Retrieves a link into archived version of target domain
+    def builtWith(self):
+        parsedQuery = util.Utilities.parseQuery(self.getQuery)
+        buildWithLink = 'https://builtwith.com/' + parsedQuery
+        print(buildWithLink)
         print()
 
     # Provides the link to view the robots.txt file of a target domain.
@@ -54,6 +115,9 @@ class Domains(qu.Query):
 
         print("View archived versions of the website:")
         self.archiveSearch()
+
+        print("Technologies and tools used to built the website:")
+        self.builtWith()
 
         print("View the robots.txt file with disallowed resource access:")
         self.robotsView()

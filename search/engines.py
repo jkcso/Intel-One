@@ -76,6 +76,28 @@ class SearchEngines(qu.Query):
         print(cluzLink)
         print()
 
+    # search engine used to match keywords.
+    def keywordMatching(self):
+        parsedQuery = util.Utilities.parseQuery(self.getQuery)
+        kmLink = 'http://www.keywordspy.com/research/search.aspx?q=' + parsedQuery + '&type=domains'
+        qrLink = 'https://keywordtool.io/search/google/10371113?keyword=' + parsedQuery + '&country=&language=en#suggestions'
+        wolrdTracker = 'https://www.wordtracker.com/search?query=' + parsedQuery
+        exLink = 'http://www.onelook.com/reverse-dictionary.shtml?s=' + parsedQuery
+        print(kmLink)
+        print(qrLink)
+        print(wolrdTracker)
+        print(exLink)
+        print()
+
+    # searches RSS feeds
+    def searchRSS(self):
+        parsedQuery = util.Utilities.parseQuery(self.getQuery)
+        rssLink_0 = 'https://www.rsssearchhub.com/feeds?q=' + parsedQuery
+        rssLink_1 = 'http://fetchrss.com/generator/invalid?url=' + parsedQuery
+        print(rssLink_0)
+        print(rssLink_1)
+        print()
+
     # Executes all of the above functions.
     def searchEngineAllSearches(self):
         print("\n---- SEARCH ENGINES ----")
@@ -98,11 +120,17 @@ class SearchEngines(qu.Query):
         print("Clustering multi search:")
         self.clusteringSearchEngines()
 
+        print("Keyword matching search:")
+        self.keywordMatching()
+
         print("Excite news search:")
         self.exciteNewsSearch()
 
         print("Fact bites news search:")
         self.oldArticlesSearch()
+
+        print("Search in RSS Feeds:")
+        self.searchRSS()
 
 
 # Class responsible for people search engines' search.

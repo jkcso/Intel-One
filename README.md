@@ -17,9 +17,17 @@ or contributing into another tool that uses machine learning and AI algorithms w
 To be updated soon.
 
 ## Current version
+### Powerful ways to perform all searches in one click
+Specifically, there exist 4 flags that perform everything:
+-i for individuals
+-d for domains
+-c for companies
+-e for emails
+All of the above include social media and search engine search inclusive.
+
 ### Constantly improving user experience
 - A well documented help menu explaining all the available options with examples.
-- Powerful way to perform all searches in one go by providing 3 flags: -i for individuals, -d for domains and -c for companies, -e for emails.
+- Individual flags to perform all available features in isolation.
 
 ### Targeting individuals
 - Real time social media search matching the provided keyword in recent posts on everything that exists out there.

@@ -47,6 +47,7 @@ Options Short/Long  |  Description                                      |  Examp
 -in, --instagram    | Performs instagram search, posts and analytics    | who-dis> john smith -in | --instagram
 -pn, --pinterest    | Performs pinterest search through google          | who-dis> john smith -pn | --pinterest
 -yt, --youtube      | Performs search in youtube for username           | who-dis> john smith -yt | --youtube
+-evs, --extraVid    | Perfroms further search in multiple video engines | who-dis> john smith -evs | --extraVid
 -tb, --tumblr       | Performs tumblr search through google             | who-dis> john smith -tb | --tumblr    
 -re, --redit        | Performs reddit search and posts search           | who-dis> john smith -re | --reddit
 -ure, --userReddit  | Provides insights and statistics on reddit user   | who-dis> john smith -ure | --userReddit
@@ -63,10 +64,12 @@ Options Short/Long  |  Description                                      |  Examp
 -bd, --baidu        | Performs search in chinese engine baidu           | who-dis> john smith -bd | --baidu
 -bg, --bing         | Performs search in bing search engine             | who-dis> john smith -bg | --bing
 -qw, --qwant        | Performs search in qwant search engine            | who-dis> john smith -qw | --qwant
+-km, --keyword      | Performs keyword matching search on given keyword | who-dis> john smith -km | --keyword
 -cl, --cluster      | Performs clustering search for query              | who-dis> john smith -cl | --cluster 
 -ex, --exciteNews   | Performs search about recent news on search engine| who-dis> john smith -ex | --exciteNews
 -oa, --oldArticles  | Performs search about very old posts about query  | who-dis> john smith -oa | --oldArticles
 -ev, --emailValid   | Performs email validity search for target mail    | who-dis> jsmith@email.com -ev | --emailValid
+-rss, --rssFeeds    | Performs RSS search in feeds on target keyword    | who-dis> john smith -rss | --rssFeeds
 
 
 -- [ Options for People Search Engines ] --
@@ -94,6 +97,7 @@ Options Short/Long  |  Description                                      |  Examp
 -dns, --dnsLookup   | Performs a DNS lookup about target domain         | who-dis> glovdi.com -dns | --dnsLookup     
 -sc, --scan         | Performs a vulnerability scan using asafaweb site | who-dis> glovdi.com -sc | --scan
 -ar, --archive      | Performs search for past versions of website      | who-dis> glovdi.com -ar | --arch
+-bw, --builtWith    | Shows with which tools and tech the site is built | who-dis> glovdi.com -bw | --builtWith
 -rb, --robots       | Provides the link including the robots.txt file   | who-dis> glovdi.com -rb | --robots     
            
            
