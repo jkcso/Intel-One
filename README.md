@@ -17,12 +17,12 @@ or contributing into another tool that uses machine learning and AI algorithms w
 To be updated soon.
 
 ## Current version
-### Powerful ways to perform all searches in one click
+### Powerful searches in one click
 Specifically, there exist 4 flags that perform everything:
--i for individuals
--d for domains
--c for companies
--e for emails
+- -i for individuals
+- -d for domains
+- -c for companies
+- -e for emails
 All of the above include social media and search engine search inclusive.
 
 ### Constantly improving user experience
