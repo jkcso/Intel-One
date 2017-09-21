@@ -81,7 +81,7 @@ class SocialMedia(qu.Query):
         print(tweetsLink_0)
         print(tweetsLink_1)
         print(tweetsLink_2)
-        print("Trying to retrieve twitter user account birthday here:")
+        print("\nTrying to retrieve twitter user account birthday here:")
         print(tweetsLink_3)
         print()
 
@@ -195,7 +195,7 @@ class SocialMedia(qu.Query):
         print("Browser plugin that finds emails of people's profiles in Linkedin.")
         print('https://chrome.google.com/webstore/detail/ftl/lkpekgkhmldknbcgjicjkomphkhhdkjj?hl=en-GB')
 
-        print("Twitter search:")
+        print("\nTwitter search:")
         self.retrieveAccounts('tw')
 
         print("Tweets mentioning target keyword:")
