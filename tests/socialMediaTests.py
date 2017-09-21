@@ -7,25 +7,7 @@ from io import StringIO
 
 class TestSocialMedia(TestCase):
 
-    # tests if reddit search is returning back the correct link for single flag.
-    def test_redditSearch_shortFlag(self):
-        q = "edgar -ure"
-        query = sm.SocialMedia(q)
-        with TestSocialMedia.captured_output(self) as (out, err):
-            sm.SocialMedia.retrieveRedditUserStats(query)
-        link = out.getvalue().strip()
-        self.assertEqual(link, 'https://snoopsnoo.com/u/edgar')
-
-    # tests if reddit search is returning back the correct link for big flag.
-    def test_redditSearch_longFlag(self):
-        q = "edgar --userReddit"
-        query = sm.SocialMedia(q)
-        with TestSocialMedia.captured_output(self) as (out, err):
-            sm.SocialMedia.retrieveRedditUserStats(query)
-        link = out.getvalue().strip()
-        self.assertEqual(link, 'https://snoopsnoo.com/u/edgar')
-
-    # tests if reddit search is returning back the correct link for single flag.
+    # tests if source code search is giving correct output.
     def test_sourceCodeSearch_shortFlag(self):
         q = "whodis -gh"
         query = sm.SocialMedia(q)
@@ -35,7 +17,7 @@ class TestSocialMedia(TestCase):
         self.assertEqual(link, 'https://nerdydata.com/search?query=whodis\n'
                                'https://github.com/search?q=whodis')
 
-    # tests if reddit search is returning back the correct link for big flag.
+    # tests if github search is returning back the correct link for big flag.
     def test_githubSearch_longFlag(self):
         q = "whodis --github"
         query = sm.SocialMedia(q)
@@ -45,7 +27,7 @@ class TestSocialMedia(TestCase):
         self.assertEqual(link, 'https://nerdydata.com/search?query=whodis\n'
                                'https://github.com/search?q=whodis')
 
-    # tests if reddit search is returning back the correct link for single flag.
+    # tests if youtube search is returning back the correct link for single flag.
     def test_youtubeSearch_shortFlag(self):
         q = "google -yt"
         query = sm.SocialMedia(q)
@@ -54,7 +36,7 @@ class TestSocialMedia(TestCase):
         link = out.getvalue().strip()
         self.assertEqual(link, 'https://www.youtube.com/user/google')
 
-    # tests if reddit search is returning back the correct link for big flag.
+    # tests if youtube search is returning back the correct link for big flag.
     def test_youtubeSearch_longFlag(self):
         q = "google --youtube"
         query = sm.SocialMedia(q)
