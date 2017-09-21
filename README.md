@@ -23,7 +23,7 @@ Specifically, there exist 4 flags that perform everything:
 - -d for domains
 - -c for companies
 - -e for emails
-All of the above include social media and search engine search inclusive.
+- In addition, all of the above include social media and search engine search inclusive.
 
 ### Constantly improving user experience
 - A well documented help menu explaining all the available options with examples.
