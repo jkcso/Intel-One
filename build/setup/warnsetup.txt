@@ -1,0 +1,39 @@
+missing module named 'multiprocessing.forking' - imported by /Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/PyInstaller/loader/rthooks/pyi_rth_multiprocessing.py
+missing module named multiprocessing.get_context - imported by multiprocessing, multiprocessing.pool, multiprocessing.managers, multiprocessing.sharedctypes
+missing module named multiprocessing.TimeoutError - imported by multiprocessing, multiprocessing.pool
+missing module named multiprocessing.AuthenticationError - imported by multiprocessing, multiprocessing.connection
+missing module named multiprocessing.BufferTooShort - imported by multiprocessing, multiprocessing.connection
+missing module named multiprocessing.get_start_method - imported by multiprocessing, multiprocessing.spawn
+missing module named multiprocessing.set_start_method - imported by multiprocessing, multiprocessing.spawn
+missing module named multiprocessing.Pipe - imported by multiprocessing, pycallgraph.memory_profiler
+missing module named multiprocessing.Process - imported by multiprocessing, pycallgraph.memory_profiler
+missing module named 'org.python' - imported by pickle, /Users/jk/Google Drive/Github/PYTHON  |  Who-Dis/setup.py, xml.sax
+excluded module named _frozen_importlib - imported by importlib, importlib.abc, /Users/jk/Google Drive/Github/PYTHON  |  Who-Dis/setup.py
+missing module named _frozen_importlib_external - imported by importlib._bootstrap, importlib, importlib.abc, /Users/jk/Google Drive/Github/PYTHON  |  Who-Dis/setup.py
+missing module named _winreg - imported by platform, cx_Freeze.dist, /Users/jk/Google Drive/Github/PYTHON  |  Who-Dis/setup.py
+missing module named java - imported by platform, /Users/jk/Google Drive/Github/PYTHON  |  Who-Dis/setup.py
+missing module named 'java.lang' - imported by platform, /Users/jk/Google Drive/Github/PYTHON  |  Who-Dis/setup.py, xml.sax._exceptions
+missing module named vms_lib - imported by platform, /Users/jk/Google Drive/Github/PYTHON  |  Who-Dis/setup.py
+missing module named winreg - imported by platform, mimetypes, cx_Freeze.dist, /Users/jk/Google Drive/Github/PYTHON  |  Who-Dis/setup.py, urllib.request
+missing module named org - imported by copy, /Users/jk/Google Drive/Github/PYTHON  |  Who-Dis/setup.py
+missing module named nt - imported by os, ntpath, shutil, /Users/jk/Google Drive/Github/PYTHON  |  Who-Dis/setup.py
+missing module named ce - imported by os, /Users/jk/Google Drive/Github/PYTHON  |  Who-Dis/setup.py
+missing module named msvcrt - imported by subprocess, multiprocessing.spawn, multiprocessing.popen_spawn_win32, /Users/jk/Google Drive/Github/PYTHON  |  Who-Dis/setup.py, getpass
+missing module named _winapi - imported by subprocess, multiprocessing.reduction, multiprocessing.connection, multiprocessing.heap, multiprocessing.popen_spawn_win32, /Users/jk/Google Drive/Github/PYTHON  |  Who-Dis/setup.py
+missing module named _dummy_threading - imported by dummy_threading, /Users/jk/Google Drive/Github/PYTHON  |  Who-Dis/setup.py
+missing module named 'IPython.utils' - imported by pycallgraph.memory_profiler
+missing module named 'IPython.core' - imported by pycallgraph.memory_profiler
+missing module named 'IPython.ipapi' - imported by pycallgraph.memory_profiler
+missing module named 'IPython.ipstruct' - imported by pycallgraph.memory_profiler
+missing module named 'IPython.genutils' - imported by pycallgraph.memory_profiler
+missing module named IPython - imported by pycallgraph.memory_profiler
+missing module named psutil - imported by pycallgraph.memory_profiler
+missing module named win32verstamp - imported by cx_Freeze.freezer
+missing module named zmq - imported by cx_Freeze.hooks
+missing module named Tkinter - imported by cx_Freeze.hooks
+missing module named PySide - imported by cx_Freeze.macdist, cx_Freeze.hooks
+missing module named pywintypes - imported by cx_Freeze.hooks
+missing module named pythoncom - imported by cx_Freeze.hooks
+missing module named h5py - imported by cx_Freeze.hooks
+missing module named PyQt4 - imported by cx_Freeze.macdist
+missing module named msilib - imported by distutils.command.bdist_msi, cx_Freeze.windist
