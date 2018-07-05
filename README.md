@@ -1,4 +1,4 @@
-# Who-Dis
+# EBLEM
 
 ## Synopsis
 An intuitively easy to get started open source command line tool that collects and stores Open Source Intelligence about an individual, a target domain
