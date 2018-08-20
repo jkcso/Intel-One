@@ -12,7 +12,7 @@ __listLastIndex__ = 1
 
 # The main thread of the program.
 if __name__ == '__main__':
-    intro.welcomeMessage()
+    intro.welcomeMessage_1()
 
     # the main loop of the program running constantly until ctl+C or exit/quit is used.
     while True:
