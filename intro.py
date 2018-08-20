@@ -22,6 +22,7 @@ Press exit or quit to exit the program
 Please refer to 'Issues' section in GitHub for any problems you may have.
 """)
 
+
 def welcomeMessage_2():
     print("""
 #####################################################################################################################################
