@@ -1,8 +1,10 @@
 # Eblem
 
-## Synopsis
-An intuitively easy to get started open source command line tool that collects and stores Open Source Intelligence about an individual, a target domain
-or a company.
+## Who is Who
+
+
+## Installation and Running
+
 
 ## Motivation
 Implemented in my free time from mid August to mid September 2017 as part of my genuine interest in Cyber Security, especially penetration testing.
@@ -12,9 +14,6 @@ constantly improving and maintaining an optimised and effective toolset with var
 the cybersecurity progress that has yet to come in both software and hardware systems.  I will start doing so by firstly offering a more optimised OSINT
 automation by a possible combination or extension of a famous and must have existing OSINT tool with features from Eblem and also I aspire of writing
 or contributing into another tool that uses machine learning and AI algorithms with cybersecurity data sets to enable unsupervised decision making.
-
-## Installation
-To be updated soon.
 
 ## Current version
 ### Powerful searches in one click
