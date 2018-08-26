@@ -3,6 +3,9 @@
 ## Get Started
 
 
+## List of all features
+
+Taken from the help menu, accessible via: `python3 eblem.py help` or `python3 eblem.py --help` 
 
 ## Installation and Dependencies
 
