@@ -1,19 +1,12 @@
 # Eblem
 
-## Who is Who
+## Get Started
 
 
-## Installation and Running
+
+## Installation and Dependencies
 
 
-## Motivation
-Implemented in my free time from mid August to mid September 2017 as part of my genuine interest in Cyber Security, especially penetration testing.
-After I played around with some Kali Linux tools, I have identified a gap in performing high quality OSINT search wholly from the command line and
-by a few clicks to get a browser with many tabs containing useful information.  My short term aim is to make the life of a pentester easier by providing,
-constantly improving and maintaining an optimised and effective toolset with various powerful features.  My main long term goal is to contribute to
-the cybersecurity progress that has yet to come in both software and hardware systems.  I will start doing so by firstly offering a more optimised OSINT
-automation by a possible combination or extension of a famous and must have existing OSINT tool with features from Eblem and also I aspire of writing
-or contributing into another tool that uses machine learning and AI algorithms with cybersecurity data sets to enable unsupervised decision making.
 
 ## Current version
 ### Powerful searches in one click
@@ -86,6 +79,11 @@ Specifically, there exist 4 flags that perform everything:
 - Advanced google dorks.
 - IP address of target.
 - And many more.
+
+## Motivation
+Implemented in my free time from mid August to mid September 2017 as part of my genuine interest in Cyber Security, especially penetration testing.  After I played around with some Kali Linux tools, I have identified a gap in performing high quality OSINT search wholly from the command line and by a few clicks to get a browser with many tabs containing useful information.  
+
+My short term aim is to make the life of a pentester easier by providing, constantly improving and maintaining an optimised and effective toolset with various powerful features.  My main long term goal is to contribute to the cybersecurity progress that has yet to come in both software and hardware systems.  A potential first step towards this direction is by offering an optimised OSINT solution by a possible combination or extension of a famous and must have existing OSINT tool with features from Eblem and also I aspire of writing or contributing into another tool that effeciently performs classification for cyber security related problems by deploying state-of-the-art Machine Learning.
 
 ## Disclaimer
 This tool should be used in the white hat way, however, I have no responsibility if someone will use for malicious purposes.
