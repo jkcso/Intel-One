@@ -17,11 +17,16 @@ class SearchEngines(qu.Query):
     __STOP__ = 1
     # Lapse to wait between HTTP requests.
     __PAUSE__ = 2
+    # if searchQuery requires extra parsing in a potential redirection.
+    TO_PARSE = True
 
     # returns google search results.
     def googleSearch(self):
-        parsedQuery = util.Utilities.parseQuery(self.getQuery)
-        googleLink = 'http://www.google.com/search?q=' + parsedQuery
+        if self.TO_PARSE:
+            parsedQuery = util.Utilities.parseQuery(self.getQuery)
+            googleLink = 'http://www.google.com/search?q=' + parsedQuery
+        else:
+            googleLink = 'http://www.google.com/search?q=' + self.getQuery
         print(googleLink)
         print()
         webbrowser.open(googleLink)
@@ -195,6 +200,23 @@ class PeopleSearchEngines(SearchEngines):
         print(wink)
         print()
 
+        webbrowser.open(piplLink)
+        webbrowser.open(peekLink)
+        webbrowser.open(canadaLink)
+        webbrowser.open(link411Website)
+        webbrowser.open(whitePages)
+        webbrowser.open(forebears)
+        webbrowser.open(infospace)
+        webbrowser.open(intermentSearch)
+        webbrowser.open(marketVisual)
+        webbrowser.open(nationalArchives)
+        webbrowser.open(spokeo)
+        webbrowser.open(thatsThem)
+        webbrowser.open(yasni)
+        webbrowser.open(zabasaSearch)
+        webbrowser.open(journal)
+        webbrowser.open(wink)
+
     # This function performs search to the optional location in www.pipl.com.
     def piplSearchLocation(self, flag):
         parsedLocation = PeopleSearchEngines.__parseLocation__(self, flag)
@@ -202,6 +224,7 @@ class PeopleSearchEngines(SearchEngines):
         piplLink = 'https://pipl.com/search/?q=' + parsedQuery + '&l=' + parsedLocation
         print(piplLink)
         print()
+        webbrowser.open(piplLink)
 
     # Executes all of the above functions.
     def peopleEngineAllSearches(self):
@@ -257,6 +280,9 @@ class EmailValidityEngine(SearchEngines):
         print("Reverse email lookup:")
         print(revLookup)
         print()
+        webbrowser.open(evLink_0)
+        webbrowser.open(evLink_1)
+        webbrowser.open(revLookup)
 
     # Performs email and social media search on given email.
     def emailSearch(self):

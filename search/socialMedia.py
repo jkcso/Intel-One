@@ -10,16 +10,16 @@ class SocialMedia(qu.Query):
         qu.Query.__init__(self, query)
 
     # Advanced google dork used for returning results including the provided url.
-    __INURL__ = " inurl:\""
+    __INURL__ = "+site:"
 
     # Social media websites that are currently supported by Eblem.
-    __FACEBOOK__ = "www.facebook.com\""
-    __LINKEDIN__ = "www.linkedin.com\""
-    __TWITTER__ = "www.twitter.com\""
-    __INSTAGRAM__ = "www.instagram.com\""
-    __PINTEREST__ = "www.pinterest.com\n"
-    __TUMBLR__ = "www.tumblr.com\n"
-    __REDDIT__ = "www.reddit.com\""
+    __FACEBOOK__ = "facebook.com"
+    __LINKEDIN__ = "linkedin.com"
+    __TWITTER__ = "twitter.com"
+    __INSTAGRAM__ = "instagram.com"
+    __PINTEREST__ = "pinterest.com"
+    __TUMBLR__ = "tumblr.com"
+    __REDDIT__ = "reddit.com"
 
     # Performs social search through google using the advanced google dork inurl.
     def retrieveAccounts(self, media):
@@ -50,6 +50,7 @@ class SocialMedia(qu.Query):
             newQuery += SocialMedia.__REDDIT__
 
         searchQuery = engines.SearchEngines(newQuery)
+        searchQuery.TO_PARSE = False  # search query is ready to be passed without parse in search engines by now.
         return engines.SearchEngines.googleSearch(searchQuery)
 
     # Used to retrieve posts on real time about target from all available social media websites.
