@@ -22,9 +22,9 @@ class SearchEngines(qu.Query):
     def googleSearch(self):
         parsedQuery = util.Utilities.parseQuery(self.getQuery)
         googleLink = 'http://www.google.com/search?q=' + parsedQuery
-        webbrowser.open(googleLink)
         print(googleLink)
         print()
+        webbrowser.open(googleLink)
 
     # returns duckduckgo searhable link.
     def ddGoSearch(self):
@@ -32,6 +32,7 @@ class SearchEngines(qu.Query):
         ddGoLink = 'https://duckduckgo.com/?q=' + parsedQuery
         print(ddGoLink)
         print()
+        webbrowser.open(ddGoLink)
 
     # returns a baidu searchable link.
     def baiduSearch(self):
@@ -39,6 +40,7 @@ class SearchEngines(qu.Query):
         baiduLink = 'http://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=0&rsv_idx=1&tn=baidu&wd=' + parsedQuery
         print(baiduLink)
         print()
+        webbrowser.open(baiduLink)
 
     # returns a link in bing search engine to search.
     def bingSearch(self):
@@ -46,6 +48,7 @@ class SearchEngines(qu.Query):
         bingLink = 'https://www.bing.com/search?q=' + parsedQuery
         print(bingLink)
         print()
+        webbrowser.open(bingLink)
 
     # returns a link in excite search engine to search - specifically news, latest posts about queries -.
     def exciteNewsSearch(self):
@@ -53,6 +56,7 @@ class SearchEngines(qu.Query):
         exciteNewsLink = 'http://msxml.excite.com/search/news?q=' + parsedQuery + '&fcoid=411&fcop=left&om_nextpage=True&fpid=2'
         print(exciteNewsLink)
         print()
+        webbrowser.open(exciteNewsLink)
 
     # returns a link in fact bites search engine to search very old posts about search term.
     def oldArticlesSearch(self):
@@ -60,6 +64,7 @@ class SearchEngines(qu.Query):
         oldArticlesLink = 'http://www.factbites.com/topics/' + parsedQuery
         print(oldArticlesLink)
         print()
+        webbrowser.open(oldArticlesLink)
 
     # returns a link in qwant search engine collecting search, media, and social.
     def qwantSearch(self):
@@ -67,6 +72,7 @@ class SearchEngines(qu.Query):
         qwantLink = 'https://www.qwant.com/?q=' + parsedQuery + '&t=all'
         print(qwantLink)
         print()
+        webbrowser.open(qwantLink)
 
     # returns a link in clustering websites that provide search to many places.
     def clusteringSearchEngines(self):
@@ -76,6 +82,8 @@ class SearchEngines(qu.Query):
         print(carrotLink)
         print(cluzLink)
         print()
+        webbrowser.open(carrotLink)
+        webbrowser.open(cluzLink)
 
     # search engine used to match keywords.
     def keywordMatching(self):
@@ -89,6 +97,10 @@ class SearchEngines(qu.Query):
         print(wolrdTracker)
         print(exLink)
         print()
+        webbrowser.open(kmLink)
+        webbrowser.open(qrLink)
+        webbrowser.open(wolrdTracker)
+        webbrowser.open(exLink)
 
     # searches RSS feeds
     def searchRSS(self):
@@ -98,6 +110,8 @@ class SearchEngines(qu.Query):
         print(rssLink_0)
         print(rssLink_1)
         print()
+        webbrowser.open(rssLink_0)
+        webbrowser.open(rssLink_1)
 
     # Executes all of the above functions.
     def searchEngineAllSearches(self):
