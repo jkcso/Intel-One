@@ -1,6 +1,6 @@
-from google import search
 import search.utilities as util
 import search.query as qu
+import webbrowser
 
 
 # Class including functions for OSINT collection using search engines.
@@ -20,9 +20,10 @@ class SearchEngines(qu.Query):
 
     # returns google search results.
     def googleSearch(self):
-        for result in search(self.getQuery, tld=SearchEngines.__TLD__, num=SearchEngines.__NUM_RESULTS__,
-                             stop=SearchEngines.__STOP__, pause=SearchEngines.__PAUSE__):
-            print(result)
+        parsedQuery = util.Utilities.parseQuery(self.getQuery)
+        googleLink = 'http://www.google.com/search?q=' + parsedQuery
+        webbrowser.open(googleLink)
+        print(googleLink)
         print()
 
     # returns duckduckgo searhable link.

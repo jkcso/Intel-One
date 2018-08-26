@@ -1,7 +1,6 @@
 # Welcome screen of the program.
 def version():
     print("""
-
 Version 1.0 - Written by Joseph Katsioloudes, 2017.
 
 Please press 'help' for user manual and options.
@@ -12,39 +11,34 @@ Please refer to 'Issues' section in GitHub for any problems you may have.
 
 def welcomeMessage_1():
     print("""
-
-    ▓█████  ▄▄▄▄    ██▓    ▓█████  ███▄ ▄███▓
-    ▓█   ▀ ▓█████▄ ▓██▒    ▓█   ▀ ▓██▒▀█▀ ██▒
+    ▓█████  ▄▄▄▄    ██▓    ▓█████ ███▄  ▄███▓
+    ▓█   ▀ ▓█████▄ ▓██▒    ▓█   ▀ ▓██▒▀█▀██▒
     ▒███   ▒██▒ ▄██▒██░    ▒███   ▓██    ▓██░
     ▒▓█  ▄ ▒██░█▀  ▒██░    ▒▓█  ▄ ▒██    ▒██ 
     ░▒████▒░▓█  ▀█▓░██████▒░▒████▒▒██▒   ░██▒
     ░░ ▒░ ░░▒▓███▀▒░ ▒░▓  ░░░ ▒░ ░░ ▒░   ░  ░
-    ░ ░  ░▒░▒   ░ ░ ░ ▒  ░ ░ ░  ░░  ░      ░
+    ░ ░  ░▒░▒   ░ ░ ░ ▒  ░ ░ ░  ░░  ░     ░
     ░    ░    ░   ░ ░      ░   ░      ░   
     ░  ░ ░          ░  ░   ░  ░       ░   
                  ░                          
-
     """)
     version()
 
 
 def welcomeMessage_2():
     print("""
-
     ███████╗██████╗ ██╗     ███████╗███╗   ███╗
     ██╔════╝██╔══██╗██║     ██╔════╝████╗ ████║
     █████╗  ██████╔╝██║     █████╗  ██╔████╔██║
     ██╔══╝  ██╔══██╗██║     ██╔══╝  ██║╚██╔╝██║
     ███████╗██████╔╝███████╗███████╗██║ ╚═╝ ██║
     ╚══════╝╚═════╝ ╚══════╝╚══════╝╚═╝     ╚═╝
-
 """)
     version()
 
 
 def welcomeMessage_3():
     print("""
-
                         bbbbbbbb                                                                
   EEEEEEEEEEEEEEEEEEEEEEb::::::b            lllllll                                             
   E::::::::::::::::::::Eb::::::b            l:::::l                                             
@@ -62,14 +56,12 @@ def welcomeMessage_3():
   E::::::::::::::::::::E b::::::::::::::::b l::::::l e::::::::eeeeeeee  m::::m   m::::m   m::::m
   E::::::::::::::::::::E b:::::::::::::::b  l::::::l  ee:::::::::::::e  m::::m   m::::m   m::::m
   EEEEEEEEEEEEEEEEEEEEEE bbbbbbbbbbbbbbbb   llllllll    eeeeeeeeeeeeee  mmmmmm   mmmmmm   mmmmmm
-
 """)
     version()
 
 
 def welcomeMessage_4():
     print("""
-
 #####################################################################################################################################
 ##                                                                                                                                 ##
 ##                                                                                                                                 ##
