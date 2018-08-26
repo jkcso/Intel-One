@@ -1,6 +1,7 @@
 import search.engines as engines
 import search.utilities as util
 import search.query as qu
+import webbrowser
 
 
 # Class responsible for social media account collection of target user, company or domain.
@@ -71,6 +72,13 @@ class SocialMedia(qu.Query):
         print(rtLink_5)
         print(rtLink_6)
         print()
+        webbrowser.open(rtLink_0)
+        webbrowser.open(rtLink_1)
+        webbrowser.open(rtLink_2)
+        webbrowser.open(rtLink_3)
+        webbrowser.open(rtLink_4)
+        webbrowser.open(rtLink_5)
+        webbrowser.open(rtLink_6)
 
     # Gets the tweets about the keyword queried.
     def retrieveTweets(self):
@@ -85,6 +93,10 @@ class SocialMedia(qu.Query):
         print("\nTrying to retrieve twitter user account birthday here:")
         print(tweetsLink_3)
         print()
+        webbrowser.open(tweetsLink_0)
+        webbrowser.open(tweetsLink_1)
+        webbrowser.open(tweetsLink_2)
+        webbrowser.open(tweetsLink_3)
 
     # Gets the instagram posts about specific keyword.
     def retrieveInstagramPosts(self):
@@ -92,6 +104,7 @@ class SocialMedia(qu.Query):
         redditLink = 'http://hashtagify.me/hashtag/' + parsedQuery
         print(redditLink)
         print()
+        webbrowser.open(redditLink)
 
     def retrieveTwitterAnalytics(self):
         parsedQuery = util.Utilities.parseQuery(self.getQuery)
@@ -104,6 +117,10 @@ class SocialMedia(qu.Query):
         print(twitterAnalyticsLink_3)
         print(twitterAnalyticsLink_4)
         print()
+        webbrowser.open(twitterAnalyticsLink_1)
+        webbrowser.open(twitterAnalyticsLink_2)
+        webbrowser.open(twitterAnalyticsLink_3)
+        webbrowser.open(twitterAnalyticsLink_4)
 
     # Gets the reddit posts about specific keyword.
     def retrieveRedditPosts(self):
@@ -111,6 +128,7 @@ class SocialMedia(qu.Query):
         redditLink = 'http://metareddit.com/reddits/search/cloud/?query=' + parsedQuery
         print(redditLink)
         print()
+        webbrowser.open(redditLink)
 
     # Uses reddit username to get insights on lifetime reddit activity.
     def retrieveRedditUserStats(self):
@@ -124,6 +142,10 @@ class SocialMedia(qu.Query):
         print(redditLink_2)
         print(redditLink_3)
         print()
+        webbrowser.open(redditLink_0)
+        webbrowser.open(redditLink_1)
+        webbrowser.open(redditLink_2)
+        webbrowser.open(redditLink_3)
 
     # searches about individuals in github, specifically about their projects.
     def sourceCodeSearch(self):
@@ -133,6 +155,8 @@ class SocialMedia(qu.Query):
         print(scLink)
         print(githubLink)
         print()
+        webbrowser.open(scLink)
+        webbrowser.open(githubLink)
 
     # searches youtube about specific user, individual or company.
     def youtubeSearch(self):
@@ -140,6 +164,7 @@ class SocialMedia(qu.Query):
         youtubeLink = 'https://www.youtube.com/user/' + parsedQuery
         print(youtubeLink)
         print()
+        webbrowser.open(youtubeLink)
 
     # searches videos on other video databases about specific user, individual or company.
     def otherVdieoSearch(self):
@@ -170,6 +195,18 @@ class SocialMedia(qu.Query):
         print(archive)
         print(geoSearch)
         print()
+        webbrowser.open(metacafeLink)
+        webbrowser.open(metatube)
+        webbrowser.open(aol)
+        webbrowser.open(bing)
+        webbrowser.open(blinkx)
+        webbrowser.open(veoh)
+        webbrowser.open(yahoo)
+        webbrowser.open(earthcam)
+        webbrowser.open(liveleak)
+        webbrowser.open(voxalead)
+        webbrowser.open(archive)
+        webbrowser.open(geoSearch)
 
     # searches in blogs about provided keyword.
     def blogSearch(self):
@@ -179,6 +216,8 @@ class SocialMedia(qu.Query):
         print(blogLink_0)
         print(blogLink_1)
         print()
+        webbrowser.open(blogLink_0)
+        webbrowser.open(blogLink_1)
 
     # Executes all of the above functions to perform social media search.
     def socialMediaAllSearches(self):
