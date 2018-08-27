@@ -35,7 +35,7 @@ Eblem >>
 
 ### Search for an Individual (i.e John Smith) in 78 Sources:
 
-#### Browser connects to all 78 websites and passes the search term automatically: ####
+#### Browser connects to all 78 sources, passes the search term and outputs results on screen automatically: ####
 
 
 
