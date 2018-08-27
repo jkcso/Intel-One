@@ -2,7 +2,7 @@
 
 ## Get Started
 
-### Welcome Screen
+### Welcome Screen:
 
 ```
                         bbbbbbbb                                                                
@@ -33,13 +33,13 @@ Please refer to 'Issues' section in GitHub for any problems you may have.
 Eblem >> 
 ```
 
-### Search for an 'Individual' (i.e John Smith) in 78 Sources:
+### Search for an Individual (i.e John Smith) in 78 Sources:
 
-#### Browser connects to all 78 websites and passes the search term automatically ####
+#### Browser connects to all 78 websites and passes the search term automatically: ####
 
 
 
-#### Output in Terminal ####
+#### Output in Terminal: ####
 ```
 Eblem >> John Smith -i
 
@@ -194,13 +194,13 @@ http://fetchrss.com/generator/invalid?url=John+Smith
 Eblem >>
 ```
 
-### Company Search
+### Company Search:
 
 ```
 
 ```
 
-### Domain Search
+### Domain Search:
 
 ```
 
