@@ -2,6 +2,34 @@
 
 ## Get Started
 
+```
+                        bbbbbbbb                                                                
+  EEEEEEEEEEEEEEEEEEEEEEb::::::b            lllllll                                             
+  E::::::::::::::::::::Eb::::::b            l:::::l                                             
+  E::::::::::::::::::::Eb::::::b            l:::::l                                             
+  EE::::::EEEEEEEEE::::E b:::::b            l:::::l                                             
+    E:::::E       EEEEEE b:::::bbbbbbbbb     l::::l     eeeeeeeeeeee       mmmmmmm    mmmmmmm   
+    E:::::E              b::::::::::::::bb   l::::l   ee::::::::::::ee   mm:::::::m  m:::::::mm 
+    E::::::EEEEEEEEEE    b::::::::::::::::b  l::::l  e::::::eeeee:::::eem::::::::::mm::::::::::m
+    E:::::::::::::::E    b:::::bbbbb:::::::b l::::l e::::::e     e:::::em::::::::::::::::::::::m
+    E:::::::::::::::E    b:::::b    b::::::b l::::l e:::::::eeeee::::::em:::::mmm::::::mmm:::::m
+    E::::::EEEEEEEEEE    b:::::b     b:::::b l::::l e:::::::::::::::::e m::::m   m::::m   m::::m
+    E:::::E              b:::::b     b:::::b l::::l e::::::eeeeeeeeeee  m::::m   m::::m   m::::m
+    E:::::E       EEEEEE b:::::b     b:::::b l::::l e:::::::e           m::::m   m::::m   m::::m
+  EE::::::EEEEEEEE:::::E b:::::bbbbbb::::::bl::::::le::::::::e          m::::m   m::::m   m::::m
+  E::::::::::::::::::::E b::::::::::::::::b l::::::l e::::::::eeeeeeee  m::::m   m::::m   m::::m
+  E::::::::::::::::::::E b:::::::::::::::b  l::::::l  ee:::::::::::::e  m::::m   m::::m   m::::m
+  EEEEEEEEEEEEEEEEEEEEEE bbbbbbbbbbbbbbbb   llllllll    eeeeeeeeeeeeee  mmmmmm   mmmmmm   mmmmmm
+
+
+Version 1.0 - Written by Joseph Katsioloudes, 2018.
+
+Please press 'help' for user manual and options.
+Press exit or quit to exit the program
+Please refer to 'Issues' section in GitHub for any problems you may have.
+
+Eblem >> 
+```
 
 ## List of all features
 
