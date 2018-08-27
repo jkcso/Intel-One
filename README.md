@@ -28,7 +28,7 @@ Please press 'help' for user manual and options.
 Press exit or quit to exit the program
 Please refer to 'Issues' section in GitHub for any problems you may have.
 
-eblem> 
+Eblem >> 
 ```
 
 ## List of all features
