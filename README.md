@@ -1,7 +1,6 @@
 # Eblem
 
 ## Get Started
-
 ```
                         bbbbbbbb                                                                
   EEEEEEEEEEEEEEEEEEEEEEb::::::b            lllllll                                             
