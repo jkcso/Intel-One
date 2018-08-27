@@ -1,7 +1,10 @@
+import random
+
+
 # Welcome screen of the program.
 def version():
     print("""
-Version 1.0 - Written by Joseph Katsioloudes, 2017.
+Version 1.0 - Written by Joseph Katsioloudes, 2018.
 
 Please press 'help' for user manual and options.
 Press exit or quit to exit the program
@@ -91,3 +94,8 @@ def welcomeMessage_4():
 #####################################################################################################################################  
 """)
     version()
+
+
+# randomly chooses one of the above welcome messages.
+def welcomeMessage():
+    return random.choice([welcomeMessage_1, welcomeMessage_2, welcomeMessage_3, welcomeMessage_4])()

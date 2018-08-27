@@ -12,12 +12,13 @@ __listLastIndex__ = 1
 
 # The main thread of the program.
 if __name__ == '__main__':
-    intro.welcomeMessage_1()
+    # picks one of the welcome messages randomly.
+    welcomeMessage = intro.welcomeMessage()
 
     # the main loop of the program running constantly until ctl+C or exit/quit is used.
     while True:
         # holds the current command of the user.
-        userQuery = str(input('eblem> '))
+        userQuery = str(input('Eblem >> '))
         parsedUserQuery = userQuery.split(' ')
         lenUserQuery = len(parsedUserQuery)
         effectiveLen = lenUserQuery - __listLastIndex__
