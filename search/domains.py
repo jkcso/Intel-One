@@ -1,5 +1,6 @@
 import search.utilities as util
 import search.query as qu
+import webbrowser
 
 
 # Class including functions for OSINT collection for target domains.
@@ -38,6 +39,18 @@ class Domains(qu.Query):
         print(pageGlimpse)
         print()
 
+        webbrowser.open(whoIsLink_5)
+        webbrowser.open(whoIsLink_0)
+        webbrowser.open(whoIsLink_1)
+        webbrowser.open(whoIsLink_9)
+        webbrowser.open(whoIsLink_2)
+        webbrowser.open(whoIsLink_3)
+        webbrowser.open(whoIsLink_4)
+        webbrowser.open(whoIsLink_7)
+        webbrowser.open(whoIsLink_6)
+        webbrowser.open(whoIsLink_8)
+        webbrowser.open(pageGlimpse)
+
     # Performs search in who.is records giving information about a target domain.
     def dnsLookup(self):
         parsedQuery = util.Utilities.parseQuery(self.getQuery)
@@ -68,12 +81,26 @@ class Domains(qu.Query):
         print(dnsLookupLink_7)
         print()
 
+        webbrowser.open(dnsLookupLink_0)
+        webbrowser.open(dedicatedOrNot)
+        webbrowser.open(netcraft)
+        webbrowser.open(dnsLookupLink_1)
+        webbrowser.open(dnsLookupLink_2)
+        webbrowser.open(dnsLookupLink_9)
+        webbrowser.open(dnsLookupLink_8)
+        webbrowser.open(dnsLookupLink_3)
+        webbrowser.open(dnsLookupLink_6)
+        webbrowser.open(dnsLookupLink_4)
+        webbrowser.open(dnsLookupLink_5)
+        webbrowser.open(dnsLookupLink_7)
+
     # Retrieves a link for scanning a target domain.
     def scanSearch(self):
         parsedQuery = util.Utilities.parseQuery(self.getQuery)
         scanLink = 'https://asafaweb.com/Scan?Url=' + parsedQuery
         print(scanLink)
         print()
+        webbrowser.open(scanLink)
 
     # Retrieves a link into archived version of target domain
     def archiveSearch(self):
@@ -88,12 +115,18 @@ class Domains(qu.Query):
         print(screenShot)
         print()
 
+        webbrowser.open(archiveLink)
+        webbrowser.open(googleCache)
+        webbrowser.open(webCache)
+        webbrowser.open(screenShot)
+
     # Retrieves a link into archived version of target domain
     def builtWith(self):
         parsedQuery = util.Utilities.parseQuery(self.getQuery)
         buildWithLink = 'https://builtwith.com/' + parsedQuery
         print(buildWithLink)
         print()
+        webbrowser.open(buildWithLink)
 
     # Provides the link to view the robots.txt file of a target domain.
     # This function has as a precondition that was is queries is a valid link.
@@ -102,6 +135,7 @@ class Domains(qu.Query):
         newQuery = 'https://' + str(parsedQuery) + '/robots.txt'
         print(newQuery)
         print()
+        webbrowser.open(newQuery)
 
     # Executes all of the above functions.
     def domainAllSearches(self):

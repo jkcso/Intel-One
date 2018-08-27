@@ -1,5 +1,6 @@
 import search.utilities as util
 import search.query as qu
+import webbrowser
 
 
 # A collection of functions that are not directly related to OSINT collection.
@@ -13,3 +14,4 @@ class Other(qu.Query):
         shodanLink = 'https://www.shodan.io/search?query=' + util.Utilities.parseQuery(self.getQuery)
         print(shodanLink)
         print()
+        webbrowser.open(shodanLink)

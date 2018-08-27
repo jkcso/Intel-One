@@ -1,5 +1,6 @@
 import search.utilities as util
 import search.query as qu
+import webbrowser
 
 
 # Class including functions for OSINT collection for companies.
@@ -48,12 +49,29 @@ class Companies(qu.Query):
         print(ebr)
         print()
 
+        webbrowser.open(edgarLink)
+        webbrowser.open(cwLink)
+        webbrowser.open(hoovers)
+        webbrowser.open(glassdoor)
+        webbrowser.open(canLink)
+        webbrowser.open(comparablyLink)
+        webbrowser.open(opencorp)
+        webbrowser.open(serpstat)
+        webbrowser.open(semrush)
+        webbrowser.open(qLink)
+        webbrowser.open(ezilon)
+        webbrowser.open(ispionage)
+        webbrowser.open(owler)
+        webbrowser.open(marketVisual)
+        webbrowser.open(ebr)
+
     # Gets the email ending of the company.
     def getCompanyEmailFormat(self):
         parsedQuery = util.Utilities.parseQuery(self.getQuery)
         ceLink = 'https://email-format.com/i/search_result/?q=' + parsedQuery
         print(ceLink)
         print()
+        webbrowser.open(ceLink)
 
     # Provides link to annual reports, slideshows and other insights of a company.
     def annualReportSearch(self):
@@ -71,6 +89,13 @@ class Companies(qu.Query):
         print(postsLink_5)
         print(postsLink_6)
         print()
+
+        webbrowser.open(postsLink_1)
+        webbrowser.open(postsLink_2)
+        webbrowser.open(postsLink_3)
+        webbrowser.open(postsLink_4)
+        webbrowser.open(postsLink_5)
+        webbrowser.open(postsLink_6)
 
     # Executes all of the above functions to perform company search.
     def companyAllSearches(self):
