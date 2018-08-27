@@ -37,7 +37,7 @@ Eblem >>
 
 #### Browser connects to all 78 sources, passes the search term and outputs results on screen automatically: ####
 
-
+![alt text](https://github.com/jkatsioloudes/Eblem/blob/master/individual_browser_output.png)
 
 #### Output in Terminal: ####
 ```
@@ -198,7 +198,7 @@ Eblem >>
 
 #### Browser connects to all 85 sources, passes the search term and outputs results on screen automatically: ####
 
-
+![alt text](https://github.com/jkatsioloudes/Eblem/blob/master/company_browser_output.png)
 
 #### Output in Terminal: ####
 
@@ -366,7 +366,7 @@ Eblem >>
 
 #### Browser connects to all 91 sources, passes the search term and outputs results on screen automatically: ####
 
-
+![alt text](https://github.com/jkatsioloudes/Eblem/blob/master/domain_browser_output.png)
 
 #### Output in Terminal: ####
 
