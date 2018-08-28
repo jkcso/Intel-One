@@ -18,18 +18,18 @@ Please press 'help' for user manual and options.
 Press exit or quit to exit the program
 Please refer to 'Issues' section in GitHub for any problems you may have.
 
-Eblem >> 
+Intel-One >> 
 ```
 
 ### Passive Reconnaissance for an Individual (i.e John Smith) in 78 Sources:
 
 #### Browser connects to all 78 sources, passes the search term and outputs results on screen automatically: ####
 
-![alt text](https://github.com/jkatsioloudes/Eblem/blob/master/individual_browser_output.png)
+![alt text](https://github.com/jkatsioloudes/Intel-One/blob/master/individual_browser_output.png)
 
 #### Output in Terminal: ####
 ```
-Eblem >> John Smith -i
+Intel-One >> John Smith -i
 
 ---- PEOPLE SEARCH ENGINES ----
 Note: We suggest to add a location to make your search more specific.
@@ -179,19 +179,19 @@ Search in RSS Feeds:
 https://www.rsssearchhub.com/feeds?q=John+Smith
 http://fetchrss.com/generator/invalid?url=John+Smith
 
-Eblem >>
+Intel-One >>
 ```
 
 ### Passive Reconnaissance for a Company (i.e Example Limited) in 85 Sources:
 
 #### Browser connects to all 85 sources, passes the search term and outputs results on screen automatically: ####
 
-![alt text](https://github.com/jkatsioloudes/Eblem/blob/master/company_browser_output.png)
+![alt text](https://github.com/jkatsioloudes/Intel-One/blob/master/company_browser_output.png)
 
 #### Output in Terminal: ####
 
 ```
-Eblem >> Example Limited -c
+Intel-One >> Example Limited -c
 
 ---- COMPANY RECORDS ----
 Company information and search results can be found here:
@@ -347,19 +347,19 @@ Search in RSS Feeds:
 https://www.rsssearchhub.com/feeds?q=Example+Limited
 http://fetchrss.com/generator/invalid?url=Example+Limited
 
-Eblem >> 
+Intel-One >> 
 ```
 
 ### Passive Reconnaissance for a Domain (i.e www.example.com) in 91 Sources:
 
 #### Browser connects to all 91 sources, passes the search term and outputs results on screen automatically: ####
 
-![alt text](https://github.com/jkatsioloudes/Eblem/blob/master/domain_browser_output.png)
+![alt text](https://github.com/jkatsioloudes/Intel-One/blob/master/domain_browser_output.png)
 
 #### Output in Terminal: ####
 
 ```
-Eblem >> www.example.com -d
+Intel-One >> www.example.com -d
 
 ---- DOMAIN INFO ----
 View official whois records:
@@ -527,13 +527,13 @@ Search in RSS Feeds:
 https://www.rsssearchhub.com/feeds?q=www.example.com
 http://fetchrss.com/generator/invalid?url=www.example.com
 
-Eblem >> 
+Intel-One >> 
 ```
 
 ## List of all features (directly taken from the help menu):
 
 ```
-Eblem >> help
+Intel-One >> help
 
 Please refer to 'Issues' section in GitHub for any problems you may have.
            
@@ -634,7 +634,7 @@ Options Short/Long  |  Description                                      |  Examp
 -sh, --shodan       | Performs shodan search for given keyword          | eblem> zanussi -sh | --shodan          
 
 
-Eblem >> 
+Intel-One >> 
 ```
 
 ## Installation
@@ -738,7 +738,7 @@ Specifically, there exist 4 flags that perform everything:
 
 Implemented in my free time from mid August to mid September 2017 as part of my genuine interest in Cyber Security, especially penetration testing.  After I played around with some Kali Linux tools, I have identified a gap in performing high quality OSINT search wholly from the command line and by a few clicks to get a browser with many tabs containing useful information.  
 
-My short term aim is to make the life of a pentester easier by providing, constantly improving and maintaining an optimised and effective toolset with various powerful features.  My main long term goal is to contribute to the cybersecurity progress that has yet to come in both software and hardware systems.  A potential first step towards this direction is by offering an optimised OSINT solution by a possible combination or extension of a famous and must have existing OSINT tool with features from Eblem and also I aspire of writing or contributing into another tool that effeciently performs classification for cyber security related problems by deploying state-of-the-art Machine Learning.
+My short term aim is to make the life of a pentester easier by providing, constantly improving and maintaining an optimised and effective toolset with various powerful features.  My main long term goal is to contribute to the cybersecurity progress that has yet to come in both software and hardware systems.  A potential first step towards this direction is by offering an optimised OSINT solution by a possible combination or extension of a famous and must have existing OSINT tool with features from Intel-One and also I aspire of writing or contributing into another tool that effeciently performs classification for cyber security related problems by deploying state-of-the-art Machine Learning.
 
 ## Disclaimer
 
