@@ -13,7 +13,7 @@ class SocialMedia(qu.Query):
     # Advanced google dork used for returning results including the provided url.
     __INURL__ = "+site:"
 
-    # Social media websites that are currently supported by Eblem.
+    # Social media websites that are currently supported by our tool.
     __FACEBOOK__ = "facebook.com"
     __LINKEDIN__ = "linkedin.com"
     __TWITTER__ = "twitter.com"
