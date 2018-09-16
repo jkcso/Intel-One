@@ -646,7 +646,7 @@ Intel-One >>
 ## Installation
 
 1. Donwload the repository
-2. In a terminal, run `python3 Intel-One.py`
+2. In a terminal, run `python3 intel-one.py`
 
 ## Packages Needed
 
