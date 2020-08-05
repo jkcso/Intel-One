@@ -76,8 +76,14 @@ http://www.uvrx.com/results-social/index.html?cx=008219812513279254587%3Ao2g7x-v
 Facebook search:
 http://www.google.com/search?q=John+Smith+site:facebook.com
 
+Instagram search:
+http://www.google.com/search?q=John+Smith+site:instagram.com
+
 Linkedin search:
 http://www.google.com/search?q=John+Smith+site:linkedin.com
+
+Strava search:
+http://www.google.com/search?q=John+Smith+site:strava.com
 
 Browser plugin that finds emails of people's profiles in Linkedin.
 https://chrome.google.com/webstore/detail/ftl/lkpekgkhmldknbcgjicjkomphkhhdkjj?hl=en-GB
@@ -577,11 +583,12 @@ Options Short/Long  |  Description                                      |  Examp
 -ln, --linkedin     | Performs linkedin search through google           | Intel-One >> john smith -ln | --linkedin     
 -tw, --twitter      | Twitter search plus retrieves tweets and analytics| Intel-One >> john smith -tw | --twitter      
 -in, --instagram    | Performs instagram search, posts and analytics    | Intel-One >> john smith -in | --instagram
+-st, --strava       | Performs strava search for locations and activity | Intel-One >> john smith -st | --strava
 -pn, --pinterest    | Performs pinterest search through google          | Intel-One >> john smith -pn | --pinterest
 -yt, --youtube      | Performs search in youtube for username           | Intel-One >> john smith -yt | --youtube
 -evs, --extraVid    | Perfroms further search in multiple video engines | Intel-One >> john smith -evs | --extraVid
 -tb, --tumblr       | Performs tumblr search through google             | Intel-One >> john smith -tb | --tumblr    
--re, --redit        | Performs reddit search and posts search           | Intel-One >> john smith -re | --reddit
+-re, --reddit       | Performs reddit search and posts search           | Intel-One >> john smith -re | --reddit
 -ure, --userReddit  | Provides insights and statistics on reddit user   | Intel-One >> john smith -ure | --userReddit
 -bl, --blogs        | Searches in blogs about target keyword            | Intel-One >> john smith -bl | --blogs  
 -cd ,--code         | Performs github & 'nerdy data' search on repos    | Intel-One >> setoolkit -cd | --code
