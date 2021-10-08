@@ -759,3 +759,7 @@ This tool should be used in the white hat way, however, I have no responsibility
 
 ## License
 I own all the copyrights of this project.  Feel free to contact me and suggestions new features or anything you like.
+
+## Codespaces
+
+Press '.' (the fullstop) if you're seeing this now!
